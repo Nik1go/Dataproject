@@ -1,0 +1,1 @@
+[2025-06-03T19:34:03.275+0200] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: macro_trading_dag.compute_economic_quadrants manual__2025-06-03T14:00:34.154573+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

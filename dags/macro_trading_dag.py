@@ -6,7 +6,6 @@ import os
 import yfinance as yf
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from fredapi import Fred
-import numpy as np
 
 FRED_API_KEY = 'c4caaa1267e572ae636ff75a2a600f3d'
 
@@ -170,7 +169,6 @@ def prepare_assets_data(base_dir):
 
 
 def format_and_clean_data(base_dir, input_path, data_type):
-    """Nettoie et convertit les données en mensuelles"""
     # Lire les données
     df = pd.read_csv(input_path, parse_dates=['date'])
 
@@ -188,19 +186,20 @@ def format_and_clean_data(base_dir, input_path, data_type):
     # Réinitialiser l'index
     monthly_df.reset_index(inplace=True)
 
+    # → **Ici** : convertir la colonne `date` en string (YYYY-MM-DD)
+    monthly_df['date'] = monthly_df['date'].dt.strftime('%Y-%m-%d')
+
     # Définir le chemin de sortie
     output_path = os.path.join(base_dir, f"{data_type}.parquet")
 
     # Sauvegarder en Parquet
-    monthly_df.to_parquet(output_path)
+    monthly_df.to_parquet(output_path, index=False)
     print(f"Données {data_type} mensuelles nettoyées sauvegardées: {output_path}")
 
-    # Afficher un échantillon
-    print(f"\nAperçu des données {data_type} mensuelles:")
+    # Aperçu
     print(monthly_df.tail(5))
 
     return output_path
-
 
 # === Configuration du DAG ===
 
@@ -249,8 +248,26 @@ with (DAG(
             'data_type': 'Assets'
         }
     )
+    # Chemins Parquet générés par format_and_clean_data
+    INDICATORS_PARQUET = os.path.join(base_dir, "Indicators.parquet")
+    # Dossier (ou fichier) où on souhaite écrire le résultat quadrant
+    QUADRANT_OUTPUT = os.path.join(base_dir, "quadrants.parquet")
+
+
+    compute_quadrant_task = SparkSubmitOperator(
+        task_id='compute_economic_quadrants',
+        application="/home/airflow/spark_jobs/compute_quadrants.py",
+        name="compute_economic_quadrants",
+        application_args=[
+            INDICATORS_PARQUET,
+            QUADRANT_OUTPUT
+        ],
+        conn_id="spark_local",
+        verbose=False
+    )
+    # ────────────────────────────────────────────────────────────────────────────
 
     # Enchaînement des tâches
     fetch_task >> [prepare_indicators_task, prepare_assets_task]
-    prepare_indicators_task >> format_indicators_task
+    prepare_indicators_task >> format_indicators_task >> compute_quadrant_task
     prepare_assets_task >> format_assets_task
