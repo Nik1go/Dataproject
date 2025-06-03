@@ -1,64 +1,80 @@
+#!/usr/bin/env python3
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, to_date, datediff
+from pyspark.sql.functions import col, expr, when, lag, year, month
 from pyspark.sql.window import Window
-import pyspark.sql.functions as F
 import argparse
-import datetime
+import os
+
+# Configuration Java pour Spark
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', required=True)
-    parser.add_argument('--output', required=True)
+    parser.add_argument('--input', required=True, help="Chemin du fichier Parquet des indicateurs")
+    parser.add_argument('--output', required=True, help="Répertoire de sortie")
     args = parser.parse_args()
 
     spark = SparkSession.builder \
-        .appName("CountercyclicalStrategy") \
-        .config("spark.sql.shuffle.partitions", "1") \
+        .appName("CountercyclicalStrategyMonthly") \
         .getOrCreate()
 
-    # Charger les données avec gestion des valeurs manquantes
-    df = spark.read.csv(args.input, header=True, inferSchema=True) \
-        .withColumn("date", to_date(col("date"))) \
-        .fillna(0, subset=["hy_spread", "long_spread"])
+    # 1. Chargement des données mensuelles
+    df = spark.read.parquet(args.input)
 
-    # Calculer les médianes sur 10 ans (3650 jours) avec fenêtre glissante
-    window_spec = Window.orderBy("date").rowsBetween(-3650, 0)
+    # 2. Calcul des médianes sur 10 ans (120 mois)
+    window_spec = Window.orderBy("date").rowsBetween(-120, 0)
 
     df = df.withColumn("hy_median",
-                       F.percentile_approx("hy_spread", 0.5).over(window_spec))
+                       expr(
+                           "percentile_approx(High_Yield_Bond_SPREAD, 0.5) OVER (ORDER BY date ROWS BETWEEN 120 PRECEDING AND CURRENT ROW)"))
 
     df = df.withColumn("long_spread_median",
-                       F.percentile_approx("long_spread", 0.5).over(window_spec))
+                       expr(
+                           "percentile_approx(`10-2Year_Treasury_Yield_Bond`, 0.5) OVER (ORDER BY date ROWS BETWEEN 120 PRECEDING AND CURRENT ROW)"))
 
-    # Dernière observation complète
-    latest = df.filter(
-        (col("hy_spread").isNotNull()) &
-        (col("long_spread").isNotNull())
-    ).orderBy(col("date").desc()).first()
+    # 3. Calcul de la décision
+    df = df.withColumn("decision",
+                       when(col("High_Yield_Bond_SPREAD") > col("hy_median"), "CROISSANCE")
+                       .when((col("High_Yield_Bond_SPREAD") <= col("hy_median")) &
+                             (col("10-2Year_Treasury_Yield_Bond") < col("long_spread_median")), "INFLATION")
+                       .otherwise("RALENTISSEMENT"))
 
-    # Logique de décision
-    decision = "UNDEFINED"
-    if latest and latest['hy_spread'] > latest['hy_median']:
-        decision = "CROISSANCE"
-        print(f"\nDECISION: Allocation au Portefeuille Croissance")
-        print(f"  HY Spread actuel: {latest['hy_spread']:.2f}%")
-        print(f"  Médiane 10 ans: {latest['hy_median']:.2f}%")
-    elif latest:
-        if latest['long_spread'] < latest['long_spread_median']:
-            decision = "INFLATION"
-            print(f"\nDECISION: Allocation au Portefeuille Inflation")
-            print(f"  Long Spread actuel: {latest['long_spread']:.2f}%")
-            print(f"  Médiane 10 ans: {latest['long_spread_median']:.2f}%")
-            print("  Composition: 50% S&P 500, 40% or, 10% small-cap value")
-        else:
-            decision = "RALENTISSEMENT"
-            print(f"\nDECISION: Allocation au Portefeuille Ralentissement")
+    # 4. Détection des changements d'état
+    window_spec_prev = Window.orderBy("date")
+    df = df.withColumn("prev_decision", lag("decision", 1).over(window_spec_prev))
+    df = df.withColumn("state_change",
+                       when(col("decision") != col("prev_decision"), 1).otherwise(0))
 
-    # Sauvegarder les résultats
-    result_data = [(datetime.datetime.now().isoformat(), decision)]
-    result_df = spark.createDataFrame(result_data, ["timestamp", "decision"])
-    result_df.write.mode("overwrite").csv(f"{args.output}/strategy_decision")
+    # 5. Ajout d'information temporelle
+    df = df.withColumn("year", year("date"))
+    df = df.withColumn("month", month("date"))
+
+    # 6. Sauvegarde des résultats
+    # Historique complet
+    df.write.mode("overwrite") \
+        .option("header", "true") \
+        .parquet(args.output + "/full_history")
+
+    # Dernière décision
+    latest = df.orderBy(col("date").desc()).first()
+    result_data = [(latest["date"], latest["decision"])]
+    result_df = spark.createDataFrame(result_data, ["date", "decision"])
+    result_df.write.mode("overwrite").parquet(args.output + "/latest_decision")
+
+    # 7. Affichage des résultats
+    print("\n" + "=" * 50)
+    print("DERNIÈRE DÉCISION MENSUELLE:")
+    print(f"Date: {latest['date']}")
+    print(f"HY Spread: {latest['High_Yield_Bond_SPREAD']:.2f}% (Médiane: {latest['hy_median']:.2f}%)")
+    print(f"10-2Y Spread: {latest['10-2Year_Treasury_Yield_Bond']:.2f}% (Médiane: {latest['long_spread_median']:.2f}%)")
+    print(f"Décision: {latest['decision']}")
+    print("=" * 50)
+
+    # Afficher les changements récents
+    changes = df.filter(col("state_change") == 1).orderBy(col("date").desc()).limit(5)
+    print("\nDerniers changements d'état:")
+    changes.select("date", "decision").show(truncate=False)
 
     spark.stop()
 

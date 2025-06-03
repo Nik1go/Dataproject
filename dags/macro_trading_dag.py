@@ -6,6 +6,7 @@ import os
 import yfinance as yf
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from fredapi import Fred
+import numpy as np
 
 FRED_API_KEY = 'c4caaa1267e572ae636ff75a2a600f3d'
 
@@ -20,8 +21,8 @@ FRED_SERIES_MAPPING = {
 YF_SERIES_MAPPING = {
     'S&P500(LARGE CAP)': {'ticker': '^GSPC', 'series_id': 'SP500'},
     "GOLD_OZ_USD": {'ticker': 'GC=F', 'series_id': 'GOLD_OZ_USD'},
-    "RUSSELL2000(Small CAP)" : {'ticker': 'IWM', 'series_id': 'SmallCAP'},
-    "REITs(Immobilier US)": {'ticker': 'VNQ', 'series_id': 'US REIT VNQ'},
+    "RUSSELL2000(Small CAP)": {'ticker': 'IWM', 'series_id': 'SmallCAP'},
+    "REITs(Immobilier US)": {'ticker': 'VNQ', 'series_id': 'US_REIT_VNQ'},
     'US_TREASURY_10Y': {'ticker': 'IEF', 'series_id': 'TREASURY_10Y'},
 }
 
@@ -32,6 +33,7 @@ default_args = {
     'retries': 2,
     'retry_delay': timedelta(minutes=3)
 }
+
 
 def fetch_and_save_data(**kwargs):
     fred = Fred(api_key=FRED_API_KEY)
@@ -108,84 +110,147 @@ def fetch_and_save_data(**kwargs):
         else:
             print(f"Aucune nouvelle donnée pour {name} ({meta['series_id']})")
 
-fetch_and_save_data()
 
-def prepare_combined_data(base_dir):
-    """Crée un fichier combiné HY_SPREAD + LONG_SPREAD pour Spark"""
+def prepare_indicators_data(base_dir):
+    """Combine les indicateurs économiques en un seul DataFrame"""
     backup_dir = os.path.join(base_dir, 'backup')
+    indicators = [
+        'INFLATION',
+        'UNEMPLOYMENT',
+        'CONSUMER_SENTIMENT',
+        'High_Yield_Bond_SPREAD',
+        '10-2Year_Treasury_Yield_Bond'
+    ]
 
-    # Charger HY Spread
-    hy_path = os.path.join(backup_dir, 'High_Yield_Bond_SPREAD.csv')
-    hy_df = pd.read_csv(hy_path, parse_dates=['date']) if os.path.exists(hy_path) else pd.DataFrame(
-        columns=['date', 'value'])
-    hy_df = hy_df.rename(columns={'value': 'High_Yield_Bond_SPREAD'})
+    combined_df = pd.DataFrame()
 
-    # Charger Long Spread
-    long_path = os.path.join(backup_dir, '10-2Year_Treasury_Yield_Bond')
-    long_df = pd.read_csv(long_path, parse_dates=['date']) if os.path.exists(long_path) else pd.DataFrame(
-        columns=['date', 'value'])
-    long_df = long_df.rename(columns={'value': '10-2Year_Treasury_Yield_Bond'})
+    for indicator in indicators:
+        file_path = os.path.join(backup_dir, f"{indicator}.csv")
+        if os.path.exists(file_path):
+            df = pd.read_csv(file_path, parse_dates=['date'])
+            df = df.rename(columns={'value': indicator})
 
-    # Fusionner et sauvegarder
-    combined = pd.merge(hy_df, long_df, on='date', how='outer').sort_values('date')
-    combined_path = os.path.join(base_dir, 'combined_spreads.csv')
-    combined.to_csv(combined_path, index=False)
-    print(f"Fichier combiné créé: {combined_path}")
+            if combined_df.empty:
+                combined_df = df
+            else:
+                combined_df = pd.merge(combined_df, df, on='date', how='outer')
+
+    # Sauvegarder temporairement
+    output_path = os.path.join(base_dir, 'combined_indicators.csv')
+    combined_df.to_csv(output_path, index=False)
+    print(f"Fichier combiné des indicateurs créé: {output_path}")
+    return output_path
 
 
-def run_strategy_with_spark(**kwargs):
-    """Exécute la stratégie avec Spark"""
-    base_dir = os.path.expanduser('~/airflow/data')
-    input_path = os.path.join(base_dir, 'combined_spreads.csv')
+def prepare_assets_data(base_dir):
+    """Combine les actifs en un seul DataFrame"""
+    backup_dir = os.path.join(base_dir, 'backup')
+    assets = list(YF_SERIES_MAPPING.keys())
 
-    spark_args = {
-        'input_path': input_path,
-        'output_path': os.path.join(base_dir, 'results')
-    }
+    combined_df = pd.DataFrame()
 
-    return SparkSubmitOperator(
-        task_id='spark_strategy_task',
-        application="home/leoja/airflow/scripts/spark_strategy.py",
-        application_args=[
-            '--input', spark_args['input_path'],
-            '--output', spark_args['output_path']
-        ],
-        conn_id="spark_default",
-        dag=kwargs['dag']
-    ).execute(context=kwargs)
+    for asset in assets:
+        file_path = os.path.join(backup_dir, f"{asset}.csv")
+        if os.path.exists(file_path):
+            df = pd.read_csv(file_path, parse_dates=['date'])
+            # Récupérer le nom court de l'actif
+            asset_name = YF_SERIES_MAPPING[asset]['series_id']
+            df = df.rename(columns={'value': asset_name})
+
+            if combined_df.empty:
+                combined_df = df
+            else:
+                combined_df = pd.merge(combined_df, df, on='date', how='outer')
+
+    # Sauvegarder temporairement
+    output_path = os.path.join(base_dir, 'combined_assets.csv')
+    combined_df.to_csv(output_path, index=False)
+    print(f"Fichier combiné des actifs créé: {output_path}")
+    return output_path
+
+
+def format_and_clean_data(base_dir, input_path, data_type):
+    """Nettoie et convertit les données en mensuelles"""
+    # Lire les données
+    df = pd.read_csv(input_path, parse_dates=['date'])
+
+    # Supprimer les lignes où toutes les valeurs sont nulles
+    df = df.dropna(how='all', subset=df.columns.difference(['date']))
+
+    # Convertir en mensuel (dernier jour du mois)
+    df['date'] = pd.to_datetime(df['date'])
+    df.set_index('date', inplace=True)
+    monthly_df = df.resample('M').last()
+
+    # Interpolation pour les valeurs manquantes
+    monthly_df = monthly_df.interpolate(method='linear')
+
+    # Réinitialiser l'index
+    monthly_df.reset_index(inplace=True)
+
+    # Définir le chemin de sortie
+    output_path = os.path.join(base_dir, f"{data_type}.parquet")
+
+    # Sauvegarder en Parquet
+    monthly_df.to_parquet(output_path)
+    print(f"Données {data_type} mensuelles nettoyées sauvegardées: {output_path}")
+
+    # Afficher un échantillon
+    print(f"\nAperçu des données {data_type} mensuelles:")
+    print(monthly_df.tail(5))
+
+    return output_path
+
 
 # === Configuration du DAG ===
 
 base_dir = os.path.expanduser('~/airflow/data')
 
-with DAG(
-    dag_id='macro_trading_dag',
-    default_args=default_args,
-    description='Stratégie contre-cyclique avec données FRED',
-    schedule_interval='0 8 * * *',
-    catchup=False
-) as dag:
-
+with (DAG(
+        dag_id='macro_trading_dag',
+        default_args=default_args,
+        description='Stratégie contre-cyclique avec données FRED et Yahoo Finance',
+        schedule_interval='0 8 * * *',
+        catchup=False
+) as dag):
     fetch_task = PythonOperator(
-        task_id='fetch_fred_data',
+        task_id='fetch_data',
         python_callable=fetch_and_save_data
     )
 
-    combine_task = PythonOperator(
-        task_id='prepare_combined_data',
-        python_callable=prepare_combined_data,
-        op_args=[base_dir]
+    prepare_indicators_task = PythonOperator(
+        task_id='prepare_indicators_data',
+        python_callable=prepare_indicators_data,
+        op_kwargs={'base_dir': base_dir}
     )
 
-    strategy_task = SparkSubmitOperator(
-        task_id='run_countercyclical_strategy',
-        application='/home/leoja/airflow/scripts/spark_strategy.py',
-        application_args=[
-            '--input', os.path.join(base_dir, 'combined_spreads.csv'),
-            '--output', os.path.join(base_dir, 'results')
-        ],
-        conn_id='spark_default'
+    prepare_assets_task = PythonOperator(
+        task_id='prepare_assets_data',
+        python_callable=prepare_assets_data,
+        op_kwargs={'base_dir': base_dir}
+    )
+
+    format_indicators_task = PythonOperator(
+        task_id='format_indicators_data',
+        python_callable=format_and_clean_data,
+        op_kwargs={
+            'base_dir': base_dir,
+            'input_path': "{{ ti.xcom_pull(task_ids='prepare_indicators_data') }}",
+            'data_type': 'Indicators'
+        }
+    )
+
+    format_assets_task = PythonOperator(
+        task_id='format_assets_data',
+        python_callable=format_and_clean_data,
+        op_kwargs={
+            'base_dir': base_dir,
+            'input_path': "{{ ti.xcom_pull(task_ids='prepare_assets_data') }}",
+            'data_type': 'Assets'
+        }
     )
 
     # Enchaînement des tâches
-    fetch_task >> combine_task >> strategy_task
+    fetch_task >> [prepare_indicators_task, prepare_assets_task]
+    prepare_indicators_task >> format_indicators_task
+    prepare_assets_task >> format_assets_task
