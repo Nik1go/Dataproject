@@ -1,0 +1,25 @@
+[2025-05-31T23:53:56.431+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T23:53:56.443+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-30T08:00:00+00:00 [queued]>
+[2025-05-31T23:53:56.449+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-30T08:00:00+00:00 [queued]>
+[2025-05-31T23:53:56.449+0200] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2025-05-31T23:53:56.465+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_fred_data> on 2025-05-30 08:00:00+00:00
+[2025-05-31T23:53:56.472+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'fetch_fred_data', 'scheduled__2025-05-30T08:00:00+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp2u97heow']
+[2025-05-31T23:53:56.473+0200] {standard_task_runner.py:91} INFO - Job 71: Subtask fetch_fred_data
+[2025-05-31T23:53:56.479+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=133560) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T23:53:56.479+0200] {standard_task_runner.py:63} INFO - Started process 133596 to run task
+[2025-05-31T23:53:56.513+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-30T08:00:00+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-05-31T23:53:56.586+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='fetch_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-30T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-30T08:00:00+00:00'
+[2025-05-31T23:53:56.588+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T23:53:56.916+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:53:57.164+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:53:57.453+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:53:57.734+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:53:58.024+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:53:58.354+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:53:58.673+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:53:58.675+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-31T23:53:58.675+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T23:53:58.682+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=macro_trading_dag, task_id=fetch_fred_data, execution_date=20250530T080000, start_date=20250531T215356, end_date=20250531T215358
+[2025-05-31T23:53:58.714+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-31T23:53:58.722+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T23:53:58.722+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,117 @@
+[2025-05-21T09:46:27.144+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-21T09:46:27.167+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-20T00:00:00+00:00 [queued]>
+[2025-05-21T09:46:27.174+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-20T00:00:00+00:00 [queued]>
+[2025-05-21T09:46:27.174+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 4
+[2025-05-21T09:46:27.347+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_fred_data> on 2025-05-20 00:00:00+00:00
+[2025-05-21T09:46:27.354+0200] {standard_task_runner.py:63} INFO - Started process 279120 to run task
+[2025-05-21T09:46:27.358+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'fetch_fred_data', 'scheduled__2025-05-20T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/my_first_dag.py', '--cfg-path', '/tmp/tmp_80q2kxg']
+[2025-05-21T09:46:27.359+0200] {standard_task_runner.py:91} INFO - Job 34: Subtask fetch_fred_data
+[2025-05-21T09:46:27.538+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.fetch_fred_data scheduled__2025-05-20T00:00:00+00:00 [running]> on host N15I711-16GR512.
+[2025-05-21T09:46:27.717+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='leoja' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='fetch_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-20T00:00:00+00:00'
+[2025-05-21T09:46:27.718+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-21T09:46:38.079+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-21T09:46:38.080+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 715, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 404, in _make_request
+    self._validate_conn(conn)
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1058, in _validate_conn
+    conn.connect()
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f6eb9b34610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=CPIAUCSL (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6eb9b34610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/dags/my_first_dag.py", line 32, in fetch_fred_data
+    data = pdr.DataReader(
+           ^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/data.py", line 456, in DataReader
+    ).read()
+      ^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/fred.py", line 27, in read
+    return self._read()
+           ^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/fred.py", line 62, in _read
+    [fetch_data(url, n) for url, n in zip(urls, names)], axis=1, join="outer"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/fred.py", line 62, in <listcomp>
+    [fetch_data(url, n) for url, n in zip(urls, names)], axis=1, join="outer"
+     ^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/fred.py", line 41, in fetch_data
+    resp = self._read_url_as_StringIO(url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/base.py", line 119, in _read_url_as_StringIO
+    response = self._get_response(url, params=params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas_datareader/base.py", line 155, in _get_response
+    response = self.session.get(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=CPIAUCSL (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6eb9b34610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+[2025-05-21T09:46:38.099+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=fetch_fred_data, execution_date=20250520T000000, start_date=20250521T074627, end_date=20250521T074638
+[2025-05-21T09:46:38.114+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 34 for task fetch_fred_data (HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Max retries exceeded with url: /graph/fredgraph.csv?id=CPIAUCSL (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6eb9b34610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')); 279120)
+[2025-05-21T09:46:38.156+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-21T09:46:38.171+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T09:46:38.171+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

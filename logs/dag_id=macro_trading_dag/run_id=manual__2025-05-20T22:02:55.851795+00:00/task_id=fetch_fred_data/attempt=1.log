@@ -1,0 +1,52 @@
+[2025-05-21T00:02:59.486+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-21T00:02:59.506+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data manual__2025-05-20T22:02:55.851795+00:00 [queued]>
+[2025-05-21T00:02:59.510+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_fred_data manual__2025-05-20T22:02:55.851795+00:00 [queued]>
+[2025-05-21T00:02:59.510+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 4
+[2025-05-21T00:02:59.528+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_fred_data> on 2025-05-20 22:02:55.851795+00:00
+[2025-05-21T00:02:59.531+0200] {standard_task_runner.py:63} INFO - Started process 276657 to run task
+[2025-05-21T00:02:59.535+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'fetch_fred_data', 'manual__2025-05-20T22:02:55.851795+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/my_first_dag.py', '--cfg-path', '/tmp/tmpofeqr47j']
+[2025-05-21T00:02:59.535+0200] {standard_task_runner.py:91} INFO - Job 30: Subtask fetch_fred_data
+[2025-05-21T00:02:59.576+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.fetch_fred_data manual__2025-05-20T22:02:55.851795+00:00 [running]> on host N15I711-16GR512.
+[2025-05-21T00:02:59.630+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='leoja' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='fetch_fred_data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-20T22:02:55.851795+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-20T22:02:55.851795+00:00'
+[2025-05-21T00:02:59.631+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-21T00:03:00.624+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-21T00:03:00.627+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/dags/my_first_dag.py", line 41, in fetch_fred_data
+    data.to_csv(path)
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/core/generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/io/formats/csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/io/common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/leoja/airflow_venv/lib/python3.11/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/data/raw/2025-05-20'
+[2025-05-21T00:03:00.663+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=fetch_fred_data, execution_date=20250520T220255, start_date=20250520T220259, end_date=20250520T220300
+[2025-05-21T00:03:00.673+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 30 for task fetch_fred_data (Cannot save file into a non-existent directory: '/data/raw/2025-05-20'; 276657)
+[2025-05-21T00:03:00.711+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-21T00:03:00.730+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T00:03:00.731+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

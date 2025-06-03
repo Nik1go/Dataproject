@@ -1,0 +1,1190 @@
+[2025-05-31T23:50:46.983+0200] {processor.py:161} INFO - Started process (PID=132944) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:50:46.984+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:50:46.986+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:50:46.985+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:50:48.641+0200] {logging_mixin.py:188} INFO - Données mises à jour pour SP500 (SP500)
+[2025-05-31T23:50:49.105+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:50:49.507+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:50:50.016+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:50:50.440+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:50:50.879+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:50:51.277+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:50:51.283+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:50:51.408+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:50:51.408+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:50:51.429+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:50:51.429+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:50:51.456+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.482 seconds
+[2025-05-31T23:51:46.901+0200] {processor.py:161} INFO - Started process (PID=133133) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:51:46.906+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:51:46.909+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:51:46.908+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:51:48.284+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:51:48.709+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:51:49.104+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:51:49.391+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:51:49.677+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:51:49.988+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:51:50.257+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:51:50.263+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:51:50.277+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:51:50.277+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:51:50.289+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:51:50.289+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:51:50.310+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.422 seconds
+[2025-05-31T23:52:42.667+0200] {processor.py:161} INFO - Started process (PID=133339) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:52:42.672+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:52:42.672+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:52:42.672+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:52:43.701+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:52:44.074+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:52:44.532+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:52:44.801+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:52:45.193+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:52:45.605+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:52:46.063+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:52:46.070+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:52:46.085+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:52:46.085+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:52:46.097+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:52:46.097+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:52:46.119+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.460 seconds
+[2025-05-31T23:53:33.585+0200] {processor.py:161} INFO - Started process (PID=133521) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:53:33.589+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:53:33.590+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:53:33.590+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:53:34.948+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:53:36.241+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:53:37.385+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:53:37.978+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:53:38.284+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:53:38.592+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:53:38.880+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:53:38.883+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:53:38.893+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:53:38.893+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:53:38.906+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:53:38.906+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:53:38.922+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.345 seconds
+[2025-05-31T23:54:12.814+0200] {processor.py:161} INFO - Started process (PID=133658) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:12.816+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:54:12.817+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:12.816+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:14.041+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:54:14.787+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:54:16.033+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:54:16.470+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:54:16.723+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:54:17.005+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:54:17.302+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:54:17.304+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:17.377+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:17.376+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:54:17.392+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:17.392+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:54:17.411+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.604 seconds
+[2025-05-31T23:54:49.654+0200] {processor.py:161} INFO - Started process (PID=133778) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:49.656+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:54:49.657+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:49.656+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:51.459+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:54:52.150+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:54:53.874+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:54:54.250+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:54:54.520+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:54:55.221+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:54:55.555+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:54:55.558+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:54:55.567+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:55.567+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:54:55.581+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:54:55.581+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:54:55.601+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.952 seconds
+[2025-05-31T23:55:41.596+0200] {processor.py:161} INFO - Started process (PID=133980) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:55:41.597+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:55:41.598+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:55:41.598+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:55:42.563+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:55:44.728+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:55:45.626+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:55:46.251+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:55:46.744+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:55:47.953+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:55:48.398+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:55:48.400+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:55:48.472+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:55:48.472+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:55:48.487+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:55:48.487+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:55:48.510+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 6.919 seconds
+[2025-05-31T23:56:37.258+0200] {processor.py:161} INFO - Started process (PID=134166) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:56:37.259+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:56:37.261+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:56:37.260+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:56:38.667+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:56:39.276+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:56:40.142+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:56:41.000+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:56:41.776+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:56:42.524+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:56:42.815+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:56:42.818+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:56:42.902+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:56:42.901+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:56:42.917+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:56:42.917+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:56:42.939+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.688 seconds
+[2025-05-31T23:57:27.584+0200] {processor.py:161} INFO - Started process (PID=134349) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:57:27.585+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:57:27.586+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:57:27.586+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:57:28.380+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:57:28.651+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:57:28.900+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:57:29.176+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:57:29.413+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:57:29.655+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:57:29.999+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:57:30.002+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:57:30.021+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:57:30.020+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:57:30.043+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:57:30.043+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:57:30.070+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.493 seconds
+[2025-05-31T23:58:15.671+0200] {processor.py:161} INFO - Started process (PID=134527) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:58:15.673+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:58:15.674+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:58:15.673+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:58:17.109+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:58:17.741+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:58:19.487+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:58:19.897+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:58:20.685+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:58:21.217+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:58:21.585+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:58:21.589+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:58:21.603+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:58:21.603+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:58:21.620+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:58:21.620+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:58:21.641+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.976 seconds
+[2025-05-31T23:59:13.430+0200] {processor.py:161} INFO - Started process (PID=134735) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:59:13.431+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-05-31T23:59:13.432+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:59:13.431+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:59:15.940+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-05-31T23:59:18.163+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-05-31T23:59:19.151+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-05-31T23:59:19.919+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-05-31T23:59:20.721+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-05-31T23:59:21.178+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-05-31T23:59:21.413+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-05-31T23:59:21.419+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-05-31T23:59:21.432+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:59:21.432+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-31T23:59:21.443+0200] {logging_mixin.py:188} INFO - [2025-05-31T23:59:21.443+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-05-31T23:59:21.463+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 8.038 seconds
+[2025-06-01T00:00:11.631+0200] {processor.py:161} INFO - Started process (PID=134963) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:00:11.633+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:00:11.634+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:00:11.634+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:00:12.899+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:00:13.845+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:00:15.485+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:00:15.849+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:00:16.121+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:00:16.463+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:00:16.740+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:00:16.746+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:00:16.804+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:00:16.804+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:00:16.814+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:00:16.813+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:00:16.830+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.204 seconds
+[2025-06-01T00:01:02.511+0200] {processor.py:161} INFO - Started process (PID=135164) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:02.513+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:01:02.513+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:02.513+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:03.277+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:01:03.519+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:01:03.850+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:01:04.155+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:01:04.470+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:01:04.755+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:01:05.037+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:01:05.042+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:05.111+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:05.111+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:01:05.123+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:05.123+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:01:05.140+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.634 seconds
+[2025-06-01T00:01:53.320+0200] {processor.py:161} INFO - Started process (PID=135335) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:53.322+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:01:53.323+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:53.323+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:54.579+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:01:55.664+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:01:56.011+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:01:56.248+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:01:56.503+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:01:56.767+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:01:56.988+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:01:56.991+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:01:56.999+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:56.999+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:01:57.014+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:01:57.014+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:01:57.033+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.722 seconds
+[2025-06-01T00:02:44.788+0200] {processor.py:161} INFO - Started process (PID=135513) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:02:44.789+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:02:44.790+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:02:44.789+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:02:45.688+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:02:45.952+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:02:46.394+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:02:46.795+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:02:47.554+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:02:48.029+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:02:48.324+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:02:48.330+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:02:48.394+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:02:48.393+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:02:48.407+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:02:48.407+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:02:48.427+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.645 seconds
+[2025-06-01T00:03:33.162+0200] {processor.py:161} INFO - Started process (PID=135693) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:03:33.163+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:03:33.163+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:03:33.163+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:03:33.875+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:03:34.214+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:03:34.569+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:03:35.086+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:03:36.470+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:03:36.776+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:03:37.004+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:03:37.009+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:03:37.075+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:03:37.075+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:03:37.088+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:03:37.087+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:03:37.112+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.956 seconds
+[2025-06-01T00:04:24.182+0200] {processor.py:161} INFO - Started process (PID=135876) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:04:24.184+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:04:24.185+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:04:24.184+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:04:24.881+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:04:25.170+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:04:25.480+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:04:25.776+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:04:26.006+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:04:26.346+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:04:26.599+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:04:26.601+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:04:26.611+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:04:26.611+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:04:26.625+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:04:26.625+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:04:26.645+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.472 seconds
+[2025-06-01T00:05:10.043+0200] {processor.py:161} INFO - Started process (PID=136023) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:05:10.045+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:05:10.046+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:05:10.046+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:05:10.778+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:05:11.043+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:05:11.279+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:05:11.519+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:05:11.728+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:05:12.007+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:05:12.257+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:05:12.260+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:05:12.269+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:05:12.269+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:05:12.286+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:05:12.286+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:05:12.306+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.269 seconds
+[2025-06-01T00:05:57.501+0200] {processor.py:161} INFO - Started process (PID=136200) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:05:57.502+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:05:57.503+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:05:57.502+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:05:58.283+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:05:58.588+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:05:58.877+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:05:59.246+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:05:59.559+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:05:59.858+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:06:00.182+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:06:00.184+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:06:00.245+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:06:00.245+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:06:00.257+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:06:00.257+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:06:00.277+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.782 seconds
+[2025-06-01T00:06:48.964+0200] {processor.py:161} INFO - Started process (PID=136381) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:06:48.965+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:06:48.966+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:06:48.966+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:06:49.873+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:06:50.131+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:06:50.567+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:06:50.844+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:06:51.131+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:06:51.386+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:06:51.717+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:06:51.719+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:06:51.728+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:06:51.728+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:06:51.740+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:06:51.740+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:06:51.782+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.825 seconds
+[2025-06-01T00:07:39.662+0200] {processor.py:161} INFO - Started process (PID=136562) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:07:39.663+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:07:39.664+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:07:39.664+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:07:40.407+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:07:40.821+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:07:41.054+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:07:41.717+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:07:42.245+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:07:43.432+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:07:43.720+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:07:43.725+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:07:43.788+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:07:43.788+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:07:43.799+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:07:43.799+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:07:43.819+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.163 seconds
+[2025-06-01T00:08:31.688+0200] {processor.py:161} INFO - Started process (PID=136744) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:08:31.689+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:08:31.690+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:08:31.690+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:08:32.487+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:08:32.734+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:08:33.013+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:08:33.503+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:08:34.396+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:08:34.717+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:08:35.002+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:08:35.004+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:08:35.014+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:08:35.014+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:08:35.030+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:08:35.030+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:08:35.050+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.367 seconds
+[2025-06-01T00:09:19.209+0200] {processor.py:161} INFO - Started process (PID=136922) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:09:19.210+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:09:19.210+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:09:19.210+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:09:19.981+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:09:20.206+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:09:20.446+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:09:20.754+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:09:21.085+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:09:21.404+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:09:21.642+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:09:21.646+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:09:21.711+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:09:21.711+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:09:21.725+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:09:21.725+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:09:21.744+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.541 seconds
+[2025-06-01T00:10:06.773+0200] {processor.py:161} INFO - Started process (PID=137100) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:06.774+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:10:06.775+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:06.774+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:07.883+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:10:08.321+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:10:08.563+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:10:08.927+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:10:09.204+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:10:09.468+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:10:09.721+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:10:09.724+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:09.733+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:09.733+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:10:09.746+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:09.746+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:10:09.766+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.000 seconds
+[2025-06-01T00:10:56.035+0200] {processor.py:161} INFO - Started process (PID=137274) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:56.036+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:10:56.037+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:56.037+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:56.960+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:10:57.366+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:10:57.625+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:10:57.834+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:10:58.083+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:10:58.462+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:10:58.714+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:10:58.718+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:10:58.736+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:58.735+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:10:58.748+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:10:58.748+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:10:58.774+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.748 seconds
+[2025-06-01T00:11:44.628+0200] {processor.py:161} INFO - Started process (PID=137430) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:11:44.629+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:11:44.630+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:11:44.630+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:11:45.334+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:11:45.701+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:11:46.294+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:11:46.638+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:11:46.882+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:11:47.166+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:11:47.395+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:11:47.398+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:11:47.457+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:11:47.457+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:11:47.468+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:11:47.468+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:11:47.487+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.864 seconds
+[2025-06-01T00:12:32.981+0200] {processor.py:161} INFO - Started process (PID=137606) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:12:32.983+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:12:32.984+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:12:32.984+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:12:33.920+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:12:34.672+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:12:35.314+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:12:35.763+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:12:36.768+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:12:37.174+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:12:37.427+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:12:37.433+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:12:37.447+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:12:37.447+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:12:37.458+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:12:37.458+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:12:37.475+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.500 seconds
+[2025-06-01T00:13:27.744+0200] {processor.py:161} INFO - Started process (PID=137815) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:13:27.746+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:13:27.747+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:13:27.746+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:13:28.846+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:13:29.231+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:13:29.473+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:13:29.718+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:13:29.950+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:13:30.254+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:13:30.488+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:13:30.493+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:13:30.504+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:13:30.503+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:13:30.514+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:13:30.514+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:13:30.534+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.796 seconds
+[2025-06-01T00:14:19.881+0200] {processor.py:161} INFO - Started process (PID=137994) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:14:19.883+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:14:19.884+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:14:19.883+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:14:21.038+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:14:21.307+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:14:21.560+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:14:21.800+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:14:22.095+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:14:22.304+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:14:22.681+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:14:22.687+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:14:22.700+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:14:22.700+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:14:22.711+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:14:22.711+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:14:22.732+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.856 seconds
+[2025-06-01T00:15:08.529+0200] {processor.py:161} INFO - Started process (PID=138174) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:08.532+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:15:08.533+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:08.532+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:09.274+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:15:09.537+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:15:09.785+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:15:10.021+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:15:10.314+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:15:10.562+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:15:10.785+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:15:10.790+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:10.805+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:10.804+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:15:10.820+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:10.820+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:15:10.844+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.323 seconds
+[2025-06-01T00:15:57.265+0200] {processor.py:161} INFO - Started process (PID=138353) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:57.268+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:15:57.269+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:57.269+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:58.071+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:15:58.383+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:15:58.660+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:15:58.897+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:15:59.150+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:15:59.371+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:15:59.671+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:15:59.673+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:15:59.737+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:59.736+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:15:59.749+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:15:59.749+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:15:59.766+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.506 seconds
+[2025-06-01T00:16:44.982+0200] {processor.py:161} INFO - Started process (PID=138501) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:16:44.983+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:16:44.984+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:16:44.984+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:16:45.790+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:16:45.985+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:16:46.221+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:16:46.444+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:16:46.730+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:16:46.949+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:16:47.398+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:16:47.402+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:16:47.467+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:16:47.467+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:16:47.479+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:16:47.479+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:16:47.503+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.526 seconds
+[2025-06-01T00:17:34.055+0200] {processor.py:161} INFO - Started process (PID=138682) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:17:34.056+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:17:34.057+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:17:34.057+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:17:34.773+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:17:35.077+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:17:35.274+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:17:35.505+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:17:35.847+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:17:36.122+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:17:36.360+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:17:36.368+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:17:36.451+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:17:36.450+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:17:36.460+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:17:36.460+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:17:36.483+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.433 seconds
+[2025-06-01T00:18:22.865+0200] {processor.py:161} INFO - Started process (PID=138861) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:18:22.866+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:18:22.867+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:18:22.867+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:18:23.774+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:18:24.042+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:18:24.294+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:18:24.649+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:18:24.994+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:18:25.358+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:18:25.600+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:18:25.605+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:18:25.669+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:18:25.668+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:18:25.682+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:18:25.682+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:18:25.701+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.841 seconds
+[2025-06-01T00:19:09.341+0200] {processor.py:161} INFO - Started process (PID=139039) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:19:09.348+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:19:09.349+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:19:09.349+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:19:10.168+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:19:10.389+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:19:10.787+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:19:11.079+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:19:11.287+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:19:11.533+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:19:11.908+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:19:11.911+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:19:11.923+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:19:11.923+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:19:11.940+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:19:11.939+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:19:11.983+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.649 seconds
+[2025-06-01T00:19:58.673+0200] {processor.py:161} INFO - Started process (PID=139207) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:19:58.685+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:19:58.686+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:19:58.686+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:19:59.560+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:19:59.931+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:20:00.299+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:20:00.629+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:20:00.844+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:20:01.084+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:20:01.301+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:20:01.304+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:20:01.316+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:20:01.315+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:20:01.331+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:20:01.331+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:20:01.350+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.683 seconds
+[2025-06-01T00:20:47.847+0200] {processor.py:161} INFO - Started process (PID=139364) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:20:47.848+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:20:47.849+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:20:47.848+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:20:48.640+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:20:48.877+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:20:49.181+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:20:49.439+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:20:49.736+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:20:49.974+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:20:50.206+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:20:50.211+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:20:50.283+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:20:50.282+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:20:50.295+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:20:50.295+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:20:50.314+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.481 seconds
+[2025-06-01T00:21:35.787+0200] {processor.py:161} INFO - Started process (PID=139546) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:21:35.789+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:21:35.790+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:21:35.790+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:21:37.043+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:21:37.292+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:21:37.589+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:21:37.819+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:21:38.093+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:21:38.343+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:21:38.566+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:21:38.572+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:21:38.589+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:21:38.589+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:21:38.613+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:21:38.612+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:21:38.635+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.853 seconds
+[2025-06-01T00:22:30.120+0200] {processor.py:161} INFO - Started process (PID=139748) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:22:30.121+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:22:30.122+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:22:30.122+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:22:31.353+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:22:32.470+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:22:33.081+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:22:33.342+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:22:33.630+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:22:33.846+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:22:34.091+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:22:34.098+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:22:34.159+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:22:34.159+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:22:34.174+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:22:34.173+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:22:34.194+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.079 seconds
+[2025-06-01T00:23:23.183+0200] {processor.py:161} INFO - Started process (PID=139931) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:23:23.185+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:23:23.185+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:23:23.185+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:23:26.909+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:23:27.315+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:23:27.591+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:23:27.895+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:23:28.490+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:23:29.033+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:23:29.349+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:23:29.354+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:23:29.368+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:23:29.368+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:23:29.382+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:23:29.381+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:23:29.402+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 6.224 seconds
+[2025-06-01T00:24:22.867+0200] {processor.py:161} INFO - Started process (PID=140134) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:24:22.869+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:24:22.869+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:24:22.869+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:24:23.640+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:24:24.210+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:24:24.694+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:24:25.579+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:24:25.795+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:24:26.136+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:24:26.419+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:24:26.426+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:24:26.504+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:24:26.503+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:24:26.515+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:24:26.515+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:24:26.536+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.674 seconds
+[2025-06-01T00:25:15.614+0200] {processor.py:161} INFO - Started process (PID=140315) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:25:15.616+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:25:15.617+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:25:15.616+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:25:16.557+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:25:17.640+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:25:18.051+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:25:18.327+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:25:18.617+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:25:18.871+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:25:19.241+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:25:19.246+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:25:19.262+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:25:19.262+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:25:19.281+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:25:19.281+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:25:19.299+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.690 seconds
+[2025-06-01T00:26:08.331+0200] {processor.py:161} INFO - Started process (PID=140496) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:08.333+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:26:08.333+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:08.333+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:08.859+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:26:09.211+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:26:09.415+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:26:09.681+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:26:09.907+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:26:10.148+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:26:10.380+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:26:10.384+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:10.401+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:10.400+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:26:10.416+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:10.416+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:26:10.553+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.230 seconds
+[2025-06-01T00:26:53.579+0200] {processor.py:161} INFO - Started process (PID=140673) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:53.581+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:26:53.582+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:53.582+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:54.192+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:26:54.449+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:26:54.738+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:26:55.031+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:26:55.267+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:26:55.573+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:26:55.829+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:26:55.832+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:26:55.844+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:55.843+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:26:55.861+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:26:55.861+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:26:55.884+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.313 seconds
+[2025-06-01T00:27:41.078+0200] {processor.py:161} INFO - Started process (PID=140842) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:27:41.079+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:27:41.080+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:27:41.079+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:27:41.696+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:27:41.939+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:27:42.182+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:27:42.438+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:27:42.679+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:27:42.898+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:27:43.166+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:27:43.169+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:27:43.366+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:27:43.365+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:27:43.377+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:27:43.377+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:27:43.395+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.324 seconds
+[2025-06-01T00:28:29.796+0200] {processor.py:161} INFO - Started process (PID=141000) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:28:29.798+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:28:29.799+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:28:29.798+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:28:30.813+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:28:31.635+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:28:31.936+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:28:32.550+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:28:33.257+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:28:33.513+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:28:33.790+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:28:33.795+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:28:33.817+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:28:33.817+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:28:33.833+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:28:33.833+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:28:33.989+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 4.198 seconds
+[2025-06-01T00:29:21.471+0200] {processor.py:161} INFO - Started process (PID=141206) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:29:21.472+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:29:21.473+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:29:21.473+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:29:22.180+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:29:22.676+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:29:23.375+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:29:23.811+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:29:25.518+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:29:26.210+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:29:26.495+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:29:26.500+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:29:26.559+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:29:26.559+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:29:26.576+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:29:26.575+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:29:26.600+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.134 seconds
+[2025-06-01T00:30:11.363+0200] {processor.py:161} INFO - Started process (PID=141385) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:30:11.365+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:30:11.365+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:30:11.365+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:30:12.126+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:30:12.624+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:30:12.950+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:30:13.297+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:30:13.623+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:30:14.042+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:30:14.446+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:30:14.452+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:30:14.666+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:30:14.666+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:30:14.677+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:30:14.677+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:30:14.695+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.336 seconds
+[2025-06-01T00:30:58.959+0200] {processor.py:161} INFO - Started process (PID=141529) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:30:58.961+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:30:58.962+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:30:58.961+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:30:59.739+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:31:00.002+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:31:00.815+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:31:01.033+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:31:01.296+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:31:01.539+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:31:01.821+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:31:01.825+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:31:01.836+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:31:01.836+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:31:01.849+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:31:01.849+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:31:01.868+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.917 seconds
+[2025-06-01T00:31:48.534+0200] {processor.py:161} INFO - Started process (PID=141711) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:31:48.536+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:31:48.537+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:31:48.536+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:31:49.275+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:31:49.501+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:31:49.792+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:31:50.155+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:31:50.370+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:31:50.633+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:31:50.863+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:31:50.868+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:31:50.932+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:31:50.932+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:31:50.947+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:31:50.947+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:31:50.974+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.450 seconds
+[2025-06-01T00:32:36.598+0200] {processor.py:161} INFO - Started process (PID=141890) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:32:36.600+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:32:36.600+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:32:36.600+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:32:37.346+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:32:37.600+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:32:37.893+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:32:38.143+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:32:38.368+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:32:38.621+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:32:38.891+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:32:38.897+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:32:38.962+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:32:38.962+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:32:38.974+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:32:38.974+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:32:38.992+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.401 seconds
+[2025-06-01T00:33:23.259+0200] {processor.py:161} INFO - Started process (PID=142065) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:33:23.260+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:33:23.261+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:33:23.261+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:33:24.017+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:33:24.572+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:33:25.197+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:33:25.564+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:33:25.754+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:33:26.029+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:33:26.253+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:33:26.257+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:33:26.264+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:33:26.264+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:33:26.276+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:33:26.276+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:33:26.295+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.041 seconds
+[2025-06-01T00:34:13.997+0200] {processor.py:161} INFO - Started process (PID=142245) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:34:13.999+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:34:13.999+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:34:13.999+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:34:14.690+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:34:14.963+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:34:15.214+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:34:15.429+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:34:15.674+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:34:15.924+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:34:16.243+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:34:16.247+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:34:16.311+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:34:16.310+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:34:16.321+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:34:16.321+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:34:16.342+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.350 seconds
+[2025-06-01T00:35:03.333+0200] {processor.py:161} INFO - Started process (PID=142429) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:03.335+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:35:03.336+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:03.335+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:04.062+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:35:04.408+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:35:04.698+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:35:04.907+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:35:05.434+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:35:05.662+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:35:05.875+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:35:05.880+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:05.959+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:05.958+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:35:05.974+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:05.974+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:35:05.998+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.673 seconds
+[2025-06-01T00:35:50.706+0200] {processor.py:161} INFO - Started process (PID=142576) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:50.708+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:35:50.710+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:50.709+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:51.621+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:35:51.960+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:35:52.212+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:35:52.417+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:35:52.667+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:35:52.868+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:35:53.075+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:35:53.080+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:35:53.149+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:53.149+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:35:53.159+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:35:53.159+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:35:53.176+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.475 seconds
+[2025-06-01T00:36:38.417+0200] {processor.py:161} INFO - Started process (PID=142757) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:36:38.419+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:36:38.420+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:36:38.420+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:36:39.176+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:36:39.597+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:36:39.838+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:36:40.151+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:36:40.385+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:36:40.615+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:36:40.867+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:36:40.872+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:36:40.889+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:36:40.889+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:36:40.901+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:36:40.901+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:36:40.921+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.510 seconds
+[2025-06-01T00:37:25.811+0200] {processor.py:161} INFO - Started process (PID=142936) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:37:25.813+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:37:25.814+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:37:25.813+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:37:27.013+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:37:27.410+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:37:27.696+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:37:28.034+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:37:28.365+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:37:28.603+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:37:28.831+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:37:28.835+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:37:28.897+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:37:28.896+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:37:28.909+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:37:28.909+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:37:28.929+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.124 seconds
+[2025-06-01T00:38:11.349+0200] {processor.py:161} INFO - Started process (PID=143086) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:11.351+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:38:11.352+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:11.351+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:12.345+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:38:12.721+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:38:12.948+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:38:13.239+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:38:13.462+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:38:13.695+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:38:13.937+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:38:13.941+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:13.999+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:13.998+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:38:14.011+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:14.011+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:38:14.027+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.683 seconds
+[2025-06-01T00:38:56.374+0200] {processor.py:161} INFO - Started process (PID=143258) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:56.376+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:38:56.376+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:56.376+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:57.095+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:38:57.315+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:38:57.572+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:38:57.822+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:38:58.044+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:38:58.356+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:38:58.602+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:38:58.610+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:38:58.621+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:58.621+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:38:58.635+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:38:58.635+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:38:58.656+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.287 seconds
+[2025-06-01T00:39:41.940+0200] {processor.py:161} INFO - Started process (PID=143413) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:39:41.941+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:39:41.942+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:39:41.941+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:39:42.657+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:39:43.216+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:39:43.660+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:39:43.983+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:39:44.948+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:39:45.282+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:39:45.606+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:39:45.612+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:39:45.674+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:39:45.673+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:39:45.687+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:39:45.687+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:39:45.704+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.769 seconds
+[2025-06-01T00:40:31.110+0200] {processor.py:161} INFO - Started process (PID=143584) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:40:31.112+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:40:31.113+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:40:31.112+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:40:31.989+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:40:32.692+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:40:33.300+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:40:33.618+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:40:33.999+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:40:34.253+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:40:34.635+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:40:34.640+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:40:34.704+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:40:34.703+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:40:34.713+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:40:34.713+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:40:34.734+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.630 seconds
+[2025-06-01T00:41:25.353+0200] {processor.py:161} INFO - Started process (PID=143793) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:41:25.354+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:41:25.355+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:41:25.354+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:41:26.120+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:41:26.462+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:41:26.709+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:41:26.946+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:41:27.237+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:41:27.506+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:41:27.842+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:41:27.846+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:41:27.919+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:41:27.919+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:41:27.933+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:41:27.933+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:41:27.950+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.602 seconds
+[2025-06-01T00:42:16.633+0200] {processor.py:161} INFO - Started process (PID=143971) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:42:16.634+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:42:16.635+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:42:16.635+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:42:17.315+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:42:17.545+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:42:17.879+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:42:18.119+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:42:18.349+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:42:18.563+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:42:18.761+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:42:18.765+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:42:18.822+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:42:18.822+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:42:18.833+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:42:18.832+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:42:18.850+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.222 seconds
+[2025-06-01T00:43:06.090+0200] {processor.py:161} INFO - Started process (PID=144151) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:06.091+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:43:06.092+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:06.091+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:06.985+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:43:07.232+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:43:07.479+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:43:07.940+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:43:08.279+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:43:08.768+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:43:09.010+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:43:09.018+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:09.077+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:09.076+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:43:09.089+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:09.089+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:43:09.110+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.028 seconds
+[2025-06-01T00:43:52.852+0200] {processor.py:161} INFO - Started process (PID=144306) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:52.854+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:43:52.855+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:52.855+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:53.681+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:43:53.935+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:43:54.176+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:43:54.420+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:43:54.696+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:43:54.953+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:43:55.221+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:43:55.224+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:43:55.285+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:55.285+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:43:55.303+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:43:55.303+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:43:55.327+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.483 seconds
+[2025-06-01T00:44:42.011+0200] {processor.py:161} INFO - Started process (PID=144481) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:44:42.013+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:44:42.014+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:44:42.013+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:44:43.252+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:44:43.626+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:44:43.988+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:44:44.359+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:44:44.608+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:44:44.848+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:44:45.206+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:44:45.211+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:44:45.270+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:44:45.269+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:44:45.283+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:44:45.283+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:44:45.309+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.305 seconds
+[2025-06-01T00:45:33.145+0200] {processor.py:161} INFO - Started process (PID=144661) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:45:33.146+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:45:33.147+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:45:33.146+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:45:34.126+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:45:34.719+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:45:35.400+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:45:35.649+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:45:35.960+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:45:36.397+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:45:36.627+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:45:36.633+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:45:36.703+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:45:36.702+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:45:36.715+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:45:36.715+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:45:36.734+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.595 seconds
+[2025-06-01T00:46:23.321+0200] {processor.py:161} INFO - Started process (PID=144842) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:46:23.322+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:46:23.323+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:46:23.323+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:46:24.272+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:46:24.712+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:46:24.956+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:46:25.217+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:46:25.539+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:46:25.776+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:46:25.977+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:46:25.980+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:46:25.988+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:46:25.987+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:46:26.002+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:46:26.002+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:46:26.020+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.709 seconds
+[2025-06-01T00:47:11.951+0200] {processor.py:161} INFO - Started process (PID=145023) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:47:11.953+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:47:11.954+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:47:11.954+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:47:12.845+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:47:13.085+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:47:13.307+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:47:13.594+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:47:13.844+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:47:14.432+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:47:14.675+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:47:14.677+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:47:14.740+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:47:14.739+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:47:14.750+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:47:14.749+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:47:14.768+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.831 seconds
+[2025-06-01T00:48:00.214+0200] {processor.py:161} INFO - Started process (PID=145193) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:00.216+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:48:00.216+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:00.216+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:01.042+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:48:01.297+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:48:01.562+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:48:01.798+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:48:02.042+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:48:02.280+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:48:02.530+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:48:02.536+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:02.611+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:02.610+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:48:02.622+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:02.622+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:48:02.643+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.436 seconds
+[2025-06-01T00:48:48.057+0200] {processor.py:161} INFO - Started process (PID=145371) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:48.059+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:48:48.059+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:48.059+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:49.082+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:48:49.900+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:48:50.124+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:48:50.367+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:48:50.576+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:48:50.834+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:48:51.065+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:48:51.069+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:48:51.078+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:51.077+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:48:51.093+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:48:51.093+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:48:51.113+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.063 seconds
+[2025-06-01T00:49:36.642+0200] {processor.py:161} INFO - Started process (PID=145529) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:49:36.644+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:49:36.644+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:49:36.644+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:49:37.533+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:49:37.793+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:49:38.137+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:49:38.615+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:49:38.846+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:49:39.072+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:49:39.306+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:49:39.310+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:49:39.324+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:49:39.323+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:49:39.337+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:49:39.337+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:49:39.362+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.727 seconds
+[2025-06-01T00:50:27.863+0200] {processor.py:161} INFO - Started process (PID=145733) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:50:27.865+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:50:27.866+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:50:27.866+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:50:28.662+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:50:28.910+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:50:29.127+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:50:29.368+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:50:29.584+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:50:29.917+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:50:30.149+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:50:30.154+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:50:30.218+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:50:30.217+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:50:30.228+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:50:30.228+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:50:30.246+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.396 seconds
+[2025-06-01T00:51:16.751+0200] {processor.py:161} INFO - Started process (PID=145894) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:51:16.752+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:51:16.753+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:51:16.753+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:51:17.503+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:51:17.733+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:51:17.951+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:51:18.194+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:51:18.488+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:51:18.711+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:51:19.038+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:51:19.045+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:51:19.055+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:51:19.055+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:51:19.069+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:51:19.069+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:51:19.090+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.345 seconds
+[2025-06-01T00:52:05.851+0200] {processor.py:161} INFO - Started process (PID=146075) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:05.852+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:52:05.853+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:05.852+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:06.507+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:52:06.730+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:52:07.002+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:52:07.303+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:52:07.574+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:52:07.801+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:52:08.136+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:52:08.138+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:08.208+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:08.208+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:52:08.222+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:08.222+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:52:08.239+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.394 seconds
+[2025-06-01T00:52:54.661+0200] {processor.py:161} INFO - Started process (PID=146247) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:54.663+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:52:54.664+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:54.664+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:55.581+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:52:55.856+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:52:56.233+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:52:56.619+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:52:56.841+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:52:57.092+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:52:57.331+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:52:57.340+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:52:57.350+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:57.350+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:52:57.361+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:52:57.361+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:52:57.381+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.725 seconds
+[2025-06-01T00:53:44.744+0200] {processor.py:161} INFO - Started process (PID=146431) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:53:44.746+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:53:44.747+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:53:44.747+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:53:45.522+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:53:45.778+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:53:46.016+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:53:46.255+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:53:46.533+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:53:46.814+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:53:47.043+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:53:47.050+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:53:47.112+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:53:47.112+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:53:47.123+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:53:47.123+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:53:47.144+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 2.410 seconds
+[2025-06-01T00:54:27.104+0200] {processor.py:161} INFO - Started process (PID=146584) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:54:27.105+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:54:27.106+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:54:27.106+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:54:28.942+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:54:29.166+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:54:29.403+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:54:29.638+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:54:29.961+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:54:30.170+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:54:30.384+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:54:30.387+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:54:30.399+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:54:30.399+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:54:30.418+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:54:30.418+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:54:30.439+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.340 seconds
+[2025-06-01T00:55:15.460+0200] {processor.py:161} INFO - Started process (PID=146754) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:55:15.461+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:55:15.462+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:55:15.462+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:55:16.869+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:55:17.099+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:55:17.447+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:55:17.749+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:55:17.981+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:55:18.226+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:55:18.639+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:55:18.646+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:55:18.656+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:55:18.656+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:55:18.669+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:55:18.669+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:55:18.691+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.237 seconds
+[2025-06-01T00:56:02.594+0200] {processor.py:161} INFO - Started process (PID=146931) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:02.596+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:56:02.597+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:02.596+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:03.611+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:56:03.924+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:56:04.390+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:56:04.960+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:56:05.224+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:56:05.490+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:56:05.790+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:56:05.795+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:05.858+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:05.858+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:56:05.869+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:05.869+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:56:05.890+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.303 seconds
+[2025-06-01T00:56:50.580+0200] {processor.py:161} INFO - Started process (PID=147111) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:50.581+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:56:50.582+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:50.582+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:51.617+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:56:51.902+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:56:52.312+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:56:53.181+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:56:53.451+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:56:53.736+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:56:53.928+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:56:53.932+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:56:53.941+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:53.940+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:56:53.953+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:56:53.953+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:56:53.968+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.393 seconds
+[2025-06-01T00:57:39.421+0200] {processor.py:161} INFO - Started process (PID=147282) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:57:39.423+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:57:39.424+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:57:39.423+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:57:40.489+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:57:41.339+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:57:41.599+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:57:41.819+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:57:42.184+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:57:42.530+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:57:42.758+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:57:42.763+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:57:42.830+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:57:42.830+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:57:42.843+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:57:42.843+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:57:42.860+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.444 seconds
+[2025-06-01T00:58:30.490+0200] {processor.py:161} INFO - Started process (PID=147463) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:58:30.491+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:58:30.493+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:58:30.492+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:58:31.291+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:58:31.559+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:58:31.865+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:58:32.323+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:58:33.146+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:58:33.584+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:58:33.800+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:58:33.806+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:58:33.818+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:58:33.818+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:58:33.834+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:58:33.834+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:58:33.852+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.367 seconds
+[2025-06-01T00:59:19.550+0200] {processor.py:161} INFO - Started process (PID=147643) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:59:19.551+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T00:59:19.552+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:59:19.551+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:59:20.575+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T00:59:21.076+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T00:59:21.565+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T00:59:21.854+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T00:59:22.101+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T00:59:22.325+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T00:59:22.577+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T00:59:22.583+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T00:59:22.597+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:59:22.596+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T00:59:22.610+0200] {logging_mixin.py:188} INFO - [2025-06-01T00:59:22.610+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T00:59:22.625+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 3.081 seconds
+[2025-06-01T01:00:09.120+0200] {processor.py:161} INFO - Started process (PID=147799) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T01:00:09.121+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-01T01:00:09.122+0200] {logging_mixin.py:188} INFO - [2025-06-01T01:00:09.122+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T01:00:10.212+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour SP500 (SP500)
+[2025-06-01T01:00:11.130+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-01T01:00:12.685+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-01T01:00:13.186+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour HY_SPREAD (BAMLH0A0HYM2)
+[2025-06-01T01:00:13.703+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour LONG_SPREAD (T10Y2Y)
+[2025-06-01T01:00:14.027+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-01T01:00:14.292+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-01T01:00:14.297+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-01T01:00:14.358+0200] {logging_mixin.py:188} INFO - [2025-06-01T01:00:14.358+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-01T01:00:14.368+0200] {logging_mixin.py:188} INFO - [2025-06-01T01:00:14.368+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-05-31 08:00:00+00:00, run_after=2025-06-01 08:00:00+00:00
+[2025-06-01T01:00:14.387+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 5.272 seconds

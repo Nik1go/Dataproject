@@ -1,0 +1,49 @@
+[2025-06-02T14:40:01.662+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-02T14:40:01.674+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.run_countercyclical_strategy manual__2025-06-02T12:15:15.689116+00:00 [queued]>
+[2025-06-02T14:40:01.678+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.run_countercyclical_strategy manual__2025-06-02T12:15:15.689116+00:00 [queued]>
+[2025-06-02T14:40:01.679+0200] {taskinstance.py:2303} INFO - Starting attempt 3 of 3
+[2025-06-02T14:40:01.692+0200] {taskinstance.py:2327} INFO - Executing <Task(SparkSubmitOperator): run_countercyclical_strategy> on 2025-06-02 12:15:15.689116+00:00
+[2025-06-02T14:40:01.698+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'run_countercyclical_strategy', 'manual__2025-06-02T12:15:15.689116+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp34ps73b7']
+[2025-06-02T14:40:01.699+0200] {standard_task_runner.py:91} INFO - Job 84: Subtask run_countercyclical_strategy
+[2025-06-02T14:40:01.701+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=95470) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-02T14:40:01.702+0200] {standard_task_runner.py:63} INFO - Started process 95513 to run task
+[2025-06-02T14:40:01.730+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.run_countercyclical_strategy manual__2025-06-02T12:15:15.689116+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-02T14:40:01.782+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='run_countercyclical_strategy' AIRFLOW_CTX_EXECUTION_DATE='2025-06-02T12:15:15.689116+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-02T12:15:15.689116+00:00'
+[2025-06-02T14:40:01.784+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-02T14:40:01.787+0200] {base.py:84} INFO - Using connection ID 'spark_default' for task execution.
+[2025-06-02T14:40:01.788+0200] {spark_submit.py:351} INFO - Spark-Submit cmd: spark-submit --master yarn --name arrow-spark --queue root.default /home/leoja/airflow/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results
+[2025-06-02T14:40:03.281+0200] {spark_submit.py:521} INFO - 25/06/02 14:40:03 WARN Utils: Your hostname, N15I711-16GR512 resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[2025-06-02T14:40:03.284+0200] {spark_submit.py:521} INFO - 25/06/02 14:40:03 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2025-06-02T14:40:03.355+0200] {spark_submit.py:521} INFO - Exception in thread "main" org.apache.spark.SparkException: When running with master 'yarn' either HADOOP_CONF_DIR or YARN_CONF_DIR must be set in the environment.
+[2025-06-02T14:40:03.355+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.error(SparkSubmitArguments.scala:650)
+[2025-06-02T14:40:03.355+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateSubmitArguments(SparkSubmitArguments.scala:281)
+[2025-06-02T14:40:03.355+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateArguments(SparkSubmitArguments.scala:237)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.<init>(SparkSubmitArguments.scala:122)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2$$anon$3.<init>(SparkSubmit.scala:1108)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.parseArguments(SparkSubmit.scala:1108)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:86)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+[2025-06-02T14:40:03.356+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-06-02T14:40:03.367+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-02T14:40:03.371+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 156, in execute
+    self._hook.submit(self._application)
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 452, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark --queue root.default /home/leoja/airflow/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results. Error code is: 1.
+[2025-06-02T14:40:03.374+0200] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=macro_trading_dag, task_id=run_countercyclical_strategy, execution_date=20250602T121515, start_date=20250602T124001, end_date=20250602T124003
+[2025-06-02T14:40:03.385+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 84 for task run_countercyclical_strategy (Cannot execute: spark-submit --master yarn --name arrow-spark --queue root.default /home/leoja/airflow/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results. Error code is: 1.; 95513)
+[2025-06-02T14:40:03.401+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-02T14:40:03.411+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-02T14:40:03.411+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

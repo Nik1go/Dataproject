@@ -1,0 +1,62 @@
+[2025-05-31T00:51:48.573+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-31T00:51:48.584+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.run_countercyclical_strategy scheduled__2025-05-29T08:00:00+00:00 [queued]>
+[2025-05-31T00:51:48.587+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.run_countercyclical_strategy scheduled__2025-05-29T08:00:00+00:00 [queued]>
+[2025-05-31T00:51:48.588+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-05-31T00:51:48.602+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): run_countercyclical_strategy> on 2025-05-29 08:00:00+00:00
+[2025-05-31T00:51:48.609+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'run_countercyclical_strategy', 'scheduled__2025-05-29T08:00:00+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmpqcr6b2vc']
+[2025-05-31T00:51:48.610+0200] {standard_task_runner.py:91} INFO - Job 70: Subtask run_countercyclical_strategy
+[2025-05-31T00:51:48.619+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=123323) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-31T00:51:48.620+0200] {standard_task_runner.py:63} INFO - Started process 123357 to run task
+[2025-05-31T00:51:48.662+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.run_countercyclical_strategy scheduled__2025-05-29T08:00:00+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-05-31T00:51:48.749+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='run_countercyclical_strategy' AIRFLOW_CTX_EXECUTION_DATE='2025-05-29T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-29T08:00:00+00:00'
+[2025-05-31T00:51:48.751+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-31T00:51:48.755+0200] {baseoperator.py:399} WARNING - SparkSubmitOperator.execute cannot be called outside TaskInstance!
+[2025-05-31T00:51:48.764+0200] {base.py:84} INFO - Using connection ID 'spark_default' for task execution.
+[2025-05-31T00:51:48.765+0200] {spark_submit.py:351} INFO - Spark-Submit cmd: spark-submit --master yarn --name arrow-spark --queue root.default /path/to/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results
+[2025-05-31T00:51:51.572+0200] {spark_submit.py:521} INFO - 25/05/31 00:51:51 WARN Utils: Your hostname, N15I711-16GR512 resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[2025-05-31T00:51:51.576+0200] {spark_submit.py:521} INFO - 25/05/31 00:51:51 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2025-05-31T00:51:51.637+0200] {spark_submit.py:521} INFO - Exception in thread "main" org.apache.spark.SparkException: When running with master 'yarn' either HADOOP_CONF_DIR or YARN_CONF_DIR must be set in the environment.
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.error(SparkSubmitArguments.scala:650)
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateSubmitArguments(SparkSubmitArguments.scala:281)
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.validateArguments(SparkSubmitArguments.scala:237)
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmitArguments.<init>(SparkSubmitArguments.scala:122)
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2$$anon$3.<init>(SparkSubmit.scala:1108)
+[2025-05-31T00:51:51.638+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.parseArguments(SparkSubmit.scala:1108)
+[2025-05-31T00:51:51.639+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:86)
+[2025-05-31T00:51:51.639+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+[2025-05-31T00:51:51.639+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+[2025-05-31T00:51:51.639+0200] {spark_submit.py:521} INFO - at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-05-31T00:51:51.648+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-31T00:51:51.651+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/dags/macro_trading_dag.py", line 130, in run_strategy_with_spark
+    ).execute(context=kwargs)
+      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 156, in execute
+    self._hook.submit(self._application)
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 452, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark --queue root.default /path/to/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results. Error code is: 1.
+[2025-05-31T00:51:51.663+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=run_countercyclical_strategy, execution_date=20250529T080000, start_date=20250530T225148, end_date=20250530T225151
+[2025-05-31T00:51:51.684+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 70 for task run_countercyclical_strategy (Cannot execute: spark-submit --master yarn --name arrow-spark --queue root.default /path/to/scripts/spark_strategy.py --input /home/leoja/airflow/data/combined_spreads.csv --output /home/leoja/airflow/data/results. Error code is: 1.; 123357)
+[2025-05-31T00:51:51.689+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-31T00:51:51.699+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-31T00:51:51.699+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

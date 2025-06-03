@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="373aec1a-0771-40df-9b65-aa530073233e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../airflow\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/dags" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://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@github.com/Nik1go/Macro_project_data.git",
+    "accountId": "7a1d11b6-e300-4a78-9274-9a55d91a831b"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2x2Cd8D9byPoQLhX9KIUMf2HJdZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.pytest in macro_trading_dag.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in my_first_dag.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest in test_api_connections.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.macro_trading_dag.executor&quot;: &quot;Run&quot;,
+    &quot;Python.my_first_dag.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spark_combine.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spark_quadrant.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spark_strategy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spark_transform.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webserver_config.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\ubuntu\home\leoja\airflow\data\raw" />
+      <recent name="\\wsl$\ubuntu\home\leoja\airflow\data" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="373aec1a-0771-40df-9b65-aa530073233e" name="Changes" comment="" />
+      <created>1747126866614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747126866614</updated>
+      <workItem from="1747126867760" duration="7640000" />
+      <workItem from="1747733009601" duration="2379000" />
+      <workItem from="1747761373566" duration="30605000" />
+      <workItem from="1747853888682" duration="1258000" />
+      <workItem from="1748077124902" duration="1732000" />
+      <workItem from="1748369045096" duration="1370000" />
+      <workItem from="1748435638981" duration="11635000" />
+      <workItem from="1748792697297" duration="16298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/airflow$my_first_dag.coverage" NAME="my_first_dag Coverage Results" MODIFIED="1747830546097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+    <SUITE FILE_PATH="coverage/airflow$pytest_in_test_api_connections_py.coverage" NAME="pytest in test_api_connections.py Coverage Results" MODIFIED="1748800093440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/airflow$spark_combine.coverage" NAME="spark_combine Coverage Results" MODIFIED="1748446480020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$pytest_in_my_first_dag_py.coverage" NAME="pytest in my_first_dag.py Coverage Results" MODIFIED="1747827751430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+    <SUITE FILE_PATH="coverage/airflow$spark_strategy.coverage" NAME="spark_strategy Coverage Results" MODIFIED="1748516986849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/airflow$webserver_config.coverage" NAME="webserver_config Coverage Results" MODIFIED="1747128066826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/airflow$pytest_in_macro_trading_dag_py.coverage" NAME="pytest in macro_trading_dag.py Coverage Results" MODIFIED="1747845979334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+    <SUITE FILE_PATH="coverage/airflow$spark_transform.coverage" NAME="spark_transform Coverage Results" MODIFIED="1747775951008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$spark_quadrant.coverage" NAME="spark_quadrant Coverage Results" MODIFIED="1748438672763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$macro_trading_dag.coverage" NAME="macro_trading_dag Coverage Results" MODIFIED="1748938445664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+  </component>
+</project>
