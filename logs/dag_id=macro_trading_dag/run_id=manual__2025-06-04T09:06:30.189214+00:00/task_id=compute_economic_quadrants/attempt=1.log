@@ -1,0 +1,41 @@
+[2025-06-04T11:06:51.839+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-04T11:06:51.849+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.compute_economic_quadrants manual__2025-06-04T09:06:30.189214+00:00 [queued]>
+[2025-06-04T11:06:51.853+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.compute_economic_quadrants manual__2025-06-04T09:06:30.189214+00:00 [queued]>
+[2025-06-04T11:06:51.853+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-06-04T11:06:51.866+0200] {taskinstance.py:2327} INFO - Executing <Task(SparkSubmitOperator): compute_economic_quadrants> on 2025-06-04 09:06:30.189214+00:00
+[2025-06-04T11:06:51.876+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'compute_economic_quadrants', 'manual__2025-06-04T09:06:30.189214+00:00', '--job-id', '219', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp3jiuu767']
+[2025-06-04T11:06:51.877+0200] {standard_task_runner.py:91} INFO - Job 219: Subtask compute_economic_quadrants
+[2025-06-04T11:06:51.891+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=334663) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-04T11:06:51.892+0200] {standard_task_runner.py:63} INFO - Started process 334707 to run task
+[2025-06-04T11:06:51.936+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.compute_economic_quadrants manual__2025-06-04T09:06:30.189214+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-04T11:06:52.003+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='compute_economic_quadrants' AIRFLOW_CTX_EXECUTION_DATE='2025-06-04T09:06:30.189214+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-04T09:06:30.189214+00:00'
+[2025-06-04T11:06:52.004+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-04T11:06:52.008+0200] {base.py:84} INFO - Using connection ID 'spark_local' for task execution.
+[2025-06-04T11:06:52.008+0200] {spark_submit.py:351} INFO - Spark-Submit cmd: spark-submit --master local[*] --name compute_economic_quadrants /home/airflow/spark_jobs/compute_quadrants.py /home/leoja/airflow/data/Indicators.parquet /home/leoja/airflow/data/quadrants.parquet
+[2025-06-04T11:06:53.713+0200] {spark_submit.py:521} INFO - 25/06/04 11:06:53 WARN Utils: Your hostname, N15I711-16GR512 resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[2025-06-04T11:06:53.716+0200] {spark_submit.py:521} INFO - 25/06/04 11:06:53 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2025-06-04T11:06:54.199+0200] {spark_submit.py:521} INFO - python3: can't open file '/home/airflow/spark_jobs/compute_quadrants.py': [Errno 2] No such file or directory
+[2025-06-04T11:06:54.213+0200] {spark_submit.py:521} INFO - 25/06/04 11:06:54 INFO ShutdownHookManager: Shutdown hook called
+[2025-06-04T11:06:54.214+0200] {spark_submit.py:521} INFO - 25/06/04 11:06:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-3f45fddf-ebea-4dcc-8ecf-1ad0097e942a
+[2025-06-04T11:06:54.249+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-04T11:06:54.252+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 156, in execute
+    self._hook.submit(self._application)
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 452, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local[*] --name compute_economic_quadrants /home/airflow/spark_jobs/compute_quadrants.py /home/leoja/airflow/data/Indicators.parquet /home/leoja/airflow/data/quadrants.parquet. Error code is: 2.
+[2025-06-04T11:06:54.256+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=compute_economic_quadrants, execution_date=20250604T090630, start_date=20250604T090651, end_date=20250604T090654
+[2025-06-04T11:06:54.280+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 219 for task compute_economic_quadrants (Cannot execute: spark-submit --master local[*] --name compute_economic_quadrants /home/airflow/spark_jobs/compute_quadrants.py /home/leoja/airflow/data/Indicators.parquet /home/leoja/airflow/data/quadrants.parquet. Error code is: 2.; 334707)
+[2025-06-04T11:06:54.319+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-04T11:06:54.326+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-04T11:06:54.327+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

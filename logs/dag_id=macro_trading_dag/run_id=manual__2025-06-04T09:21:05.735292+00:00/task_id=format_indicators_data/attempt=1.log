@@ -1,0 +1,28 @@
+[2025-06-04T11:21:25.053+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-04T11:21:25.066+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.format_indicators_data manual__2025-06-04T09:21:05.735292+00:00 [queued]>
+[2025-06-04T11:21:25.069+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.format_indicators_data manual__2025-06-04T09:21:05.735292+00:00 [queued]>
+[2025-06-04T11:21:25.070+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-06-04T11:21:25.081+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): format_indicators_data> on 2025-06-04 09:21:05.735292+00:00
+[2025-06-04T11:21:25.087+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'format_indicators_data', 'manual__2025-06-04T09:21:05.735292+00:00', '--job-id', '227', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp7nqw0_r5']
+[2025-06-04T11:21:25.090+0200] {standard_task_runner.py:91} INFO - Job 227: Subtask format_indicators_data
+[2025-06-04T11:21:25.098+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=340662) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-04T11:21:25.099+0200] {standard_task_runner.py:63} INFO - Started process 340732 to run task
+[2025-06-04T11:21:25.131+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.format_indicators_data manual__2025-06-04T09:21:05.735292+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-04T11:21:25.191+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='format_indicators_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-04T09:21:05.735292+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-04T09:21:05.735292+00:00'
+[2025-06-04T11:21:25.192+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-04T11:21:25.219+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/dags/macro_trading_dag.py:183 FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.
+[2025-06-04T11:21:25.256+0200] {logging_mixin.py:188} INFO - Données Indicators mensuelles nettoyées sauvegardées: /home/leoja/airflow/data/Indicators.parquet
+[2025-06-04T11:21:25.270+0200] {logging_mixin.py:188} INFO -            date  ...  10-2Year_Treasury_Yield_Bond
+241  2025-02-28  ...                          0.25
+242  2025-03-31  ...                          0.34
+243  2025-04-30  ...                          0.57
+244  2025-05-31  ...                          0.52
+245  2025-06-30  ...                          0.50
+
+[5 rows x 6 columns]
+[2025-06-04T11:21:25.271+0200] {python.py:237} INFO - Done. Returned value was: /home/leoja/airflow/data/Indicators.parquet
+[2025-06-04T11:21:25.271+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-04T11:21:25.289+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=macro_trading_dag, task_id=format_indicators_data, execution_date=20250604T092105, start_date=20250604T092125, end_date=20250604T092125
+[2025-06-04T11:21:25.354+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-04T11:21:25.366+0200] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-04T11:21:25.372+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

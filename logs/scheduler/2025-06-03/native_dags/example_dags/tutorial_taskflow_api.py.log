@@ -5262,3 +5262,311 @@
 [2025-06-03T23:36:38.310+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:36:38.309+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-03T23:36:38.318+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:36:38.318+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
 [2025-06-03T23:36:38.337+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.051 seconds
+[2025-06-03T23:37:25.375+0200] {processor.py:161} INFO - Started process (PID=310202) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:37:25.377+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:37:25.378+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:37:25.377+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:37:25.383+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:37:25.399+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:37:25.399+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:37:25.409+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:37:25.409+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:37:25.433+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.062 seconds
+[2025-06-03T23:38:10.973+0200] {processor.py:161} INFO - Started process (PID=310628) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:10.975+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:38:10.976+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:10.975+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:10.981+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:10.997+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:10.996+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:38:11.006+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:11.006+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:38:11.039+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.075 seconds
+[2025-06-03T23:38:58.177+0200] {processor.py:161} INFO - Started process (PID=310958) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:58.179+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:38:58.180+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:58.180+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:58.188+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:38:58.212+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:58.212+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:38:58.228+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:38:58.227+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:38:58.253+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.082 seconds
+[2025-06-03T23:39:42.070+0200] {processor.py:161} INFO - Started process (PID=311310) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:39:42.071+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:39:42.073+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:39:42.072+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:39:42.081+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:39:42.099+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:39:42.098+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:39:42.112+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:39:42.112+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:39:42.144+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.081 seconds
+[2025-06-03T23:40:29.467+0200] {processor.py:161} INFO - Started process (PID=311561) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:40:29.468+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:40:29.469+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:40:29.469+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:40:29.474+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:40:29.486+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:40:29.486+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:40:29.494+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:40:29.494+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:40:29.513+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.051 seconds
+[2025-06-03T23:41:15.900+0200] {processor.py:161} INFO - Started process (PID=311713) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:41:15.901+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:41:15.902+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:41:15.902+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:41:15.907+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:41:15.920+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:41:15.920+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:41:15.929+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:41:15.928+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:41:15.948+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.053 seconds
+[2025-06-03T23:42:04.191+0200] {processor.py:161} INFO - Started process (PID=311881) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:04.192+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:42:04.192+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:04.192+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:04.198+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:04.210+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:04.210+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:42:04.219+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:04.219+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:42:04.239+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.053 seconds
+[2025-06-03T23:42:47.981+0200] {processor.py:161} INFO - Started process (PID=312031) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:47.982+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:42:47.983+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:47.983+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:47.988+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:42:48.000+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:48.000+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:42:48.008+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:42:48.007+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:42:48.024+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-03T23:43:31.383+0200] {processor.py:161} INFO - Started process (PID=312179) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:43:31.384+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:43:31.385+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:43:31.384+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:43:31.392+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:43:31.403+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:43:31.403+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:43:31.411+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:43:31.411+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:43:31.427+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-03T23:44:17.649+0200] {processor.py:161} INFO - Started process (PID=312346) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:44:17.650+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:44:17.651+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:44:17.650+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:44:17.656+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:44:17.667+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:44:17.667+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:44:17.675+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:44:17.675+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:44:17.691+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-03T23:45:03.845+0200] {processor.py:161} INFO - Started process (PID=312520) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:03.847+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:45:03.847+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:03.847+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:03.853+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:03.865+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:03.864+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:45:03.873+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:03.873+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:45:03.985+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.146 seconds
+[2025-06-03T23:45:49.582+0200] {processor.py:161} INFO - Started process (PID=312670) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:49.583+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:45:49.583+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:49.583+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:49.588+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:45:49.600+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:49.599+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:45:49.607+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:45:49.607+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:45:49.623+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.046 seconds
+[2025-06-03T23:46:37.523+0200] {processor.py:161} INFO - Started process (PID=312836) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:46:37.524+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:46:37.524+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:46:37.524+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:46:37.531+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:46:37.542+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:46:37.542+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:46:37.551+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:46:37.551+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:46:37.570+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.051 seconds
+[2025-06-03T23:47:25.353+0200] {processor.py:161} INFO - Started process (PID=312989) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:47:25.355+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:47:25.355+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:47:25.355+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:47:25.360+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:47:25.372+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:47:25.372+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:47:25.381+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:47:25.381+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:47:25.398+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.049 seconds
+[2025-06-03T23:48:13.060+0200] {processor.py:161} INFO - Started process (PID=313162) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:48:13.062+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:48:13.063+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:48:13.063+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:48:13.068+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:48:13.080+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:48:13.080+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:48:13.088+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:48:13.088+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:48:13.106+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.050 seconds
+[2025-06-03T23:49:00.888+0200] {processor.py:161} INFO - Started process (PID=313329) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:00.889+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:49:00.890+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:00.889+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:00.897+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:00.908+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:00.908+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:49:00.918+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:00.918+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:49:00.937+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.057 seconds
+[2025-06-03T23:49:46.637+0200] {processor.py:161} INFO - Started process (PID=313478) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:46.638+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:49:46.639+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:46.638+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:46.645+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:49:46.656+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:46.656+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:49:46.667+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:49:46.667+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:49:46.687+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.054 seconds
+[2025-06-03T23:50:31.344+0200] {processor.py:161} INFO - Started process (PID=313652) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:50:31.345+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:50:31.346+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:50:31.345+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:50:31.352+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:50:31.364+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:50:31.364+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:50:31.372+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:50:31.372+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:50:31.389+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.051 seconds
+[2025-06-03T23:51:15.777+0200] {processor.py:161} INFO - Started process (PID=313795) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:15.778+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:51:15.779+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:15.779+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:15.787+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:15.802+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:15.801+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:51:15.809+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:15.809+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:51:15.828+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.059 seconds
+[2025-06-03T23:51:57.616+0200] {processor.py:161} INFO - Started process (PID=313944) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:57.617+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:51:57.618+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:57.618+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:57.623+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:51:57.634+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:57.634+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:51:57.642+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:51:57.642+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:51:57.658+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.046 seconds
+[2025-06-03T23:52:43.211+0200] {processor.py:161} INFO - Started process (PID=314113) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:52:43.212+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:52:43.213+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:52:43.213+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:52:43.218+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:52:43.229+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:52:43.229+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:52:43.237+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:52:43.237+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:52:43.252+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.045 seconds
+[2025-06-03T23:53:27.671+0200] {processor.py:161} INFO - Started process (PID=314255) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:53:27.672+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:53:27.673+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:53:27.672+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:53:27.678+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:53:27.688+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:53:27.688+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:53:27.696+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:53:27.696+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:53:27.714+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-03T23:54:15.386+0200] {processor.py:161} INFO - Started process (PID=314431) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:54:15.387+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:54:15.388+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:54:15.388+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:54:15.394+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:54:15.406+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:54:15.405+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:54:15.413+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:54:15.413+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:54:15.431+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.049 seconds
+[2025-06-03T23:55:01.778+0200] {processor.py:161} INFO - Started process (PID=314654) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:01.779+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:55:01.780+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:01.779+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:01.785+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:01.798+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:01.798+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:55:01.807+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:01.807+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:55:01.827+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.055 seconds
+[2025-06-03T23:55:49.993+0200] {processor.py:161} INFO - Started process (PID=314924) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:49.995+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:55:49.995+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:49.995+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:50.001+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:55:50.012+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:50.012+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:55:50.020+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:55:50.020+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:55:50.037+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-03T23:56:35.989+0200] {processor.py:161} INFO - Started process (PID=315097) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:56:35.990+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:56:35.991+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:56:35.991+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:56:35.995+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:56:36.008+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:56:36.007+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:56:36.015+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:56:36.015+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:56:36.032+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-03T23:57:22.658+0200] {processor.py:161} INFO - Started process (PID=315252) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:57:22.659+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:57:22.660+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:57:22.660+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:57:22.665+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:57:22.677+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:57:22.677+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:57:22.685+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:57:22.685+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:57:22.704+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.050 seconds
+[2025-06-03T23:58:09.358+0200] {processor.py:161} INFO - Started process (PID=315417) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:09.359+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:58:09.360+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:09.360+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:09.366+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:09.377+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:09.377+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:58:09.387+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:09.387+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:58:09.407+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.058 seconds
+[2025-06-03T23:58:54.384+0200] {processor.py:161} INFO - Started process (PID=315568) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:54.386+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:58:54.387+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:54.387+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:54.394+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:58:54.408+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:54.408+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:58:54.417+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:58:54.417+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:58:54.435+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.056 seconds
+[2025-06-03T23:59:42.409+0200] {processor.py:161} INFO - Started process (PID=315742) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:59:42.411+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-03T23:59:42.412+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:59:42.411+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:59:42.417+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-03T23:59:42.428+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:59:42.428+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-03T23:59:42.435+0200] {logging_mixin.py:188} INFO - [2025-06-03T23:59:42.435+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-03T23:59:42.452+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-04T00:00:29.450+0200] {processor.py:161} INFO - Started process (PID=316002) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:00:29.451+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:00:29.452+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:00:29.451+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:00:29.457+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:00:29.468+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:00:29.468+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:00:29.475+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:00:29.475+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:00:29.505+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.059 seconds
+[2025-06-04T00:01:16.693+0200] {processor.py:161} INFO - Started process (PID=316175) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:01:16.694+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:01:16.695+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:01:16.695+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:01:16.701+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:01:16.714+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:01:16.713+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:01:16.722+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:01:16.722+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:01:16.740+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.052 seconds
+[2025-06-04T00:02:04.642+0200] {processor.py:161} INFO - Started process (PID=316348) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:04.643+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:02:04.644+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:04.643+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:04.650+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:04.663+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:04.663+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:02:04.672+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:04.672+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:02:04.689+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.052 seconds
+[2025-06-04T00:02:50.599+0200] {processor.py:161} INFO - Started process (PID=316492) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:50.600+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:02:50.600+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:50.600+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:50.606+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:02:50.617+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:50.617+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:02:50.625+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:02:50.625+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:02:50.648+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.054 seconds
+[2025-06-04T00:03:35.681+0200] {processor.py:161} INFO - Started process (PID=316663) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:03:35.682+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:03:35.683+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:03:35.683+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:03:35.688+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:03:35.699+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:03:35.699+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:03:35.707+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:03:35.707+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:03:35.723+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-04T00:04:19.422+0200] {processor.py:161} INFO - Started process (PID=316812) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:04:19.424+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:04:19.424+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:04:19.424+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:04:19.430+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:04:19.441+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:04:19.441+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:04:19.449+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:04:19.448+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:04:19.464+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.047 seconds
+[2025-06-04T00:05:06.907+0200] {processor.py:161} INFO - Started process (PID=316957) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:06.908+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:05:06.909+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:06.908+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:06.914+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:06.925+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:06.925+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:05:06.933+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:06.933+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:05:06.949+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.046 seconds
+[2025-06-04T00:05:51.956+0200] {processor.py:161} INFO - Started process (PID=317128) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:51.957+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:05:51.958+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:51.957+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:51.964+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:05:51.975+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:51.974+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:05:51.987+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:05:51.987+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:05:52.004+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.052 seconds
+[2025-06-04T00:06:41.022+0200] {processor.py:161} INFO - Started process (PID=317301) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:06:41.023+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:06:41.024+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:06:41.023+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:06:41.029+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:06:41.041+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:06:41.040+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:06:41.049+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:06:41.048+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:06:41.066+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-04T00:07:25.309+0200] {processor.py:161} INFO - Started process (PID=317446) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:07:25.311+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:07:25.312+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:07:25.312+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:07:25.319+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:07:25.336+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:07:25.335+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:07:25.351+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:07:25.350+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:07:25.378+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.075 seconds
+[2025-06-04T00:08:10.911+0200] {processor.py:161} INFO - Started process (PID=317616) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:10.912+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:08:10.913+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:10.912+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:10.918+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:10.929+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:10.929+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:08:10.937+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:10.937+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:08:10.954+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-04T00:08:59.928+0200] {processor.py:161} INFO - Started process (PID=317767) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:59.929+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:08:59.929+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:59.929+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:59.934+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:08:59.946+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:59.946+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:08:59.954+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:08:59.954+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:08:59.971+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.048 seconds
+[2025-06-04T00:09:46.774+0200] {processor.py:161} INFO - Started process (PID=317941) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:09:46.775+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:09:46.776+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:09:46.776+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:09:46.781+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:09:46.792+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:09:46.792+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:09:46.801+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:09:46.801+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:09:46.820+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.051 seconds
+[2025-06-04T00:10:30.273+0200] {processor.py:161} INFO - Started process (PID=318154) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:10:30.275+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2025-06-04T00:10:30.275+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:10:30.275+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:10:30.282+0200] {processor.py:840} INFO - DAG(s) 'tutorial_taskflow_api' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2025-06-04T00:10:30.296+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:10:30.296+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-04T00:10:30.305+0200] {logging_mixin.py:188} INFO - [2025-06-04T00:10:30.305+0200] {dag.py:3954} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2025-06-04T00:10:30.324+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.057 seconds

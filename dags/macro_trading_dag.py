@@ -15,7 +15,9 @@ FRED_SERIES_MAPPING = {
     'High_Yield_Bond_SPREAD': 'BAMLH0A0HYM2',
     '10-2Year_Treasury_Yield_Bond': 'T10Y2Y',
     'CONSUMER_SENTIMENT': 'UMCSENT',
-    'BARREL PETROL': 'DCOILBRENTEU'}
+    'BARREL PETROL': 'DCOILBRENTEU',
+    'TAUX_FED': 'FEDFUNDS'}
+
 
 YF_SERIES_MAPPING = {
     'S&P500(LARGE CAP)': {'ticker': '^GSPC', 'series_id': 'SP500'},
@@ -49,7 +51,7 @@ def fetch_and_save_data(**kwargs):
             last_date = existing_data['date'].max()
             start_date = last_date + pd.Timedelta(days=1)
         else:
-            start_date = datetime(2006, 1, 1)
+            start_date = datetime(2005, 1, 1)
 
         new_data = fred.get_series(series_id, observation_start=start_date)
 
@@ -81,7 +83,7 @@ def fetch_and_save_data(**kwargs):
             last_date = existing_data['date'].max()
             start_date = last_date + pd.Timedelta(days=1)
         else:
-            start_date = datetime(2006, 1, 1)
+            start_date = datetime(2005, 1, 1)
 
         end_date = datetime.today() - timedelta(days=1)
         start_date = min(start_date, end_date)
@@ -118,7 +120,9 @@ def prepare_indicators_data(base_dir):
         'UNEMPLOYMENT',
         'CONSUMER_SENTIMENT',
         'High_Yield_Bond_SPREAD',
-        '10-2Year_Treasury_Yield_Bond'
+        '10-2Year_Treasury_Yield_Bond',
+        'TAUX_FED'
+
     ]
 
     combined_df = pd.DataFrame()
@@ -169,8 +173,12 @@ def prepare_assets_data(base_dir):
 
 
 def format_and_clean_data(base_dir, input_path, data_type):
+    print(f"→ format_and_clean_data: on lit le fichier CSV : {input_path}")
+
     # Lire les données
     df = pd.read_csv(input_path, parse_dates=['date'])
+
+    print("   Colonnes lues dans df :", df.columns.tolist())
 
     # Supprimer les lignes où toutes les valeurs sont nulles
     df = df.dropna(how='all', subset=df.columns.difference(['date']))
@@ -248,24 +256,22 @@ with (DAG(
             'data_type': 'Assets'
         }
     )
-    # Chemins Parquet générés par format_and_clean_data
-    INDICATORS_PARQUET = os.path.join(base_dir, "Indicators.parquet")
-    # Dossier (ou fichier) où on souhaite écrire le résultat quadrant
-    QUADRANT_OUTPUT = os.path.join(base_dir, "quadrants.parquet")
 
+    INDICATORS_PARQUET = os.path.join(base_dir, "Indicators.parquet")
+    QUADRANT_OUTPUT = os.path.join(base_dir, "quadrants.parquet")
 
     compute_quadrant_task = SparkSubmitOperator(
         task_id='compute_economic_quadrants',
-        application="/home/airflow/spark_jobs/compute_quadrants.py",
+        application="/home/leoja/airflow/spark_jobs/compute_quadrants.py",
         name="compute_economic_quadrants",
-        application_args=[
-            INDICATORS_PARQUET,
-            QUADRANT_OUTPUT
-        ],
-        conn_id="spark_local",
+        application_args=[INDICATORS_PARQUET, QUADRANT_OUTPUT],
+        conn_id="spark_local",  # on reste sur yank ‘spark_local’
+        conf={
+            "spark.pyspark.python": "/home/leoja/airflow_venv/bin/python",
+            "spark.pyspark.driver.python": "/home/leoja/airflow_venv/bin/python"
+        },
         verbose=False
     )
-    # ────────────────────────────────────────────────────────────────────────────
 
     # Enchaînement des tâches
     fetch_task >> [prepare_indicators_task, prepare_assets_task]
