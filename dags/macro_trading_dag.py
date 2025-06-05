@@ -209,6 +209,49 @@ def format_and_clean_data(base_dir, input_path, data_type):
 
     return output_path
 
+
+def format_and_clean_data_daily(base_dir, input_path, data_type):
+    """
+    - Lit le CSV journalier dont le chemin est input_path
+    - Supprime les jours où il manque au moins une donnée (colonnes autres que 'date')
+    - Trie par date et convertit la date en format YYYY-MM-DD (string)
+    - Écrit le DataFrame nettoyé en Parquet
+    """
+    print(f"→ format_and_clean_data_daily: on lit le fichier CSV : {input_path}")
+
+    # 1. Lecture du CSV et conversion de la colonne 'date' en datetime
+    df = pd.read_csv(input_path, parse_dates=['date'])
+    print("   Colonnes lues dans df :", df.columns.tolist())
+
+    # 2. Supprimer les lignes où TOUTES les colonnes (sauf 'date') sont nulles
+    df = df.dropna(how='all', subset=df.columns.difference(['date']))
+
+    # 3. Supprimer les lignes où AU MOINS UNE colonne (autre que 'date') est nulle
+    #    → Ainsi on retire purement et simplement tous les jours qui contiennent un ou plusieurs NULLs
+    df = df.dropna(how='any', subset=df.columns.difference(['date']))
+
+    # 4. S’assurer que la colonne 'date' est bien un datetime, puis trier
+    df['date'] = pd.to_datetime(df['date'])
+    df = df.sort_values('date')
+
+    # 5. (Optionnel) Si vous aviez besoin de réindexes sur les week-ends, etc.,
+    #    vous pourriez le faire ici, mais dans notre cas on conserve strictement
+    #    uniquement les dates présentes dans le CSV.
+
+    # 6. Convertir la date en string "YYYY-MM-DD" (c’est souvent plus simple pour lire le Parquet)
+    df['date'] = df['date'].dt.strftime('%Y-%m-%d')
+
+    # 7. Sauvegarde en Parquet
+    output_path = os.path.join(base_dir, f"{data_type}_daily.parquet")
+    df.to_parquet(output_path, index=False)
+    print(f"Données {data_type} journalières nettoyées sauvegardées : {output_path}")
+
+    # 8. Affichage d’un petit aperçu
+    print(df.head(5))
+    print(df.tail(5))
+
+    return output_path
+
 # === Configuration du DAG ===
 
 base_dir = os.path.expanduser('~/airflow/data')
@@ -249,7 +292,7 @@ with (DAG(
 
     format_assets_task = PythonOperator(
         task_id='format_assets_data',
-        python_callable=format_and_clean_data,
+        python_callable=format_and_clean_data_daily,
         op_kwargs={
             'base_dir': base_dir,
             'input_path': "{{ ti.xcom_pull(task_ids='prepare_assets_data') }}",
