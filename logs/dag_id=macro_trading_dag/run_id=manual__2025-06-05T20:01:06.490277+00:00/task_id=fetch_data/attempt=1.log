@@ -1,0 +1,45 @@
+[2025-06-05T22:01:11.104+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-05T22:01:11.120+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_data manual__2025-06-05T20:01:06.490277+00:00 [queued]>
+[2025-06-05T22:01:11.124+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.fetch_data manual__2025-06-05T20:01:06.490277+00:00 [queued]>
+[2025-06-05T22:01:11.124+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-06-05T22:01:11.139+0200] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_data> on 2025-06-05 20:01:06.490277+00:00
+[2025-06-05T22:01:11.152+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'fetch_data', 'manual__2025-06-05T20:01:06.490277+00:00', '--job-id', '289', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmppxpzr1l6']
+[2025-06-05T22:01:11.154+0200] {standard_task_runner.py:91} INFO - Job 289: Subtask fetch_data
+[2025-06-05T22:01:11.166+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=585786) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-05T22:01:11.166+0200] {standard_task_runner.py:63} INFO - Started process 585818 to run task
+[2025-06-05T22:01:11.224+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.fetch_data manual__2025-06-05T20:01:06.490277+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-05T22:01:11.321+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='fetch_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-05T20:01:06.490277+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-05T20:01:06.490277+00:00'
+[2025-06-05T22:01:11.323+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-05T22:01:12.129+0200] {logging_mixin.py:188} INFO - Données mises à jour pour INFLATION (CPIAUCSL)
+[2025-06-05T22:01:12.639+0200] {logging_mixin.py:188} INFO - Données mises à jour pour UNEMPLOYMENT (UNRATE)
+[2025-06-05T22:01:13.251+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour High_Yield_Bond_SPREAD (BAMLH0A0HYM2)
+[2025-06-05T22:01:13.848+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour 10-2Year_Treasury_Yield_Bond (T10Y2Y)
+[2025-06-05T22:01:14.863+0200] {logging_mixin.py:188} INFO - Données mises à jour pour CONSUMER_SENTIMENT (UMCSENT)
+[2025-06-05T22:01:15.810+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour BARREL PETROL (DCOILBRENTEU)
+[2025-06-05T22:01:16.945+0200] {logging_mixin.py:188} INFO - Données mises à jour pour TAUX_FED (FEDFUNDS)
+[2025-06-05T22:01:17.377+0200] {multi.py:184} ERROR - 
+1 Failed download:
+[2025-06-05T22:01:17.377+0200] {multi.py:197} ERROR - ['^GSPC']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-06-04 22:01:16.953815 -> 2025-06-04 22:01:16.953815)')
+[2025-06-05T22:01:17.389+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour S&P500(LARGE CAP) (SP500)
+[2025-06-05T22:01:17.478+0200] {multi.py:184} ERROR - 
+1 Failed download:
+[2025-06-05T22:01:17.479+0200] {multi.py:197} ERROR - ['GC=F']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-06-04 22:01:17.405473 -> 2025-06-04 22:01:17.405473)')
+[2025-06-05T22:01:17.481+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour GOLD_OZ_USD (GOLD_OZ_USD)
+[2025-06-05T22:01:17.673+0200] {multi.py:184} ERROR - 
+1 Failed download:
+[2025-06-05T22:01:17.674+0200] {multi.py:197} ERROR - ['IWM']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-06-04 22:01:17.488955 -> 2025-06-04 22:01:17.488955)')
+[2025-06-05T22:01:17.678+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour RUSSELL2000(Small CAP) (SmallCAP)
+[2025-06-05T22:01:17.792+0200] {multi.py:184} ERROR - 
+1 Failed download:
+[2025-06-05T22:01:17.793+0200] {multi.py:197} ERROR - ['VNQ']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-06-04 22:01:17.689767 -> 2025-06-04 22:01:17.689767)')
+[2025-06-05T22:01:17.797+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour REITs(Immobilier US) (US_REIT_VNQ)
+[2025-06-05T22:01:17.945+0200] {multi.py:184} ERROR - 
+1 Failed download:
+[2025-06-05T22:01:17.946+0200] {multi.py:197} ERROR - ['IEF']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-06-04 22:01:17.812145 -> 2025-06-04 22:01:17.812145)')
+[2025-06-05T22:01:17.948+0200] {logging_mixin.py:188} INFO - Aucune nouvelle donnée pour US_TREASURY_10Y (TREASURY_10Y)
+[2025-06-05T22:01:17.949+0200] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-05T22:01:17.949+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-05T22:01:17.953+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=macro_trading_dag, task_id=fetch_data, execution_date=20250605T200106, start_date=20250605T200111, end_date=20250605T200117
+[2025-06-05T22:01:17.978+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-05T22:01:17.999+0200] {taskinstance.py:3482} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2025-06-05T22:01:18.008+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

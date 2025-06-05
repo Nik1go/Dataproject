@@ -261,7 +261,8 @@ with (DAG(
         default_args=default_args,
         description='Stratégie contre-cyclique avec données FRED et Yahoo Finance',
         schedule_interval='0 8 * * *',
-        catchup=False
+        catchup=False,
+        tags=['macro','assets','performance']
 ) as dag):
     fetch_task = PythonOperator(
         task_id='fetch_data',
@@ -299,15 +300,17 @@ with (DAG(
             'data_type': 'Assets'
         }
     )
+    ASSETS_PERF_OUTPUT = os.path.join(base_dir, "assets_performance_by_quadrant.parquet")
 
     INDICATORS_PARQUET = os.path.join(base_dir, "Indicators.parquet")
     QUADRANT_OUTPUT = os.path.join(base_dir, "quadrants.parquet")
+    QUADRANT_CSV = os.path.join(base_dir, "data/quadrants.csv")
 
     compute_quadrant_task = SparkSubmitOperator(
         task_id='compute_economic_quadrants',
         application="/home/leoja/airflow/spark_jobs/compute_quadrants.py",
         name="compute_economic_quadrants",
-        application_args=[INDICATORS_PARQUET, QUADRANT_OUTPUT],
+        application_args=[INDICATORS_PARQUET, QUADRANT_OUTPUT, QUADRANT_CSV],
         conn_id="spark_local",  # on reste sur yank ‘spark_local’
         conf={
             "spark.pyspark.python": "/home/leoja/airflow_venv/bin/python",
@@ -315,8 +318,42 @@ with (DAG(
         },
         verbose=False
     )
+    compute_assets_performance_task = SparkSubmitOperator(
+        task_id='compute_assets_performance',
+        application="/home/leoja/airflow/spark_jobs/compute_assets_performance.py",
+        name="compute_assets_performance",
+        application_args=[
+            # 1) Chemin vers quadrant.parquet   (écrit par compute_economic_quadrants)
+            QUADRANT_OUTPUT,
 
-    # Enchaînement des tâches
+            # 2) Chemin vers Assets_daily.parquet (écrit par format_assets_data)
+            "{{ ti.xcom_pull(task_ids='format_assets_data') }}",
+
+            # 3) Chemin de sortie final assets_performance_by_quadrant.parquet
+            ASSETS_PERF_OUTPUT
+        ],
+        conn_id="spark_local",
+        conf={
+            "spark.pyspark.python": "/home/leoja/airflow_venv/bin/python",
+            "spark.pyspark.driver.python": "/home/leoja/airflow_venv/bin/python"
+        },
+        verbose=False
+    )
+    # → Puisque compute_assets_performance.py est un script Spark,
+    #   on l’appelle avec spark-submit, exactement comme pour compute_quadrants.py.
+
+    # ── Étape 6: CHAÎNAGE DES TÂCHES ──────────────────────────────────────────────
+
+    # 1 → 2 & 3 : on fetch les données, puis on prépare assets + indicators
     fetch_task >> [prepare_indicators_task, prepare_assets_task]
+
+    # 2 → 4 : format des indicateurs → job Spark quadrants
     prepare_indicators_task >> format_indicators_task >> compute_quadrant_task
+
+    # 3 : format des assets quotidiens après prepare_assets_task
     prepare_assets_task >> format_assets_task
+
+    # 4 + 3 → 5 : on attend à la fois
+    #    • le job Spark des quadrants (compute_quadrant_task)
+    #    • et le format quotidien des assets (format_assets_task)
+    [compute_quadrant_task, format_assets_task] >> compute_assets_performance_task
