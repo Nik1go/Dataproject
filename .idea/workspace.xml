@@ -4,7 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373aec1a-0771-40df-9b65-aa530073233e" name="Changes" comment="" />
+    <list default="true" id="373aec1a-0771-40df-9b65-aa530073233e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airflow-webserver.pid" beforeDir="false" afterPath="$PROJECT_DIR$/airflow-webserver.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airflow.db" beforeDir="false" afterPath="$PROJECT_DIR$/airflow.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Assets_daily.parquet" beforeDir="false" afterPath="$PROJECT_DIR$/data/Assets_daily.parquet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Indicators.parquet" beforeDir="false" afterPath="$PROJECT_DIR$/data/Indicators.parquet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assets_performance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/assets_performance.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assets_performance.parquet" beforeDir="false" afterPath="$PROJECT_DIR$/data/assets_performance.parquet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assets_performance_by_quadrant.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/assets_performance_by_quadrant.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assets_performance_by_quadrant.parquet" beforeDir="false" afterPath="$PROJECT_DIR$/data/assets_performance_by_quadrant.parquet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/10-2Year_Treasury_Yield_Bond.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/10-2Year_Treasury_Yield_Bond.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/GOLD_OZ_USD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/GOLD_OZ_USD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/High_Yield_Bond_SPREAD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/High_Yield_Bond_SPREAD.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/REITs(Immobilier US).csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/REITs(Immobilier US).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/RUSSELL2000(Small CAP).csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/RUSSELL2000(Small CAP).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/S&amp;P500(LARGE CAP).csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/S&amp;P500(LARGE CAP).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/UNEMPLOYMENT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/UNEMPLOYMENT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/backup/US_TREASURY_10Y.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/backup/US_TREASURY_10Y.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/combined_assets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/combined_assets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/combined_indicators.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/combined_indicators.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/quadrants.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/quadrants.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_jobs/indexe.py" beforeDir="false" afterPath="$PROJECT_DIR$/index_jobs/indexe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/macro_trading_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/macro_trading_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_bash_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_bash_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_bash_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_datetime_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_day_of_week_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_day_of_week_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_labels.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_labels.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_operator_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_operator_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_branch_python_dop_operator_3.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_complex.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_complex.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dag_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dag_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_datasets.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_datasets.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_display_name.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_display_name.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dynamic_task_mapping.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dynamic_task_mapping.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_dynamic_task_mapping_with_no_taskflow_operators.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_external_task_marker_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_external_task_marker_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_kubernetes_executor.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_kubernetes_executor.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_latest_only.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_latest_only.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_latest_only_with_trigger.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_latest_only_with_trigger.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_local_kubernetes_executor.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_local_kubernetes_executor.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_nested_branch_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_nested_branch_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_params_trigger_ui.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_params_trigger_ui.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_params_ui_tutorial.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_params_ui_tutorial.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_passing_params_via_test_command.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_passing_params_via_test_command.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_python_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_python_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_python_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_python_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sensor_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sensor_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sensors.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sensors.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_setup_teardown.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_setup_teardown.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_setup_teardown_taskflow.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_setup_teardown_taskflow.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_short_circuit_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_short_circuit_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_short_circuit_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_short_circuit_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_skip_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_skip_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sla_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_sla_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_subdag_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_subdag_operator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_task_group.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_task_group.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_task_group_decorator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_task_group_decorator.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_time_delta_sensor_async.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_time_delta_sensor_async.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_trigger_controller_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_trigger_controller_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_trigger_target_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_trigger_target_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_xcom.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_xcom.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_xcomargs.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/example_xcomargs.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/decreasing_priority_weight_strategy.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/event_listener.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/event_listener.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/listener_plugin.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/listener_plugin.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/workday.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/plugins/workday.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/subdags/subdag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/subdags/subdag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_dag.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_objectstorage.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_objectstorage.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_taskflow_api.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_taskflow_api.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2025-06-05/native_dags/example_dags/tutorial_taskflow_api_virtualenv.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/latest" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/latest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark_jobs/compute_assets_performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/spark_jobs/compute_assets_performance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spark_jobs/compute_quadrants.py" beforeDir="false" afterPath="$PROJECT_DIR$/spark_jobs/compute_quadrants.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,14 +99,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/dags" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://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@github.com/Nik1go/Macro_project_data.git",
-    "accountId": "7a1d11b6-e300-4a78-9274-9a55d91a831b"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nik1go&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nik1go/Dataproject.git&quot;,
+    &quot;accountId&quot;: &quot;7a1d11b6-e300-4a78-9274-9a55d91a831b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -43,6 +127,8 @@
     &quot;Python tests.pytest in macro_trading_dag.py.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest in my_first_dag.py.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest in test_api_connections.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compute_quadrants.executor&quot;: &quot;Run&quot;,
+    &quot;Python.indexe.executor&quot;: &quot;Run&quot;,
     &quot;Python.macro_trading_dag.executor&quot;: &quot;Run&quot;,
     &quot;Python.my_first_dag.executor&quot;: &quot;Run&quot;,
     &quot;Python.spark_combine.executor&quot;: &quot;Run&quot;,
@@ -52,13 +138,14 @@
     &quot;Python.webserver_config.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,6 +154,32 @@
       <recent name="\\wsl$\ubuntu\home\leoja\airflow\data\raw" />
       <recent name="\\wsl$\ubuntu\home\leoja\airflow\data" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="indexe" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11.9 WSL (Ubuntu): (/home/leoja/airflow_venv/bin/python)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/index_jobs" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/index_jobs/indexe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -91,6 +204,9 @@
       <workItem from="1748369045096" duration="1370000" />
       <workItem from="1748435638981" duration="11635000" />
       <workItem from="1748792697297" duration="16298000" />
+      <workItem from="1749310671980" duration="11727000" />
+      <workItem from="1749475047962" duration="20000" />
+      <workItem from="1749479320173" duration="7602000" />
     </task>
     <servers />
   </component>
@@ -98,15 +214,17 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/airflow$my_first_dag.coverage" NAME="my_first_dag Coverage Results" MODIFIED="1747830546097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
     <SUITE FILE_PATH="coverage/airflow$pytest_in_test_api_connections_py.coverage" NAME="pytest in test_api_connections.py Coverage Results" MODIFIED="1748800093440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/airflow$spark_combine.coverage" NAME="spark_combine Coverage Results" MODIFIED="1748446480020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$compute_quadrants.coverage" NAME="compute_quadrants Coverage Results" MODIFIED="1749324649622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
     <SUITE FILE_PATH="coverage/airflow$pytest_in_my_first_dag_py.coverage" NAME="pytest in my_first_dag.py Coverage Results" MODIFIED="1747827751430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
     <SUITE FILE_PATH="coverage/airflow$spark_strategy.coverage" NAME="spark_strategy Coverage Results" MODIFIED="1748516986849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/airflow$webserver_config.coverage" NAME="webserver_config Coverage Results" MODIFIED="1747128066826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/airflow$pytest_in_macro_trading_dag_py.coverage" NAME="pytest in macro_trading_dag.py Coverage Results" MODIFIED="1747845979334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
     <SUITE FILE_PATH="coverage/airflow$spark_transform.coverage" NAME="spark_transform Coverage Results" MODIFIED="1747775951008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
     <SUITE FILE_PATH="coverage/airflow$spark_quadrant.coverage" NAME="spark_quadrant Coverage Results" MODIFIED="1748438672763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
-    <SUITE FILE_PATH="coverage/airflow$macro_trading_dag.coverage" NAME="macro_trading_dag Coverage Results" MODIFIED="1748938445664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+    <SUITE FILE_PATH="coverage/airflow$my_first_dag.coverage" NAME="my_first_dag Coverage Results" MODIFIED="1747830546097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
+    <SUITE FILE_PATH="coverage/airflow$indexe.coverage" NAME="indexe Coverage Results" MODIFIED="1749328842594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/index_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$spark_combine.coverage" NAME="spark_combine Coverage Results" MODIFIED="1748446480020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spark_jobs" />
+    <SUITE FILE_PATH="coverage/airflow$macro_trading_dag.coverage" NAME="macro_trading_dag Coverage Results" MODIFIED="1749484181289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dags" />
   </component>
 </project>

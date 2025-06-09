@@ -92,6 +92,8 @@ def main():
         mean_ret  = daily_ret.mean()
         std_ret   = daily_ret.std()
         sharpe_annualized = (mean_ret / std_ret) * np.sqrt(252) if std_ret > 0 else np.nan
+        sharpe_mensuel = sharpe_monthly = mean_ret / std_ret if std_ret > 0 else np.nan
+
 
         rows.append({
             'asset_id'           : asset,
@@ -100,7 +102,9 @@ def main():
             'end_date'           : sub['date'].max(),
             'monthly_return'     : monthly_return,
             'max_drawdown'       : max_dd,
-            'sharpe_annualized'  : sharpe_annualized
+            'sharpe_annualized'  : sharpe_annualized,
+            'sharpe mensuel'     : sharpe_monthly
+
         })
 
     df_summary = pd.DataFrame(rows)

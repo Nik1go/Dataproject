@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# compute_quadrants.py
-
 import sys
 import os
 import shutil
@@ -88,7 +85,7 @@ def write_single_csv(df, output_path: str):
     shutil.rmtree(tmp_dir)
 
 
-def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path: str):
+def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path: str, full_df=None):
     """
     - Si `output_parquet_path` existe déjà, on le lit, on récupère le max(date),
       puis on ne calcule que les mois > last_date (mode incrémental).
@@ -147,6 +144,8 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
         "10-2Year_Treasury_Yield_Bond",
         "TAUX_FED",
     ]
+
+    last_two = full_df.orderBy("date", ascending=False).limit(2).orderBy("date")
 
     # --- 4. Calcul des deltas et z-scores sur tout l’historique ---
     for ind in indicator_cols:
@@ -267,16 +266,12 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
     else:
         merged_df = new_df
 
-    # 13. Écrire en SINGLE‐FILE Parquet (sans dossier supplémentaire)
     write_single_parquet(merged_df, output_parquet_path)
     print(f"✔ Written single-file Parquet → {output_parquet_path}")
-
-    # 14. Écrire en SINGLE‐FILE CSV (avec header)
     write_single_csv(merged_df, output_csv_path)
     print(f"✔ Written single-file CSV   → {output_csv_path}")
 
     spark.stop()
-
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:

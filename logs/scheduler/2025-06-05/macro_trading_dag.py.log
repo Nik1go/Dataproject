@@ -2421,3 +2421,213 @@ ModuleNotFoundError: No module named 'spark_jobs'
 [2025-06-05T23:12:40.220+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:12:40.219+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-05T23:12:40.232+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:12:40.232+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
 [2025-06-05T23:12:40.251+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.641 seconds
+[2025-06-05T23:13:24.890+0200] {processor.py:161} INFO - Started process (PID=616273) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:13:24.891+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:13:24.893+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:24.892+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:13:25.500+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:13:25.509+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:25.509+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:13:25.612+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:25.612+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:13:25.628+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.743 seconds
+[2025-06-05T23:14:09.463+0200] {processor.py:161} INFO - Started process (PID=616576) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:09.464+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:14:09.465+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:09.465+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:10.076+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:10.084+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:10.084+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:14:10.096+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:10.095+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:14:10.116+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.659 seconds
+[2025-06-05T23:14:56.696+0200] {processor.py:161} INFO - Started process (PID=616978) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:56.698+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:14:56.699+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:56.698+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:57.294+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:14:57.303+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:57.302+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:14:57.317+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:57.317+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:14:57.335+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.649 seconds
+[2025-06-05T23:15:38.639+0200] {processor.py:161} INFO - Started process (PID=617535) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:15:38.640+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:15:38.641+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:38.640+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:15:39.254+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:15:39.263+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:39.263+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:15:39.369+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:39.369+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:15:39.388+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.754 seconds
+[2025-06-05T23:16:21.753+0200] {processor.py:161} INFO - Started process (PID=617785) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:16:21.756+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:16:21.757+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:16:21.756+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:16:22.495+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:16:22.504+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:16:22.503+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:16:22.516+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:16:22.516+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:16:22.532+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.785 seconds
+[2025-06-05T23:17:12.333+0200] {processor.py:161} INFO - Started process (PID=618087) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:17:12.336+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:17:12.337+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:12.336+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:17:13.208+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:17:13.219+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:13.218+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:17:13.235+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:13.235+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:17:13.264+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.937 seconds
+[2025-06-05T23:18:03.465+0200] {processor.py:161} INFO - Started process (PID=618358) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:03.466+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:18:03.467+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:03.466+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:04.079+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:04.088+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:04.088+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:18:04.191+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:04.191+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:18:04.205+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.747 seconds
+[2025-06-05T23:18:55.302+0200] {processor.py:161} INFO - Started process (PID=618672) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:55.304+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:18:55.304+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:55.304+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:56.040+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:18:56.050+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:56.049+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:18:56.064+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:56.063+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:18:56.082+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.787 seconds
+[2025-06-05T23:19:43.161+0200] {processor.py:161} INFO - Started process (PID=618932) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:19:43.163+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:19:43.164+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:43.163+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:19:43.921+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:19:43.931+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:43.930+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:19:43.942+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:43.942+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:19:43.966+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.812 seconds
+[2025-06-05T23:20:35.304+0200] {processor.py:161} INFO - Started process (PID=619222) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:20:35.305+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:20:35.306+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:35.305+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:20:35.970+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:20:35.979+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:35.979+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:35.990+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:35.990+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:20:36.005+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.707 seconds
+[2025-06-05T23:21:22.542+0200] {processor.py:161} INFO - Started process (PID=619467) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:21:22.545+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:21:22.546+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:22.545+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:21:23.188+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:21:23.197+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:23.197+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:21:23.209+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:23.208+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:21:23.225+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.694 seconds
+[2025-06-05T23:22:05.638+0200] {processor.py:161} INFO - Started process (PID=619731) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:05.640+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:22:05.641+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:05.640+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:06.383+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:06.393+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:06.393+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:22:06.406+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:06.406+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:22:06.423+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.791 seconds
+[2025-06-05T23:22:52.168+0200] {processor.py:161} INFO - Started process (PID=619920) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:52.170+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:22:52.171+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:52.170+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:52.765+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:22:52.775+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:52.775+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:22:52.793+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:52.793+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:22:52.811+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.649 seconds
+[2025-06-05T23:23:39.712+0200] {processor.py:161} INFO - Started process (PID=620093) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:23:39.713+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:23:39.714+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:39.714+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:23:40.316+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:23:40.326+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:40.325+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:23:40.337+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:40.337+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:23:40.365+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.658 seconds
+[2025-06-05T23:24:24.297+0200] {processor.py:161} INFO - Started process (PID=620325) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:24:24.299+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:24:24.300+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:24.300+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:24:26.234+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:24:26.244+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:26.244+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:24:26.256+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:26.256+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:24:26.274+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 1.993 seconds
+[2025-06-05T23:25:09.771+0200] {processor.py:161} INFO - Started process (PID=620572) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:09.772+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:25:09.773+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:09.772+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:10.391+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:10.400+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:10.399+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:25:10.415+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:10.415+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:25:10.432+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.666 seconds
+[2025-06-05T23:25:53.871+0200] {processor.py:161} INFO - Started process (PID=620728) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:53.872+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:25:53.873+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:53.873+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:54.512+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:25:54.523+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:54.522+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:25:54.537+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:54.537+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:25:54.556+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.691 seconds
+[2025-06-05T23:26:42.499+0200] {processor.py:161} INFO - Started process (PID=620941) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:26:42.502+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:26:42.502+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:42.502+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:26:43.117+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:26:43.126+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:43.126+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:26:43.139+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:43.139+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:26:43.153+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.662 seconds
+[2025-06-05T23:27:28.235+0200] {processor.py:161} INFO - Started process (PID=621211) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:27:28.236+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:27:28.237+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:28.237+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:27:28.866+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:27:28.875+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:28.875+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:28.891+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:28.891+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:27:28.919+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.694 seconds
+[2025-06-05T23:28:09.420+0200] {processor.py:161} INFO - Started process (PID=621448) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:09.422+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:28:09.423+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:09.423+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:10.060+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:10.069+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:10.069+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:28:10.082+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:10.082+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:28:10.099+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.687 seconds
+[2025-06-05T23:28:55.651+0200] {processor.py:161} INFO - Started process (PID=621692) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:55.652+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:28:55.653+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:55.653+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:56.317+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:28:56.328+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:56.327+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:28:56.342+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:56.342+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:28:56.362+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.717 seconds
+[2025-06-05T23:29:42.188+0200] {processor.py:161} INFO - Started process (PID=621960) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:29:42.190+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:29:42.191+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:42.191+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:29:42.996+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:29:43.008+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:43.008+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:29:43.031+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:43.030+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:29:43.054+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.885 seconds
+[2025-06-05T23:30:30.450+0200] {processor.py:161} INFO - Started process (PID=622207) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:30:30.452+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:30:30.453+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:30.452+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:30:31.215+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:30:31.224+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:31.224+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:30:31.236+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:31.236+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:30:31.256+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.824 seconds
+[2025-06-05T23:31:16.928+0200] {processor.py:161} INFO - Started process (PID=622464) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:31:16.929+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:31:16.930+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:16.929+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:31:17.566+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:31:17.576+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:17.576+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:31:17.590+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:17.589+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:31:17.610+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.688 seconds
+[2025-06-05T23:32:03.230+0200] {processor.py:161} INFO - Started process (PID=622732) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:03.232+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:32:03.233+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:03.232+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:03.874+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:03.887+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:03.886+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:32:03.900+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:03.900+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:32:03.918+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.694 seconds
+[2025-06-05T23:32:48.282+0200] {processor.py:161} INFO - Started process (PID=622992) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:48.283+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:32:48.285+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:48.284+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:48.952+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:32:48.961+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:48.961+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:32:48.975+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:48.974+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:32:48.994+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.719 seconds
+[2025-06-05T23:33:32.750+0200] {processor.py:161} INFO - Started process (PID=623271) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:33:32.751+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:33:32.752+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:32.752+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:33:33.623+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:33:33.633+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:33.633+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:33:33.645+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:33.644+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:33:33.662+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.917 seconds
+[2025-06-05T23:34:19.256+0200] {processor.py:161} INFO - Started process (PID=623527) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:34:19.258+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:34:19.259+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:19.258+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:34:19.932+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:34:19.943+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:19.942+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:34:19.957+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:19.956+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:34:19.976+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.727 seconds
+[2025-06-05T23:35:06.088+0200] {processor.py:161} INFO - Started process (PID=623784) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:06.089+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:35:06.090+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:06.090+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:06.690+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:06.700+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:06.699+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:35:06.714+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:06.714+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:35:06.729+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.646 seconds
+[2025-06-05T23:35:54.594+0200] {processor.py:161} INFO - Started process (PID=624193) to work on /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:54.595+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/dags/macro_trading_dag.py for tasks to queue
+[2025-06-05T23:35:54.596+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:54.596+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:55.239+0200] {processor.py:840} INFO - DAG(s) 'macro_trading_dag' retrieved from /home/leoja/airflow/dags/macro_trading_dag.py
+[2025-06-05T23:35:55.248+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:55.248+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:35:55.262+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:55.262+0200] {dag.py:3954} INFO - Setting next_dagrun for macro_trading_dag to 2025-06-05 08:00:00+00:00, run_after=2025-06-06 08:00:00+00:00
+[2025-06-05T23:35:55.283+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/dags/macro_trading_dag.py took 0.695 seconds

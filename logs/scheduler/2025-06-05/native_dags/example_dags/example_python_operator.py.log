@@ -1758,3 +1758,203 @@
 [2025-06-05T23:12:33.097+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:12:33.097+0200] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-05T23:12:33.106+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:12:33.106+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
 [2025-06-05T23:12:33.128+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.137 seconds
+[2025-06-05T23:13:40.322+0200] {processor.py:161} INFO - Started process (PID=616373) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:13:40.323+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:13:40.324+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:40.323+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:13:40.379+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:40.379+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:13:40.380+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:13:40.393+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:40.393+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:13:40.403+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:13:40.403+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:13:40.431+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.115 seconds
+[2025-06-05T23:14:48.192+0200] {processor.py:161} INFO - Started process (PID=616942) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:14:48.194+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:14:48.195+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:48.194+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:14:48.460+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:48.459+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:14:48.460+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:14:48.482+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:48.482+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:14:48.498+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:14:48.498+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:14:48.523+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.347 seconds
+[2025-06-05T23:15:51.968+0200] {processor.py:161} INFO - Started process (PID=617624) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:15:51.969+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:15:51.970+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:51.969+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:15:51.998+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:51.998+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:15:51.998+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:15:52.012+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:52.012+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:15:52.022+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:15:52.022+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:15:52.041+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.079 seconds
+[2025-06-05T23:17:01.713+0200] {processor.py:161} INFO - Started process (PID=618021) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:01.715+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:17:01.716+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:01.715+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:01.761+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:01.761+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:17:01.762+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:01.774+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:01.774+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:17:01.789+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:01.788+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:17:01.904+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.199 seconds
+[2025-06-05T23:17:54.377+0200] {processor.py:161} INFO - Started process (PID=618317) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:54.379+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:17:54.380+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:54.380+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:54.462+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:54.462+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:17:54.462+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:17:54.477+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:54.477+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:17:54.486+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:17:54.486+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:17:54.504+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.137 seconds
+[2025-06-05T23:18:44.980+0200] {processor.py:161} INFO - Started process (PID=618640) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:18:44.981+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:18:44.982+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:44.982+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:18:45.015+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:45.014+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:18:45.016+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:18:45.032+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:45.032+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:18:45.048+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:18:45.048+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:18:45.068+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.095 seconds
+[2025-06-05T23:19:35.251+0200] {processor.py:161} INFO - Started process (PID=618893) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:19:35.252+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:19:35.253+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:35.253+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:19:35.315+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:35.315+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:19:35.316+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:19:35.329+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:35.329+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:19:35.341+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:19:35.341+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:19:35.361+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.115 seconds
+[2025-06-05T23:20:26.555+0200] {processor.py:161} INFO - Started process (PID=619192) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:20:26.556+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:20:26.556+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:26.556+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:20:26.586+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:26.586+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:20:26.586+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:20:26.599+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:26.599+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:26.608+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:20:26.608+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:20:26.716+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.167 seconds
+[2025-06-05T23:21:14.996+0200] {processor.py:161} INFO - Started process (PID=619460) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:21:14.997+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:21:14.997+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:14.997+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:21:15.053+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:15.053+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:21:15.054+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:21:15.067+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:15.066+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:21:15.074+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:21:15.074+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:21:15.094+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.103 seconds
+[2025-06-05T23:22:22.382+0200] {processor.py:161} INFO - Started process (PID=619822) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:22:22.384+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:22:22.385+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:22.385+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:22:22.415+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:22.415+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:22:22.415+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:22:22.431+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:22.430+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:22:22.439+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:22:22.439+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:22:22.460+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.084 seconds
+[2025-06-05T23:23:30.295+0200] {processor.py:161} INFO - Started process (PID=620062) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:23:30.296+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:23:30.297+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:30.296+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:23:30.356+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:30.355+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:23:30.356+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:23:30.369+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:30.369+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:23:30.377+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:23:30.377+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:23:30.393+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.104 seconds
+[2025-06-05T23:24:16.101+0200] {processor.py:161} INFO - Started process (PID=620269) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:24:16.103+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:24:16.104+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:16.103+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:24:16.192+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:16.192+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:24:16.193+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:24:16.208+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:16.208+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:24:16.217+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:24:16.217+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:24:16.239+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.146 seconds
+[2025-06-05T23:25:02.240+0200] {processor.py:161} INFO - Started process (PID=620540) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:25:02.242+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:25:02.242+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:02.242+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:25:02.299+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:02.298+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:25:02.299+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:25:02.316+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:02.315+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:25:02.326+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:25:02.325+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:25:02.344+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.111 seconds
+[2025-06-05T23:26:09.947+0200] {processor.py:161} INFO - Started process (PID=620795) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:09.948+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:26:09.949+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:09.948+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:09.980+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:09.979+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:26:09.981+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:09.999+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:09.999+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:26:10.010+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:10.010+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:26:10.029+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.088 seconds
+[2025-06-05T23:26:57.973+0200] {processor.py:161} INFO - Started process (PID=621042) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:57.975+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:26:57.975+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:57.975+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:58.060+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:58.059+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:26:58.060+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:26:58.074+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:58.074+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:26:58.082+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:26:58.082+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:26:58.100+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.133 seconds
+[2025-06-05T23:27:42.568+0200] {processor.py:161} INFO - Started process (PID=621288) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:27:42.569+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:27:42.571+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.570+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:27:42.623+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.622+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:27:42.623+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:27:42.638+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.638+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:42.651+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.651+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:27:42.672+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.110 seconds
+[2025-06-05T23:28:48.218+0200] {processor.py:161} INFO - Started process (PID=621654) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:28:48.219+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:28:48.220+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:48.219+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:28:48.244+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:48.244+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:28:48.245+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:28:48.259+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:48.259+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:28:48.269+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:28:48.269+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:28:48.287+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.074 seconds
+[2025-06-05T23:29:33.646+0200] {processor.py:161} INFO - Started process (PID=621890) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:29:33.648+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:29:33.649+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:33.648+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:29:33.720+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:33.720+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:29:33.721+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:29:33.742+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:33.742+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:29:33.755+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:29:33.755+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:29:33.785+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.147 seconds
+[2025-06-05T23:30:21.687+0200] {processor.py:161} INFO - Started process (PID=622175) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:30:21.688+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:30:21.689+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:21.688+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:30:21.780+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:21.779+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:30:21.780+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:30:21.795+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:21.795+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:30:21.804+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:30:21.804+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:30:21.827+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.145 seconds
+[2025-06-05T23:31:08.762+0200] {processor.py:161} INFO - Started process (PID=622424) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:08.764+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:31:08.766+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:08.765+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:08.859+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:08.858+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:31:08.859+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:08.873+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:08.873+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:31:08.882+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:08.882+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:31:08.902+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.144 seconds
+[2025-06-05T23:31:55.375+0200] {processor.py:161} INFO - Started process (PID=622665) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:55.377+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:31:55.377+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:55.377+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:55.433+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:55.433+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:31:55.433+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:31:55.449+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:55.448+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:31:55.457+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:31:55.457+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:31:55.478+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.109 seconds
+[2025-06-05T23:32:42.146+0200] {processor.py:161} INFO - Started process (PID=622964) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:32:42.148+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:32:42.149+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:42.148+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:32:42.191+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:42.190+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:32:42.191+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:32:42.206+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:42.206+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:32:42.216+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:32:42.216+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:32:42.234+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.094 seconds
+[2025-06-05T23:33:50.357+0200] {processor.py:161} INFO - Started process (PID=623379) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:33:50.359+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:33:50.360+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:50.360+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:33:50.438+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:50.437+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:33:50.438+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:33:50.458+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:50.457+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:33:50.468+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:33:50.468+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:33:50.493+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.142 seconds
+[2025-06-05T23:34:56.956+0200] {processor.py:161} INFO - Started process (PID=623716) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:34:56.957+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:34:56.958+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:56.958+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:34:57.030+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:57.029+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:34:57.030+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:34:57.044+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:57.044+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:34:57.051+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:34:57.051+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:34:57.073+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.126 seconds
+[2025-06-05T23:35:46.673+0200] {processor.py:161} INFO - Started process (PID=624037) to work on /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:35:46.674+0200] {processor.py:830} INFO - Processing file /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-06-05T23:35:46.675+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:46.675+0200] {dagbag.py:540} INFO - Filling up the DagBag from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:35:46.732+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:46.732+0200] {example_python_operator.py:93} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-06-05T23:35:46.732+0200] {processor.py:840} INFO - DAG(s) 'example_python_operator' retrieved from /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py
+[2025-06-05T23:35:46.747+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:46.747+0200] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:35:46.756+0200] {logging_mixin.py:188} INFO - [2025-06-05T23:35:46.756+0200] {dag.py:3954} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2025-06-05T23:35:46.773+0200] {processor.py:183} INFO - Processing /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/example_dags/example_python_operator.py took 0.107 seconds

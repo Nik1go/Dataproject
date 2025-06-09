@@ -1,0 +1,42 @@
+[2025-06-09T17:50:52.649+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-09T17:50:52.658+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-09T15:46:58.167535+00:00 [queued]>
+[2025-06-09T17:50:52.661+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-09T15:46:58.167535+00:00 [queued]>
+[2025-06-09T17:50:52.662+0200] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2025-06-09T17:50:52.676+0200] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): index_to_elasticsearch> on 2025-06-09 15:46:58.167535+00:00
+[2025-06-09T17:50:52.683+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'index_to_elasticsearch', 'manual__2025-06-09T15:46:58.167535+00:00', '--job-id', '382', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp9n8fkp6q']
+[2025-06-09T17:50:52.684+0200] {standard_task_runner.py:91} INFO - Job 382: Subtask index_to_elasticsearch
+[2025-06-09T17:50:52.689+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=45965) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-09T17:50:52.689+0200] {standard_task_runner.py:63} INFO - Started process 45977 to run task
+[2025-06-09T17:50:52.719+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-09T15:46:58.167535+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-09T17:50:52.772+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='index_to_elasticsearch' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T15:46:58.167535+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T15:46:58.167535+00:00'
+[2025-06-09T17:50:52.773+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-09T17:50:52.773+0200] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-09T17:50:52.774+0200] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n                  cd /home/leoja/airflow/index_jobs &&                   /home/leoja/airflow/airflow_venv/bin/python indexe.py\n              ']
+[2025-06-09T17:50:52.790+0200] {subprocess.py:86} INFO - Output:
+[2025-06-09T17:50:53.537+0200] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-06-09T17:50:53.537+0200] {subprocess.py:93} INFO -   File "/home/leoja/airflow/index_jobs/indexe.py", line 86, in <module>
+[2025-06-09T17:50:53.538+0200] {subprocess.py:93} INFO -     index_data()
+[2025-06-09T17:50:53.538+0200] {subprocess.py:93} INFO -   File "/home/leoja/airflow/index_jobs/indexe.py", line 62, in index_data
+[2025-06-09T17:50:53.538+0200] {subprocess.py:93} INFO -     raise RuntimeError(f"Impossible de joindre Elasticsearch ({ES_URL})")
+[2025-06-09T17:50:53.538+0200] {subprocess.py:93} INFO - RuntimeError: Impossible de joindre Elasticsearch (http://127.0.0.1:9200)
+[2025-06-09T17:50:53.668+0200] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-06-09T17:50:53.669+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-09T17:50:53.674+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-06-09T17:50:53.676+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=index_to_elasticsearch, execution_date=20250609T154658, start_date=20250609T155052, end_date=20250609T155053
+[2025-06-09T17:50:53.689+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 382 for task index_to_elasticsearch (Bash command failed. The command returned a non-zero exit code 1.; 45977)
+[2025-06-09T17:50:53.719+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-09T17:50:53.728+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T17:50:53.728+0200] {local_task_job_runner.py:222} INFO - ::endgroup::
