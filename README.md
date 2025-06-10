@@ -1,4 +1,5 @@
-# Macro‐Trading Airflow + Spark Project
+# Macro‐stratégie Airflow + Spark Project
+**fait un max de PNL**
 
 Ce projet et une étude de stratégie contre-cyclique basée sur les quadrants économiques, avec :
 
