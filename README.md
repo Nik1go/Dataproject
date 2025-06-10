@@ -19,3 +19,23 @@ Ce projet et une étude de stratégie contre-cyclique basée sur les quadrants �
   - Les quadrants et les performances d’actifs
   - La valeur du portefeuille, SP500 et Gold au fil du temps  
   - Les ratios de Sharpe et autres métriques agrégées
+ 
+ ⚙️ Prérequis
+
+- **Python 3.8+** (venv recommandé)  
+- **Apache Airflow** (2.x) avec Spark provider  
+- **Apache Spark** (3.x) et `spark-submit`  
+- **Elasticsearch** (8.x) + **Kibana**  
+- Bibliothèques Python : `pandas`, `numpy`, `fredapi`, `yfinance`, `requests`, `elasticsearch`
+
+- ## 🚀 Installation & déploiement
+
+1. **Cloner le dépôt** dans `$AIRFLOW_HOME` (ex. `~/airflow`).  
+2. **Créer un virtualenv** et installer les dépendances :
+   ```bash
+   cd ~/airflow
+   python3 -m venv airflow_venv
+   source airflow_venv/bin/activate
+   pip install apache-airflow apache-airflow-providers-apache-spark pyspark pandas numpy fredapi yfinance requests elasticsearch
+   Airflow standalone
+   
