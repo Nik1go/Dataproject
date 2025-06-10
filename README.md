@@ -38,4 +38,7 @@ Ce projet et une étude de stratégie contre-cyclique basée sur les quadrants �
    source airflow_venv/bin/activate
    pip install apache-airflow apache-airflow-providers-apache-spark pyspark pandas numpy fredapi yfinance requests elasticsearch
    Airflow standalone
+
+
+   PS: Ce script est pour les PNL MAKER
    
