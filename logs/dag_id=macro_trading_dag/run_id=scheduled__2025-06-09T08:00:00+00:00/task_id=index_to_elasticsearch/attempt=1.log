@@ -1,0 +1,26 @@
+[2025-06-10T11:42:13.552+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-10T11:42:13.574+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch scheduled__2025-06-09T08:00:00+00:00 [queued]>
+[2025-06-10T11:42:13.588+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch scheduled__2025-06-09T08:00:00+00:00 [queued]>
+[2025-06-10T11:42:13.588+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-06-10T11:42:13.611+0200] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): index_to_elasticsearch> on 2025-06-09 08:00:00+00:00
+[2025-06-10T11:42:13.635+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'index_to_elasticsearch', 'scheduled__2025-06-09T08:00:00+00:00', '--job-id', '407', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmplfgkz6zq']
+[2025-06-10T11:42:13.636+0200] {standard_task_runner.py:91} INFO - Job 407: Subtask index_to_elasticsearch
+[2025-06-10T11:42:13.642+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=179621) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-10T11:42:13.643+0200] {standard_task_runner.py:63} INFO - Started process 179632 to run task
+[2025-06-10T11:42:13.674+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.index_to_elasticsearch scheduled__2025-06-09T08:00:00+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-10T11:42:13.738+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='index_to_elasticsearch' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-09T08:00:00+00:00'
+[2025-06-10T11:42:13.740+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-10T11:42:13.740+0200] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-10T11:42:13.741+0200] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            cd ~/airflow/index_jobs &&             source ~/airflow/airflow_venv/bin/activate &&             python indexe.py\n        ']
+[2025-06-10T11:42:13.752+0200] {subprocess.py:86} INFO - Output:
+[2025-06-10T11:42:19.553+0200] {subprocess.py:93} INFO - ✅ ES reachable: You Know, for Search
+[2025-06-10T11:42:19.554+0200] {subprocess.py:93} INFO - → Index 'quadrants'…
+[2025-06-10T11:42:19.554+0200] {subprocess.py:93} INFO -    ✅ 246 docs indexés dans 'quadrants'
+[2025-06-10T11:42:19.554+0200] {subprocess.py:93} INFO - → Index 'assets_performance'…
+[2025-06-10T11:42:19.554+0200] {subprocess.py:93} INFO -    ✅ 20 docs indexés dans 'assets_performance'
+[2025-06-10T11:42:19.579+0200] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-06-10T11:42:19.580+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-10T11:42:19.606+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=macro_trading_dag, task_id=index_to_elasticsearch, execution_date=20250609T080000, start_date=20250610T094213, end_date=20250610T094219
+[2025-06-10T11:42:19.636+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-10T11:42:19.645+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T11:42:19.646+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

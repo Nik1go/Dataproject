@@ -1,0 +1,50 @@
+[2025-06-10T17:26:52.725+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-10T17:26:52.735+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.backtest_strategy manual__2025-06-10T15:23:04.141179+00:00 [queued]>
+[2025-06-10T17:26:52.738+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.backtest_strategy manual__2025-06-10T15:23:04.141179+00:00 [queued]>
+[2025-06-10T17:26:52.739+0200] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2025-06-10T17:26:52.750+0200] {taskinstance.py:2327} INFO - Executing <Task(SparkSubmitOperator): backtest_strategy> on 2025-06-10 15:23:04.141179+00:00
+[2025-06-10T17:26:52.761+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'backtest_strategy', 'manual__2025-06-10T15:23:04.141179+00:00', '--job-id', '444', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmp2sa1yzi7']
+[2025-06-10T17:26:52.763+0200] {standard_task_runner.py:91} INFO - Job 444: Subtask backtest_strategy
+[2025-06-10T17:26:52.767+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=261754) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-10T17:26:52.767+0200] {standard_task_runner.py:63} INFO - Started process 261786 to run task
+[2025-06-10T17:26:52.803+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.backtest_strategy manual__2025-06-10T15:23:04.141179+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-10T17:26:52.854+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='backtest_strategy' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T15:23:04.141179+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T15:23:04.141179+00:00'
+[2025-06-10T17:26:52.855+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-10T17:26:52.859+0200] {base.py:84} INFO - Using connection ID 'spark_local' for task execution.
+[2025-06-10T17:26:52.859+0200] {spark_submit.py:351} INFO - Spark-Submit cmd: spark-submit --master local[*] --conf spark.pyspark.python=/home/leoja/airflow_venv/bin/python --conf spark.pyspark.driver.python=/home/leoja/airflow_venv/bin/python --name backtest_strategy /home/leoja/airflow/spark_jobs/backtest_strategy.py /home/leoja/airflow/data/quadrants.csv /home/leoja/airflow/data/Assets_daily.parquet 1000 /home/leoja/airflow/data/backtest_results
+[2025-06-10T17:26:53.913+0200] {spark_submit.py:521} INFO - 25/06/10 17:26:53 WARN Utils: Your hostname, N15I711-16GR512 resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[2025-06-10T17:26:53.915+0200] {spark_submit.py:521} INFO - 25/06/10 17:26:53 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2025-06-10T17:26:54.673+0200] {spark_submit.py:521} INFO - Traceback (most recent call last):
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - File "/home/leoja/airflow/spark_jobs/backtest_strategy.py", line 125, in <module>
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - main()
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - File "/home/leoja/airflow/spark_jobs/backtest_strategy.py", line 110, in main
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - c, v, s, m, a = stats_from_series(df_bt[rcol], df_bt[wcol])
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - File "/home/leoja/airflow/spark_jobs/backtest_strategy.py", line 28, in stats_from_series
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - total_yrs= (wealth_series.index[-1] - wealth_series.index[0]).days / 365.25
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+[2025-06-10T17:26:54.674+0200] {spark_submit.py:521} INFO - TypeError: unsupported operand type(s) for -: 'str' and 'str'
+[2025-06-10T17:26:54.736+0200] {spark_submit.py:521} INFO - 25/06/10 17:26:54 INFO ShutdownHookManager: Shutdown hook called
+[2025-06-10T17:26:54.736+0200] {spark_submit.py:521} INFO - 25/06/10 17:26:54 INFO ShutdownHookManager: Deleting directory /tmp/spark-d4abb1e0-1d29-466b-a265-fb7e516eb073
+[2025-06-10T17:26:54.771+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-10T17:26:54.775+0200] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 156, in execute
+    self._hook.submit(self._application)
+  File "/home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 452, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master local[*] --conf spark.pyspark.python=/home/leoja/airflow_venv/bin/python --conf spark.pyspark.driver.python=/home/leoja/airflow_venv/bin/python --name backtest_strategy /home/leoja/airflow/spark_jobs/backtest_strategy.py /home/leoja/airflow/data/quadrants.csv /home/leoja/airflow/data/Assets_daily.parquet 1000 /home/leoja/airflow/data/backtest_results. Error code is: 1.
+[2025-06-10T17:26:54.776+0200] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=macro_trading_dag, task_id=backtest_strategy, execution_date=20250610T152304, start_date=20250610T152652, end_date=20250610T152654
+[2025-06-10T17:26:54.790+0200] {standard_task_runner.py:110} ERROR - Failed to execute job 444 for task backtest_strategy (Cannot execute: spark-submit --master local[*] --conf spark.pyspark.python=/home/leoja/airflow_venv/bin/python --conf spark.pyspark.driver.python=/home/leoja/airflow_venv/bin/python --name backtest_strategy /home/leoja/airflow/spark_jobs/backtest_strategy.py /home/leoja/airflow/data/quadrants.csv /home/leoja/airflow/data/Assets_daily.parquet 1000 /home/leoja/airflow/data/backtest_results. Error code is: 1.; 261786)
+[2025-06-10T17:26:54.832+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-10T17:26:54.843+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T17:26:54.844+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

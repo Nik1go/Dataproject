@@ -1,0 +1,31 @@
+[2025-06-10T17:30:01.531+0200] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-10T17:30:01.546+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-10T15:23:04.141179+00:00 [queued]>
+[2025-06-10T17:30:01.551+0200] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-10T15:23:04.141179+00:00 [queued]>
+[2025-06-10T17:30:01.551+0200] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-06-10T17:30:01.564+0200] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): index_to_elasticsearch> on 2025-06-10 15:23:04.141179+00:00
+[2025-06-10T17:30:01.571+0200] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'macro_trading_dag', 'index_to_elasticsearch', 'manual__2025-06-10T15:23:04.141179+00:00', '--job-id', '446', '--raw', '--subdir', 'DAGS_FOLDER/macro_trading_dag.py', '--cfg-path', '/tmp/tmpe5hg0sqt']
+[2025-06-10T17:30:01.572+0200] {standard_task_runner.py:91} INFO - Job 446: Subtask index_to_elasticsearch
+[2025-06-10T17:30:01.578+0200] {logging_mixin.py:188} WARNING - /home/leoja/airflow/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=263320) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-10T17:30:01.578+0200] {standard_task_runner.py:63} INFO - Started process 263330 to run task
+[2025-06-10T17:30:01.604+0200] {task_command.py:426} INFO - Running <TaskInstance: macro_trading_dag.index_to_elasticsearch manual__2025-06-10T15:23:04.141179+00:00 [running]> on host N15I711-16GR512.localdomain
+[2025-06-10T17:30:01.660+0200] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='macro_trading_dag' AIRFLOW_CTX_TASK_ID='index_to_elasticsearch' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T15:23:04.141179+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T15:23:04.141179+00:00'
+[2025-06-10T17:30:01.661+0200] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-10T17:30:01.661+0200] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-10T17:30:01.662+0200] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            cd ~/airflow/index_jobs &&             source ~/airflow/airflow_venv/bin/activate &&             python indexe.py\n        ']
+[2025-06-10T17:30:01.671+0200] {subprocess.py:86} INFO - Output:
+[2025-06-10T17:30:04.247+0200] {subprocess.py:93} INFO - ✅ ES reachable: You Know, for Search
+[2025-06-10T17:30:04.247+0200] {subprocess.py:93} INFO - → Index 'quadrants'…
+[2025-06-10T17:30:04.247+0200] {subprocess.py:93} INFO -    ✅ 246 docs indexed in 'quadrants'
+[2025-06-10T17:30:04.247+0200] {subprocess.py:93} INFO - → Index 'assets_performance'…
+[2025-06-10T17:30:04.247+0200] {subprocess.py:93} INFO -    ✅ 20 docs indexed in 'assets_performance'
+[2025-06-10T17:30:04.248+0200] {subprocess.py:93} INFO - → Index 'backtest_timeseries'…
+[2025-06-10T17:30:04.248+0200] {subprocess.py:93} INFO - Erreur bulk: {'type': 'document_parsing_exception', 'reason': "[1:35] failed to parse field [year_month] of type [date] in document with id 'pQB2WpcBBp2zHHegeqML'. Preview of field's value: '2005-01'", 'caused_by': {'type': 'illegal_argument_exception', 'reason': 'failed to parse date field [2005-01] with format [yyyy-MM-dd]', 'caused_by': {'type': 'date_time_parse_exception', 'reason': "Text '2005-01' could not be parsed at index 7"}}}
+[2025-06-10T17:30:04.248+0200] {subprocess.py:93} INFO -    ✅ 246 docs indexed in 'backtest_timeseries'
+[2025-06-10T17:30:04.248+0200] {subprocess.py:93} INFO - → Index 'backtest_stats'…
+[2025-06-10T17:30:04.248+0200] {subprocess.py:93} INFO -    ✅ 1 docs indexed in 'backtest_stats'
+[2025-06-10T17:30:04.263+0200] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-06-10T17:30:04.264+0200] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-10T17:30:04.280+0200] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=macro_trading_dag, task_id=index_to_elasticsearch, execution_date=20250610T152304, start_date=20250610T153001, end_date=20250610T153004
+[2025-06-10T17:30:04.320+0200] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-10T17:30:04.328+0200] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T17:30:04.328+0200] {local_task_job_runner.py:222} INFO - ::endgroup::

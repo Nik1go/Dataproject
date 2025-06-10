@@ -15,127 +15,101 @@ from pyspark.sql.functions import (
     to_date,
     greatest,
 )
+""" compute_quadrants.py
+
+Objectif :
+Ce script Spark permet de déterminer dans quel quadrant économique (Q1 à Q4) se trouve chaque mois,
+en analysant des indicateurs macroéconomiques comme l’inflation, le chômage, ou les spreads de crédit.
+
+Définition des quadrants :
+- Q1 : Croissance & faible inflation (environnement favorable)
+- Q2 : Croissance & forte inflation
+- Q3 : Récession & forte inflation (stagflation)
+- Q4 : Récession & faible inflation
+
+Étapes réalisées :
+1. Lecture des indicateurs macroéconomiques à partir d’un fichier `.parquet`
+2. Calcul :
+   - des deltas (variations mensuelles),
+   - des z-scores (anomalies par rapport à l'historique),
+   - des scores de position absolue (niveau par rapport à la médiane)
+   - des scores de variation (delta par rapport à l'écart type)
+3. Attribution de scores à chaque quadrant en fonction de la direction de chaque indicateur :
+   (ex: inflation élevée → Q2 ou Q3 / chômage faible → Q1 ou Q2, etc.)
+4. Quadrant final attribué = celui avec le score total le plus élevé.
+5. Export final dans un unique fichier Parquet et un fichier CSV unique, utilisables dans les étapes suivantes du pipeline.
+
+Usage :
+Le script s'utilise avec 3 arguments :
+```bash
+spark-submit compute_quadrants.py <input_indicators.parquet> <output_quadrants.parquet> <output_quadrants.csv> """
 
 
 def write_single_parquet(df, output_path: str):
-    """
-    Écrit la DataFrame `df` en un UNIQUE fichier Parquet (coalesce(1)) :
-    1. On écrit d'abord dans `output_path + "_tmp_parquet"`
-    2. On repère le part-*.parquet généré.
-    3. On supprime l'ancien `output_path` (s'il existe) et on déplace le part-*.parquet
-       en nom exact `output_path`.
-    4. On supprime le dossier temporaire.
-    """
     tmp_dir = output_path + "_tmp_parquet"
-
-    # 1) S'assurer qu'il n'existe pas de dossier temporaire ancien
     if os.path.exists(tmp_dir):
         shutil.rmtree(tmp_dir)
-
-    # 2) Coalesce à 1 partition et écrire dans tmp_dir
     df.coalesce(1).write.mode("overwrite").parquet(tmp_dir)
 
-    # 3) Repérer le seul fichier part-XXXX.parquet à l'intérieur
     part_files = glob.glob(os.path.join(tmp_dir, "part-*.parquet"))
     if not part_files:
         raise RuntimeError(f"Aucun part-*.parquet trouvé dans {tmp_dir}")
-
     single_part = part_files[0]
 
-    # 4) Supprimer l'ancien fichier de sortie s'il existe, puis déplacer le nouveau
     if os.path.exists(output_path):
         os.remove(output_path)
     shutil.move(single_part, output_path)
-
-    # 5) Supprimer le dossier temporaire
     shutil.rmtree(tmp_dir)
 
-
 def write_single_csv(df, output_path: str):
-    """
-    Écrit la DataFrame `df` en un UNIQUE fichier CSV (coalesce(1)) avec header :
-    1. On écrit d'abord dans `output_path + "_tmp_csv"`
-    2. On repère le part-*.csv généré.
-    3. On supprime l'ancien `output_path` (s'il existe) et on déplace le part-*.csv
-       en nom exact `output_path`.
-    4. On supprime le dossier temporaire.
-    """
-    tmp_dir = output_path + "_tmp_csv"
 
-    # 1) S'assurer qu'il n'existe pas de dossier temporaire ancien
+    tmp_dir = output_path + "_tmp_csv"
     if os.path.exists(tmp_dir):
         shutil.rmtree(tmp_dir)
-
-    # 2) Coalesce à 1 partition et écrire dans tmp_dir (avec header)
     df.coalesce(1).write.mode("overwrite").option("header", "true").csv(tmp_dir)
-
-    # 3) Repérer le seul fichier part-XXXX.csv à l'intérieur
     part_files = glob.glob(os.path.join(tmp_dir, "part-*.csv"))
     if not part_files:
         raise RuntimeError(f"Aucun part-*.csv trouvé dans {tmp_dir}")
-
     single_part = part_files[0]
-
-    # 4) Supprimer l'ancien fichier de sortie s'il existe, puis déplacer le nouveau
     if os.path.exists(output_path):
         os.remove(output_path)
     shutil.move(single_part, output_path)
-
-    # 5) Supprimer le dossier temporaire
     shutil.rmtree(tmp_dir)
 
 
 def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path: str, full_df=None):
-    """
-    - Si `output_parquet_path` existe déjà, on le lit, on récupère le max(date),
-      puis on ne calcule que les mois > last_date (mode incrémental).
-    - Sinon, on refait tout l'historique (mode full).
-    - Ensuite, on concatène l'ancien DataFrame avec les nouvelles lignes.
-    - Enfin, on écrit :
-         • Un seul fichier Parquet → `output_parquet_path`
-         • Un seul fichier CSV   → `output_csv_path`
-    """
+
     spark = (
         SparkSession.builder
         .appName("ComputeEconomicQuadrants")
         .getOrCreate()
     )
 
-    # --- 1. Charger Indicators + convertir la colonne "date" en DateType ---
     df_ind = (
         spark.read.parquet(indicators_parquet_path)
         .withColumn("date", to_date(col("date"), "yyyy-MM-dd"))
         .orderBy("date")
     )
 
-    # 2. Détecter si le fichier Parquet de sortie existe déjà
     existing_df = None
     last_date = None
 
     if Path(output_parquet_path).is_file():
-        # Lire l'ancien quadrants.parquet
         existing_df = spark.read.parquet(output_parquet_path)
-        # Récupérer la date max
         max_row = existing_df.agg({"date": "max"}).collect()[0]
         last_date = max_row[0]  # type: ignore
-        # Filtrer seulement les nouvelles lignes > last_date
         new_ind = df_ind.filter(col("date") > last_date)
     else:
-        # Pas de fichier existant → full refresh
         new_ind = df_ind
 
-    # Si aucune nouvelle ligne à traiter, on sort
     if new_ind.rdd.isEmpty():
         print(f"Aucune nouvelle donnée après {last_date}. Pas de réécriture.")
         spark.stop()
         return
 
-    # --- 3. Définir les fenêtres pour delta / z-score sur l’historique complet ---
     window_lag = Window.orderBy("date")
     window_roll = Window.orderBy("date").rowsBetween(-120, -1)
-
-    working_df = df_ind  # on va calculer deltas et z-scores sur tout l’historique
-
+    working_df = df_ind
     indicator_cols = [
         "INFLATION",
         "UNEMPLOYMENT",
@@ -147,7 +121,6 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
 
     last_two = full_df.orderBy("date", ascending=False).limit(2).orderBy("date")
 
-    # --- 4. Calcul des deltas et z-scores sur tout l’historique ---
     for ind in indicator_cols:
         prev_val = lag(col(ind), 1).over(window_lag)
         working_df = (
@@ -161,14 +134,12 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
             )
         )
 
-    # --- 5. Calcul des médianes & écart‐type long‐terme sur les valeurs brutes ---
     median_std = {}
     for ind in indicator_cols:
         median_val = working_df.select(expr(f"percentile_approx(`{ind}`, 0.5)")).first()[0]
         std_all = working_df.agg(stddev_samp(col(ind))).first()[0]
         median_std[ind] = (median_val, std_all)
 
-    # 6. Fonctions utilitaires pour pos_score et var_score
     def pos_score(col_name: str, med: float, std_all: float):
         return (
             when(col(col_name) > med + 1.5 * std_all, 2)
@@ -187,10 +158,8 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
             .otherwise(0)
         )
 
-    # --- 7. Ne conserver que les nouvelles lignes dans new_df ---
     new_df = working_df.filter(col("date") > last_date) if last_date is not None else working_df
 
-    # --- 8. Pour chaque indicateur, ajouter pos_score, var_score, combined ---
     for ind in indicator_cols:
         med, std_all = median_std[ind]
         new_df = (
@@ -200,7 +169,6 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
             .withColumn(f"{ind}_combined", col(f"{ind}_pos_score") + col(f"{ind}_var_score"))
         )
 
-    # 9. Répartition des points dans les quadrants Q1..Q4
     new_df = (
         new_df
         .withColumn("score_Q1", expr("0"))
@@ -231,7 +199,6 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
         for q, expr_cond in exprs.items():
             new_df = new_df.withColumn(q, col(q) + expr_cond)
 
-    # 10. Calculer assigned_quadrant (celui qui a le plus gros score)
     new_df = (
         new_df
         .withColumn(
@@ -247,7 +214,6 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
         )
     )
 
-    # 11. Sélectionner toutes les colonnes finales
     final_cols = [
         "date",
         *indicator_cols,
@@ -260,7 +226,6 @@ def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path
     ]
     new_df = new_df.select(*final_cols)
 
-    # 12. Concaténer avec existing_df si on était en mode incrémental
     if existing_df is not None:
         merged_df = existing_df.select(*final_cols).unionByName(new_df)
     else:

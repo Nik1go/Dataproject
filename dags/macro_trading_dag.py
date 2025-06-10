@@ -8,6 +8,36 @@ import yfinance as yf
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from fredapi import Fred
 
+""" Pipeline Airflow : macro_trading_dag.py
+
+Objectif :
+Ce script définit un pipeline de données complet avec Apache Airflow pour analyser les cycles économiques.
+Il récupère, nettoie, et structure des données macroéconomiques (via FRED API) et financières (via Yahoo Finance),
+puis déclenche des scripts Spark pour identifier les phases du cycle économique et analyser la performance des actifs financiers.
+
+Étapes du pipeline :
+1. `fetch_data` : Récupération des données macro et financières (Yahoo Finance, FRED API)
+2. `prepare_indicators_data` & `prepare_assets_data` : Agrégation des données par type (indicateurs et actifs)
+3. `format_indicators_data` & `format_assets_data` : Nettoyage, interpolation, resampling et export en Parquet
+4. `compute_economic_quadrants` : Exécution d'un script Spark pour classifier chaque période dans un des 4 quadrants économiques
+5. `compute_assets_performance` : Évaluation des performances des actifs dans chaque quadrant économique
+
+Outils utilisés :
+- Airflow : orchestration du pipeline (avec DAG, tâches Python & Bash)
+- FRED API / Yahoo Finance : extraction des données économiques et financières
+- Pandas : transformation, fusion et sauvegarde des données
+- Spark (via spark-submit) : traitement à grande échelle pour la modélisation quadrants + performance
+
+Le DAG est exécuté automatiquement chaque jour à 8h (cron : `0 8 * * *`), mais peut être lancé manuellement pour test.
+
+Structure d'enregistrement :
+Les fichiers sont sauvegardés dans `~/airflow/data` :
+- Données brutes dans `/backup`
+- Données formatées en `.parquet`
+- Résultats finaux des analyses dans `quadrants.parquet`, `assets_performance_by_quadrant.parquet`
+
+Ce DAG constitue le cœur du projet : il gère toute la chaîne de collecte, traitement et modélisation pour construire un outil d’analyse macro-financière automatisé.
+"""
 
 FRED_API_KEY = 'c4caaa1267e572ae636ff75a2a600f3d'
 
@@ -36,7 +66,6 @@ default_args = {
     'retries': 2,
     'retry_delay': timedelta(minutes=3)
 }
-
 
 def fetch_and_save_data(**kwargs):
     fred = Fred(api_key=FRED_API_KEY)
@@ -113,7 +142,6 @@ def fetch_and_save_data(**kwargs):
         else:
             print(f"Aucune nouvelle donnée pour {name} ({meta['series_id']})")
 
-
 def prepare_indicators_data(base_dir):
     """Combine les indicateurs économiques en un seul DataFrame"""
     backup_dir = os.path.join(base_dir, 'backup')
@@ -123,9 +151,7 @@ def prepare_indicators_data(base_dir):
         'CONSUMER_SENTIMENT',
         'High_Yield_Bond_SPREAD',
         '10-2Year_Treasury_Yield_Bond',
-        'TAUX_FED'
-
-    ]
+        'TAUX_FED']
 
     combined_df = pd.DataFrame()
 
@@ -140,12 +166,10 @@ def prepare_indicators_data(base_dir):
             else:
                 combined_df = pd.merge(combined_df, df, on='date', how='outer')
 
-    # Sauvegarder temporairement
     output_path = os.path.join(base_dir, 'combined_indicators.csv')
     combined_df.to_csv(output_path, index=False)
     print(f"Fichier combiné des indicateurs créé: {output_path}")
     return output_path
-
 
 def prepare_assets_data(base_dir):
     """Combine les actifs en un seul DataFrame"""
@@ -158,7 +182,6 @@ def prepare_assets_data(base_dir):
         file_path = os.path.join(backup_dir, f"{asset}.csv")
         if os.path.exists(file_path):
             df = pd.read_csv(file_path, parse_dates=['date'])
-            # Récupérer le nom court de l'actif
             asset_name = YF_SERIES_MAPPING[asset]['series_id']
             df = df.rename(columns={'value': asset_name})
 
@@ -167,88 +190,44 @@ def prepare_assets_data(base_dir):
             else:
                 combined_df = pd.merge(combined_df, df, on='date', how='outer')
 
-    # Sauvegarder temporairement
     output_path = os.path.join(base_dir, 'combined_assets.csv')
     combined_df.to_csv(output_path, index=False)
     print(f"Fichier combiné des actifs créé: {output_path}")
     return output_path
 
-
 def format_and_clean_data(base_dir, input_path, data_type):
     print(f"→ format_and_clean_data: on lit le fichier CSV : {input_path}")
-
-    # Lire les données
     df = pd.read_csv(input_path, parse_dates=['date'])
-
     print("   Colonnes lues dans df :", df.columns.tolist())
-
-    # Supprimer les lignes où toutes les valeurs sont nulles
     df = df.dropna(how='all', subset=df.columns.difference(['date']))
-
-    # Convertir en mensuel (dernier jour du mois)
     df['date'] = pd.to_datetime(df['date'])
     df.set_index('date', inplace=True)
     monthly_df = df.resample('M').last()
 
-    # Interpolation pour les valeurs manquantes
     monthly_df = monthly_df.interpolate(method='linear')
-
-    # Réinitialiser l'index
     monthly_df.reset_index(inplace=True)
-
-    # → **Ici** : convertir la colonne `date` en string (YYYY-MM-DD)
     monthly_df['date'] = monthly_df['date'].dt.strftime('%Y-%m-%d')
-
-    # Définir le chemin de sortie
     output_path = os.path.join(base_dir, f"{data_type}.parquet")
-
-    # Sauvegarder en Parquet
     monthly_df.to_parquet(output_path, index=False)
     print(f"Données {data_type} mensuelles nettoyées sauvegardées: {output_path}")
-
-    # Aperçu
     print(monthly_df.tail(5))
-
     return output_path
 
 
 def format_and_clean_data_daily(base_dir, input_path, data_type):
-    """
-    - Lit le CSV journalier dont le chemin est input_path
-    - Supprime les jours où il manque au moins une donnée (colonnes autres que 'date')
-    - Trie par date et convertit la date en format YYYY-MM-DD (string)
-    - Écrit le DataFrame nettoyé en Parquet
-    """
+
     print(f"→ format_and_clean_data_daily: on lit le fichier CSV : {input_path}")
 
-    # 1. Lecture du CSV et conversion de la colonne 'date' en datetime
     df = pd.read_csv(input_path, parse_dates=['date'])
     print("   Colonnes lues dans df :", df.columns.tolist())
-
-    # 2. Supprimer les lignes où TOUTES les colonnes (sauf 'date') sont nulles
     df = df.dropna(how='all', subset=df.columns.difference(['date']))
-
-    # 3. Supprimer les lignes où AU MOINS UNE colonne (autre que 'date') est nulle
-    #    → Ainsi on retire purement et simplement tous les jours qui contiennent un ou plusieurs NULLs
     df = df.dropna(how='any', subset=df.columns.difference(['date']))
-
-    # 4. S’assurer que la colonne 'date' est bien un datetime, puis trier
     df['date'] = pd.to_datetime(df['date'])
     df = df.sort_values('date')
-
-    # 5. (Optionnel) Si vous aviez besoin de réindexes sur les week-ends, etc.,
-    #    vous pourriez le faire ici, mais dans notre cas on conserve strictement
-    #    uniquement les dates présentes dans le CSV.
-
-    # 6. Convertir la date en string "YYYY-MM-DD" (c’est souvent plus simple pour lire le Parquet)
     df['date'] = df['date'].dt.strftime('%Y-%m-%d')
-
-    # 7. Sauvegarde en Parquet
     output_path = os.path.join(base_dir, f"{data_type}_daily.parquet")
     df.to_parquet(output_path, index=False)
     print(f"Données {data_type} journalières nettoyées sauvegardées : {output_path}")
-
-    # 8. Affichage d’un petit aperçu
     print(df.head(5))
     print(df.tail(5))
 
@@ -306,7 +285,9 @@ with DAG(
     ASSETS_PERF_OUTPUT = os.path.join(base_dir, "assets_performance_by_quadrant.parquet")
     INDICATORS_PARQUET = os.path.join(base_dir, "Indicators.parquet")
     QUADRANT_OUTPUT = os.path.join(base_dir, "quadrants.parquet")
-    QUADRANT_CSV = os.path.join(base_dir, "data/quadrants.csv")
+    QUADRANT_CSV = os.path.join(base_dir, "quadrants.csv")
+    BACKTEST_OUTPUT = os.path.join(base_dir, "backtest_results")
+
 
     compute_quadrant_task = SparkSubmitOperator(
         task_id='compute_economic_quadrants',
@@ -337,6 +318,24 @@ with DAG(
         },
         verbose=False
     )
+
+    backtest_task = SparkSubmitOperator(
+        task_id='backtest_strategy',
+        application="/home/leoja/airflow/spark_jobs/backtest_strategy.py",
+        name="backtest_strategy",
+        application_args=[
+            QUADRANT_CSV,
+            "{{ ti.xcom_pull(task_ids='format_assets_data') }}",
+            "1000",
+            BACKTEST_OUTPUT
+        ],
+        conn_id="spark_local",
+        conf={
+            "spark.pyspark.python": "/home/leoja/airflow_venv/bin/python",
+            "spark.pyspark.driver.python": "/home/leoja/airflow_venv/bin/python"
+        },
+        verbose=False
+    )
     index_to_elasticsearch = BashOperator(
         task_id='index_to_elasticsearch',
         bash_command="""
@@ -350,4 +349,4 @@ with DAG(
     prepare_indicators_task >> format_indicators_task >> compute_quadrant_task
     prepare_assets_task >> format_assets_task
     [compute_quadrant_task, format_assets_task] >> compute_assets_performance_task
-    compute_assets_performance_task >> index_to_elasticsearch
+    compute_assets_performance_task >> backtest_task >> index_to_elasticsearch
