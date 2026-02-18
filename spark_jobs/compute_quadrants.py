@@ -1,289 +1,308 @@
-import sys
-import os
-import shutil
-import glob
-from pathlib import Path
+"""
+compute_quadrants.py - Economic Quadrant Classification (Probability-Based)
 
-from pyspark.sql import SparkSession, Window
-from pyspark.sql.functions import (
-    col,
-    lag,
-    avg,
-    stddev_samp,
-    when,
-    expr,
-    to_date,
-    greatest,
-    lit,
-    coalesce,
-    last,
-    count,
-    abs
-)
+Loads pre-trained ML classifiers from ml_pipeline.pkl, runs daily inference
+using predict_proba, applies EMA smoothing, and assigns economic quadrants.
 
-""" compute_quadrants.py
-
-Objectif :
-- Determiner le quadrant economique (Q1-Q4) pour CHAQUE jour (Continu).
-- Gestion des donnees 'Sparse' (Macro sort 1x/mois) via Forward Fill.
-- Gestion des Lags en 'Jours de Trading' (lignes).
-
-python spark_jobs/compute_quadrants.py data/US/output_dag/Indicators.parquet data/US/output_dag/quadrants.parquet data/US/output_dag/quadrants.csv
+Usage:
+    cd ~/airflow
+    source airflow_venv/bin/activate
+    python spark_jobs/compute_quadrants.py \
+        data/US/output_dag/combined_indicators.csv \
+        data/US/output_dag/ml_pipeline.pkl \
+        data/US/output_dag/quadrants.parquet \
+        data/US/output_dag/quadrants.csv
 """
 
-def write_single_file(df, output_path: str, format: str = "parquet"):
-    """
-    Ecrit un DataFrame en un seul fichier (CSV ou Parquet) en fusionnant les partitions.
-    """
-    tmp_dir = output_path + f"_tmp_{format}"
+import sys
+import os
+import warnings
+warnings.filterwarnings('ignore')
 
-    if os.path.exists(tmp_dir):
-        shutil.rmtree(tmp_dir)
+import pandas as pd
+import numpy as np
+import pickle
 
-    writer = df.coalesce(1).write.mode("overwrite")
 
-    if format == "csv":
-        writer.option("header", "true").csv(tmp_dir)
-        pattern = "part-*.csv"
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
+# Publication Lags (in TRADING DAYS)
+LAGS_TRADING_DAYS = {
+    'WTI_CRUDE_OIL': 0,
+    'US_DOLLAR_INDEX': 0,
+    'VIX': 0,
+    'BREAKEVEN_10Y': 0,
+    'High_Yield_Bond_SPREAD': 0,
+    '10-2Year_Treasury_Yield_Bond': 0,
+    'COPPER': 0,
+    'TAUX_FED': 0,
+    'NET_LIQUIDITY': 0,
+
+    'IND_PRODUCTION': 35,
+    'HOUSING_PERMITS': 25,
+    'CONSUMER_SENTIMENT': 5,
+    'INITIAL_CLAIMS': 5,
+    'INFLATION': 30,
+    'USPHCI': 60,
+    'Real_Gross_Domestic_Product': 60,
+}
+
+# EMA Smoothing Span for Probabilities
+EMA_SPAN = 5
+
+
+# ============================================================
+# HELPER FUNCTIONS
+# ============================================================
+
+def apply_publication_lags(df: pd.DataFrame, lags: dict) -> pd.DataFrame:
+    """Apply publication lags to features (shift data forward)."""
+    df_lagged = df.copy()
+    for col, lag_days in lags.items():
+        if col in df_lagged.columns and lag_days > 0:
+            df_lagged[col] = df_lagged[col].shift(lag_days)
+    return df_lagged
+
+
+def calculate_yoy_change(series: pd.Series, periods: int = 252) -> pd.Series:
+    """Calculate Year-over-Year percentage change."""
+    return series.pct_change(periods=periods) * 100
+
+
+def calculate_momentum(series: pd.Series, months: int) -> pd.Series:
+    """Calculate Momentum as percentage change over N months (approx 21 days/month)."""
+    return series.pct_change(periods=int(months * 21)) * 100
+
+
+def calculate_volatility(series: pd.Series, months: int) -> pd.Series:
+    """Calculate Volatility as rolling standard deviation of daily returns over N months."""
+    return series.pct_change(1).rolling(window=int(months * 21)).std() * 100
+
+
+# ============================================================
+# MAIN LOGIC
+# ============================================================
+
+def main(indicators_path: str, pipeline_path: str, output_parquet: str, output_csv: str):
+    print("=" * 60)
+    print("ECONOMIC QUADRANT CLASSIFICATION (Probability-Based)")
+    print(f"EMA Span: {EMA_SPAN} days")
+    print("=" * 60)
+    
+    # ========================================
+    # 1. LOAD ML PIPELINE
+    # ========================================
+    print("\n[1/5] Loading ML pipeline...")
+    
+    with open(pipeline_path, 'rb') as f:
+        pipeline = pickle.load(f)
+    
+    model_growth = pipeline['model_growth']
+    model_inflation = pipeline['model_inflation']
+    scaler = pipeline['scaler']
+    feature_cols = pipeline['feature_cols']
+    model_type = pipeline.get('model_type', 'classifier')
+    
+    print(f"   Loaded {model_type} models + scaler with {len(feature_cols)} features")
+    
+    # ========================================
+    # 2. LOAD & PREPARE DATA
+    # ========================================
+    print("\n[2/5] Loading data...")
+    
+    if indicators_path.endswith('.csv'):
+        df = pd.read_csv(indicators_path, parse_dates=['date'])
+    elif indicators_path.endswith('.parquet'):
+        df = pd.read_parquet(indicators_path)
+        df['date'] = pd.to_datetime(df['date'])
     else:
-        writer.parquet(tmp_dir)
-        pattern = "part-*.parquet"
+        df = pd.read_csv(indicators_path, parse_dates=['date'])
+    
+    df = df.sort_values('date').reset_index(drop=True)
+    df = df.set_index('date')
+    df = df.ffill()
+    
+    df_lagged = apply_publication_lags(df, LAGS_TRADING_DAYS)
+    
+    # Derived feature: Real Rates
+    # Derived feature: Real Rates & Inflation YoY
+    if 'INFLATION' in df_lagged.columns:
+        df_lagged['INFLATION_YOY'] = calculate_yoy_change(df_lagged['INFLATION'], periods=252)
 
-    part_files = glob.glob(os.path.join(tmp_dir, pattern))
-    if not part_files:
-        raise RuntimeError(f"Erreur Spark : Aucun fichier {pattern} dans {tmp_dir}")
+    if 'TAUX_FED' in df_lagged.columns and 'INFLATION_YOY' in df_lagged.columns:
+        df_lagged['REAL_RATES'] = df_lagged['TAUX_FED'] - df_lagged['INFLATION_YOY']
 
-    single_part = part_files[0]
-
-    if os.path.exists(output_path):
-        os.remove(output_path)
-
-    shutil.move(single_part, output_path)
-    shutil.rmtree(tmp_dir)
-
-
-def main(indicators_parquet_path: str, output_parquet_path: str, output_csv_path: str):
-    spark = (
-        SparkSession.builder
-        .appName("ComputeEconomicQuadrants_Daily_V2")
-        .getOrCreate()
-    )
-
-    # 1. LECTURE (Golden Source = déjà dédupliquée par le DAG)
-    df_ind = (
-        spark.read.parquet(indicators_parquet_path)
-        .withColumn("date", to_date(col("date"), "yyyy-MM-dd"))
-        .orderBy("date")
-    )
-
-    # Liste complete de tous les indicateurs
-    # REMOVALS: UNEMPLOYMENT (redundant with INITIAL_CLAIMS), Real_Gross_Domestic_Product (too lagging, not useful for quadrants)
-    # ADDITIONS: WTI_CRUDE_OIL, COPPER, US_DOLLAR_INDEX (should be in Indicators.parquet, not Assets)
-    all_indicators = [
-        "INFLATION",
-        "CONSUMER_SENTIMENT",
-        "INITIAL_CLAIMS",
-        "HOUSING_PERMITS",
-        "IND_PRODUCTION",
-        "High_Yield_Bond_SPREAD",
-        "10-2Year_Treasury_Yield_Bond",
-        "TAUX_FED",
-        "VIX",
-        "US_DOLLAR_INDEX",  # Dollar strength: Strong = Deflation, Weak = Inflation
-        "WTI_CRUDE_OIL",     # Oil spike = Inflation signal
-        "COPPER"             # Industrial demand = Growth signal
+    # Derived Features: Momentum & Volatility
+    # Split into Fast (Market) and Slow (Macro/Liquidity) for feature selection
+    
+    fast_assets = [
+        'COPPER', 'WTI_CRUDE_OIL', 'US_DOLLAR_INDEX', 
+        'High_Yield_Bond_SPREAD', '10-2Year_Treasury_Yield_Bond', 
+        'VIX'
     ]
-
-    # Filtrer pour ne garder que ceux qui existent vraiment dans le fichier
-    existing_cols = [c for c in all_indicators if c in df_ind.columns]
     
-    # 2. FORWARD FILL GLOBAL (Boucher les trous)
-    # Important : On propage la derniere valeur connue pour TOUT (Macro + Market le week-end)
-    window_ff = Window.orderBy("date").rowsBetween(Window.unboundedPreceding, 0)
-
-    for c in existing_cols:
-        df_ind = df_ind.withColumn(c, last(col(c), ignorenulls=True).over(window_ff))
-
-    # 3. LAGS (en jours de trading / lignes)
-    lags_config = {
-        "INFLATION": 18,
-        "CONSUMER_SENTIMENT": 10,
-        "INITIAL_CLAIMS": 5,
-        "HOUSING_PERMITS": 18,
-        "IND_PRODUCTION": 15,
-        # VIX, Bond Spread, WTI, COPPER, USD, etc. = 0 (Real Time - market data)
-    }
-
-    window_lag = Window.orderBy("date")
-
-    for col_name, lag_rows in lags_config.items():
-        if col_name in existing_cols:
-            df_ind = df_ind.withColumn(col_name, lag(col(col_name), lag_rows).over(window_lag))
-
-    # 4. CALCULS DES SCORES (Expanding & Momentum)
+    slow_assets = [
+        'NET_LIQUIDITY', 'REAL_RATES', 
+        'CONSUMER_SENTIMENT', 'HOUSING_PERMITS', 'IND_PRODUCTION', 'INFLATION_YOY'
+    ]
     
-    # Historique depuis le debut (pour le nivau absolu)
-    window_expanding = Window.orderBy("date").rowsBetween(Window.unboundedPreceding, -1)
+    # Fast Assets: Focus on 1M & 3M Momentum & Volatility (Reactive)
+    for asset in fast_assets:
+        if asset in df_lagged.columns:
+            # 1M Momentum (Fastest)
+            df_lagged[f'{asset}_MOM_1M'] = calculate_momentum(df_lagged[asset], months=1)
+            # 3M Momentum (Confirmation)
+            df_lagged[f'{asset}_MOM_3M'] = calculate_momentum(df_lagged[asset], months=3)
+            
+            # Volatility (Rolling Std of Daily Returns) - 1M & 3M
+            df_lagged[f'{asset}_VOL_1M'] = calculate_volatility(df_lagged[asset], months=1)
+            df_lagged[f'{asset}_VOL_3M'] = calculate_volatility(df_lagged[asset], months=3)
+
+    # Slow Assets: Focus on 3M & 6M Momentum (Trend)
+    for asset in slow_assets:
+        if asset in df_lagged.columns:
+            df_lagged[f'{asset}_MOM_3M'] = calculate_momentum(df_lagged[asset], months=3)
+            df_lagged[f'{asset}_MOM_6M'] = calculate_momentum(df_lagged[asset], months=6)
     
-    # Momentum 6 mois (approx 126 jours ouvres) pour normaliser la variation
-    window_momentum_norm = Window.orderBy("date").rowsBetween(-126, -1)
+    # Create YoY variables (for export in quadrants.csv) - Updated for new Growth proxy
+    df['INITIAL_CLAIMS_YOY'] = calculate_yoy_change(df['INITIAL_CLAIMS'], periods=252)
+    df['CPI_YOY'] = calculate_yoy_change(df['INFLATION'], periods=252)
     
-    working_df = df_ind
-
-    cols_to_score = [c for c in existing_cols if c in df_ind.columns] # Securite
-
-    for ind in cols_to_score:
-        # SCORE DE POSITION
-        working_df = (
-            working_df
-            .withColumn(f"{ind}_hist_mean", avg(col(ind)).over(window_expanding))
-            .withColumn(f"{ind}_hist_std", stddev_samp(col(ind)).over(window_expanding))
-        )
-
-        z_score_pos = (
-            (col(ind) - col(f"{ind}_hist_mean")) /
-            coalesce(col(f"{ind}_hist_std"), lit(1.0))
-        )
-
-        working_df = working_df.withColumn(
-            f"{ind}_pos_score",
-            when(z_score_pos > 1.5, 2)
-            .when(z_score_pos > 0.5, 1)
-            .when(z_score_pos < -1.5, -2)
-            .when(z_score_pos < -0.5, -1)
-            .otherwise(0)
-        )
-
-        # --- B. SCORE DE VARIATION (Momentum) ---
-        # Delta = Valeur_J - Valeur_J-20
-        prev_val = lag(col(ind), 20).over(Window.orderBy("date"))
-        delta = col(ind) - prev_val
-
-        # Normalisation par rapport a la volatilite du Delta sur 6 mois (126 jours)
-        delta_mean = avg(delta).over(window_momentum_norm)
-        delta_std = stddev_samp(delta).over(window_momentum_norm)
-
-        z_score_var = (
-            (delta - delta_mean) /
-            coalesce(delta_std, lit(1.0))
-        )
-
-        working_df = working_df.withColumn(
-            f"{ind}_var_score",
-            when(z_score_var > 2, 2)
-            .when(z_score_var > 1, 1)
-            .when(z_score_var < -2, -2)
-            .when(z_score_var < -1, -1)
-            .otherwise(0)
-        )
-
-        #  OFFICIEL COMBINED
-        working_df = working_df.withColumn(
-            f"{ind}_combined",
-            col(f"{ind}_pos_score") + col(f"{ind}_var_score")
-        )
-
-    # Nettoyage Warm-up (2 ans approx = 500 jours ouvres)
-    # working_df = working_df.filter(col(f"{existing_cols[0]}_hist_std").isNotNull())
-
-    # 5. ATTRIBUTION DES QUADRANTS
-    working_df = (
-        working_df
-        .withColumn("score_Q1", lit(0))
-        .withColumn("score_Q2", lit(0))
-        .withColumn("score_Q3", lit(0))
-        .withColumn("score_Q4", lit(0))
-    )
-
-    # Regles de Scoring (Incluant les nouveaux indicateurs)
-    mappings = {
-        "INFLATION_combined": (["score_Q2", "score_Q3"], ["score_Q1", "score_Q4"]),  # High Inflation = Q2 or Q3, Low = Q1 or Q4
-        "CONSUMER_SENTIMENT_combined": (["score_Q1", "score_Q2"], ["score_Q3", "score_Q4"]),
-        "High_Yield_Bond_SPREAD_combined": (["score_Q3", "score_Q4"], ["score_Q1", "score_Q2"]),
-        "10-2Year_Treasury_Yield_Bond_combined": (["score_Q1"], ["score_Q4"]),
-        "TAUX_FED_combined": (["score_Q3", "score_Q4"], ["score_Q1", "score_Q2"]),
-        "INITIAL_CLAIMS_combined": (["score_Q3", "score_Q4"], ["score_Q1", "score_Q2"]),  # Rising = Bad (Labor Market Weakness)
-        "VIX_combined": (["score_Q4"], ["score_Q1", "score_Q2"]),  # Rising = Fear
-        "HOUSING_PERMITS_combined": (["score_Q1", "score_Q2"], ["score_Q3", "score_Q4"]),  # Rising = Growth
-        "IND_PRODUCTION_combined": (["score_Q1", "score_Q2"], ["score_Q3", "score_Q4"]),  # Rising = Growth
-        "US_DOLLAR_INDEX_combined": (["score_Q1", "score_Q4"], ["score_Q2", "score_Q3"]),  # Dollar Index
-        "WTI_CRUDE_OIL_combined": (["score_Q2", "score_Q3"], ["score_Q1", "score_Q4"]),  # Oil spike
-        "COPPER_combined": (["score_Q1", "score_Q2"], ["score_Q3", "score_Q4"]),  # Industrial demand
-    }
+    # Keep USPHCI just for backup/reference if needed in CSV, but not used for Targets anymore
+    if 'USPHCI' in df.columns:
+        df['USPHCI_YOY'] = calculate_yoy_change(df['USPHCI'], periods=252)
     
-    # Poids des Indicateurs (Rééquilibrage DOUX)
-    INDICATOR_WEIGHTS = {
-        # LEADING (1.2): +20% comme tie-breaker
-        "10-2Year_Treasury_Yield_Bond_combined": 1.2,
-        "VIX_combined": 1.2,
-        "WTI_CRUDE_OIL_combined": 1.2,
+    print(f"   Loaded {len(df)} rows from {df.index.min()} to {df.index.max()}")
+    
+    # ========================================
+    # 3. DAILY INFERENCE (PROBABILITIES)
+    # ========================================
+    print("\n[3/5] Running daily inference (predict_proba)...")
+    
+    X_daily = df_lagged[feature_cols].copy()
+    X_daily = X_daily.replace([np.inf, -np.inf], np.nan)
+    X_daily = X_daily.ffill().bfill()
+    
+    # Scale features using the loaded scaler (RobustScaler or StandardScaler)
+    X_daily_scaled = scaler.transform(X_daily)
+    X_daily_scaled_df = pd.DataFrame(X_daily_scaled, columns=feature_cols, index=X_daily.index)
+    
+    # Handle Split Features (Growth vs Inflation) if pipeline has them
+    feature_cols_growth = pipeline.get('feature_cols_growth', feature_cols)
+    feature_cols_inflation = pipeline.get('feature_cols_inflation', feature_cols)
+    
+    # Get probability of class 1 (high growth / high inflation)
+    df['PROB_GROWTH_RAW'] = model_growth.predict_proba(X_daily_scaled_df[feature_cols_growth])[:, 1]
+    df['PROB_INFLATION_RAW'] = model_inflation.predict_proba(X_daily_scaled_df[feature_cols_inflation])[:, 1]
+    
+    # ========================================
+    # 4. EMA SMOOTHING + QUADRANT ASSIGNMENT
+    # ========================================
+    print(f"\n[4/5] Applying EMA smoothing (span={EMA_SPAN}) + Quadrant assignment...")
+    
+    # EMA smoothing on raw probabilities
+    df['PROB_GROWTH_EMA'] = df['PROB_GROWTH_RAW'].ewm(span=EMA_SPAN, min_periods=1).mean()
+    df['PROB_INFLATION_EMA'] = df['PROB_INFLATION_RAW'].ewm(span=EMA_SPAN, min_periods=1).mean()
+    
+    # Quadrant Assignment based on smoothed probabilities
+    # PROB_GROWTH is now PROB_RISK_ON
+    # PROB_INFLATION is PROB_REFLATION
+    conditions = [
+        (df['PROB_GROWTH_EMA'] > 0.5) & (df['PROB_INFLATION_EMA'] < 0.5),   # Q1: Goldilocks (Risk On + Disinflation)
+        (df['PROB_GROWTH_EMA'] > 0.5) & (df['PROB_INFLATION_EMA'] >= 0.5),  # Q2: Reflation Boom (Risk On + Reflation)
+        (df['PROB_GROWTH_EMA'] <= 0.5) & (df['PROB_INFLATION_EMA'] >= 0.5), # Q3: Stagflation (Risk Off + Reflation)
+        (df['PROB_GROWTH_EMA'] <= 0.5) & (df['PROB_INFLATION_EMA'] < 0.5)    # Q4: Recession (Risk Off + Disinflation)
+    ]
+    df['assigned_quadrant'] = np.select(conditions, [1, 2, 3, 4], default=1)
+    
+    # Score columns for backward compatibility with Streamlit scatter plot
+    # Map probabilities from [0,1] to [-2,2] for Z-score-like visualization
+    df['MACRO_GROWTH_SCORE'] = (df['PROB_GROWTH_EMA'] - 0.5) * 4
+    df['MACRO_INFLATION_SCORE'] = (df['PROB_INFLATION_EMA'] - 0.5) * 4
+    
+    # Legacy columns
+    df['score_Q1'] = df['MACRO_GROWTH_SCORE']
+    df['score_Q2'] = df['MACRO_INFLATION_SCORE']
+    df['score_Q3'] = 0.0
+    df['score_Q4'] = 0.0
+    
+    # ========================================
+    # 4b. TARGET QUADRANT (Ground Truth)
+    # ========================================
+    # Compute the "perfect" quadrant based on Market Logic (Spread & Breakeven SMAs)
+    print(f"\n   Computing target quadrants (Market-Implied Risk & Inflation)...")
+    
+    # 1. RISK TRUTH (Spread 1M vs 3M)
+    if 'High_Yield_Bond_SPREAD' in df.columns:
+        # 1M = 21 days, 3M = 63 days
+        df['SPREAD_SMA_1M'] = df['High_Yield_Bond_SPREAD'].rolling(window=21).mean()
+        df['SPREAD_SMA_3M'] = df['High_Yield_Bond_SPREAD'].rolling(window=63).mean()
+        # Risk On (1) if Spreads Falling (1M < 3M)
+        target_risk_on = (df['SPREAD_SMA_1M'] < df['SPREAD_SMA_3M']).astype(int)
+    else:
+        target_risk_on = 0
         
-        # COINCIDENT (1.1): +10% légère prime
-        "US_DOLLAR_INDEX_combined": 1.1,
-        "COPPER_combined": 1.1,
-        "HOUSING_PERMITS_combined": 1.1,
-        "High_Yield_Bond_SPREAD_combined": 1.1,
-        
-        # LAGGING (1.0): Base fondamentale
-        "INFLATION_combined": 1.0,
-        "INITIAL_CLAIMS_combined": 1.0,
-        "CONSUMER_SENTIMENT_combined": 1.0,
-        "TAUX_FED_combined": 1.0,
-        "IND_PRODUCTION_combined": 1.0
-    }
+    # 2. INFLATION TRUTH (Breakeven 1M vs 3M)
+    if 'BREAKEVEN_10Y' in df.columns:
+        # 1M = 21 days, 3M = 63 days
+        df['BE_SMA_1M'] = df['BREAKEVEN_10Y'].rolling(window=21).mean()
+        df['BE_SMA_3M'] = df['BREAKEVEN_10Y'].rolling(window=63).mean()
+        # Reflation (1) if Breakevens Rising (1M > 3M)
+        target_reflation = (df['BE_SMA_1M'] > df['BE_SMA_3M']).astype(int)
+    else:
+        target_reflation = 0
 
-    # Application des scores avec pondération ET intensité du signal
-    for combined_col, (pos_quads, neg_quads) in mappings.items():
-        # Verifier si la colonne existe (au cas ou)
-        if combined_col not in working_df.columns:
-            continue
-        
-        # Récupérer le poids de l'indicateur (défaut = 1.0 )
-        weight = INDICATOR_WEIGHTS.get(combined_col, 1.0)
+    # Quadrant Mapping (Updated)
+    # Q1 (Goldilocks)     : Risk On (1) + Disinflation (0)
+    # Q2 (Reflation Boom) : Risk On (1) + Reflation (1)
+    # Q3 (Stagflation)    : Risk Off (0) + Reflation (1)
+    # Q4 (Recession)      : Risk Off (0) + Disinflation (0)
+    target_conditions = [
+        (target_risk_on == 1) & (target_reflation == 0),   # Q1
+        (target_risk_on == 1) & (target_reflation == 1),   # Q2
+        (target_risk_on == 0) & (target_reflation == 1),   # Q3
+        (target_risk_on == 0) & (target_reflation == 0)    # Q4
+    ]
+    df['target_quadrant'] = np.select(target_conditions, [1, 2, 3, 4], default=0)
+    
+    # ========================================
+    # 5. OUTPUT
+    # ========================================
+    print(f"\n[5/5] Writing output...")
+    
+    df_out = df.reset_index()
+    
+    df_out.to_parquet(output_parquet, index=False)
+    print(f"   Parquet -> {output_parquet}")
+    
+    df_out.to_csv(output_csv, index=False)
+    print(f"   CSV -> {output_csv}")
+    
+    # Summary
+    latest = df.iloc[-1]
+    print("\n" + "=" * 60)
+    print("SUMMARY")
+    print("=" * 60)
+    print(f"Latest Date: {df.index[-1]}")
+    print(f"P(High Growth):    {latest['PROB_GROWTH_EMA']:.1%}")
+    print(f"P(High Inflation): {latest['PROB_INFLATION_EMA']:.1%}")
+    print(f"Assigned Quadrant: Q{int(latest['assigned_quadrant'])}")
+    
+    # Quadrant distribution
+    q_counts = df['assigned_quadrant'].value_counts().sort_index()
+    q_names = {1: 'Goldilocks', 2: 'Reflation Boom', 3: 'Stagflation', 4: 'Recession'}
+    for q, count in q_counts.items():
+        pct = count / len(df) * 100
+        print(f"   Q{q} ({q_names[q]}): {count} days ({pct:.1f}%)")
+    
+    print("\nDone!")
 
-        for q in pos_quads:
-            # Multiplier le poids par le score combined pour intensité du signal
-            working_df = working_df.withColumn(
-                q, 
-                when(col(combined_col) > 0, col(q) + lit(weight) * col(combined_col)).otherwise(col(q))
-            )
-        
-        for q in neg_quads:
-            # Multiplier le poids par la valeur absolue du score combined
-            working_df = working_df.withColumn(
-                q, 
-                when(col(combined_col) < 0, col(q) + lit(weight) * abs(col(combined_col))).otherwise(col(q))
-            )
-
-    working_df = (
-        working_df
-        .withColumn(
-            "max_score",
-            greatest(col("score_Q1"), col("score_Q2"), col("score_Q3"), col("score_Q4"))
-        )
-        .withColumn(
-            "assigned_quadrant",
-            when(col("score_Q1") == col("max_score"), 1)
-            .when(col("score_Q2") == col("max_score"), 2)
-            .when(col("score_Q3") == col("max_score"), 3)
-            .otherwise(4)
-        )
-    )
-
-    # 6. ECRIRE
-    print("Writing Parquet...")
-    write_single_file(working_df, output_parquet_path, "parquet")
-    print(f"✔ Written Parquet → {output_parquet_path}")
-
-    print("Writing CSV...")
-    write_single_file(working_df, output_csv_path, "csv")
-    print(f"✔ Written CSV     → {output_csv_path}")
-
-    spark.stop()
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python compute_quadrants.py <input.parquet> <output.parquet> <output.csv>")
+    if len(sys.argv) != 5:
+        print("Usage: python compute_quadrants.py <indicators.csv> <pipeline.pkl> <output.parquet> <output.csv>")
         sys.exit(1)
-
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
+    
+    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])

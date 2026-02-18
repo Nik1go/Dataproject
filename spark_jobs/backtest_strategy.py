@@ -3,7 +3,8 @@ import sys
 import shutil
 import pandas as pd
 import numpy as np
-from scipy import stats as sp_stats
+
+
 
 """
 backtest_strategy.py - Daily Native Version (Vectorized)
@@ -15,25 +16,28 @@ Core Strategy:
 
 dans le venv active  
 python spark_jobs/backtest_strategy.py data/US/output_dag/quadrants.csv data/US/output_dag/Assets_daily.parquet 1000 data/US/backtest_results
+on peu ajt une start-date a la fin de la cmd YYYY-MM-JJ
+
 """
 
 TRANSACTION_COST = 0.0010  # 0.10%
 TRADING_DAYS = 252
 MA_WINDOW = 200 # MA200 for trend following
-SMOOTH_WINDOW = 18# Rolling mode window for quadrant smoothing
-#optimiser pour arriver a une planche de performance entre 16 et 20j
+# ML model already applies EMA smoothing (span=5) in compute_quadrants.py
+# No additional rolling mode smoothing needed
 N_STREAK = 5  # Days below/above MA to trigger action
 
 # UCITS ETFs TER (Total Expense Ratio) - Real costs for European investors
 TER = {
-    'SP500': 0.0007,         # CSPX: 0.07% 
-    'GOLD_OZ_USD': 0.0012,   # IGLN: 0.12%
-    'SmallCAP': 0.0030,      # R2US: 0.30%
-    'US_REIT_VNQ': 0.0040,   # IUSP: 0.40%
-    'TREASURY_10Y': 0.0007,  # IBB1: 0.07%
-    'OBLIGATION': 0.0020,    # LQDE: 0.20%
-    'NASDAQ_100': 0.0030,    # EQQQ: 0.30%
-    'COMMODITIES': 0.0019    # SXRS.DE: 0.19% (Broad Commodities: Energy + Agriculture + Metals)
+    'SP500': 0.0007,         # SXR8: 0.07% (iShares Core S&P 500 UCITS)
+    'GOLD_OZ_USD': 0.0012,   # SGLD: 0.12% (iShares Physical Gold ETC)
+    'SmallCAP': 0.0035,      # IUSN: 0.35% (iShares MSCI World Small Cap UCITS)
+    'US_REIT_VNQ': 0.0040,   # IUSP: 0.40% (iShares US Property Yield UCITS)
+    'TREASURY_10Y': 0.0010,  # IDTL: 0.10% (iShares $ Treasury Bond 7-10yr UCITS)
+    'OBLIGATION': 0.0020,    # LQDE: 0.20% (iShares $ Corp Bond UCITS)
+    'NASDAQ_100': 0.0033,    # SXRV: 0.33% (iShares Nasdaq 100 UCITS)
+    'COMMODITIES': 0.0046,   # EXXY: 0.46% (iShares Diversified Commodity Swap UCITS)
+    'SHORT_SP500': 0.0089    # SH: 0.89% - ProShares Short S&P500 (Inverse ETF)
 }
 
 # Allocations Optimisées par Quadrant (Data-Driven 2005-2025)
@@ -44,70 +48,64 @@ ALLOCATIONS = {
     1: {
         'NASDAQ_100': 0.4,      # Moteur de performance
         'SmallCAP': 0.3,        # Beta élevé
-        'SP500': 0.3,           # Stabilité relative
+        'SP500': 0.3,           #cd  Stabilité relative
         'US_REIT_VNQ': 0.0, 
         'GOLD_OZ_USD': 0.0, 
         'TREASURY_10Y': 0.0, 
         'OBLIGATION': 0.0, 
-        'COMMODITIES': 0.0
+        'COMMODITIES': 0.0,
+        'SHORT_SP500': 0.0
     },
     
     # Q2 (Inflation): QUALITÉ & RÉEL.
     # On vire les SmallCaps (trop fragiles) et on réduit la Tech (taux).
     # On mise sur les grosses boîtes (SP500) et les matières premières.
     2: {
-        'SP500': 0.4,           # Pricing Power (McDo monte ses prix, pas la start-up)
+        'SP500': 0.4,           # Pricing Power
         'GOLD_OZ_USD': 0.3,     # Protection Monétaire
         'COMMODITIES': 0.2,     # Hedge Inflation direct
-        'NASDAQ_100': 0.1,      # On garde un pied dans la tech, mais léger
-        'SmallCAP': 0.0,        # Trop risqué avec les taux
+        'NASDAQ_100': 0.1,      # On garde un pied dans la tech
+        'SmallCAP': 0.0,
         'TREASURY_10Y': 0.0, 
         'US_REIT_VNQ': 0.0,
-        'OBLIGATION': 0.0
+        'OBLIGATION': 0.0,
+        'SHORT_SP500': 0.0
     },
     
     # Q3 (Stagflation): DÉFENSE TOTALE.
-    # On enlève l'Immo (REITs). On ne garde que ce qui survit au chaos.
     3: {
         'GOLD_OZ_USD': 0.6,     # L'actif roi en Q3
         'COMMODITIES': 0.2,     # La cause de l'inflation
-        'TREASURY_10Y': 0.2,    # Sécurité (Volatilité faible)
+        'TREASURY_10Y': 0.2,    # Sécurité
         'NASDAQ_100': 0.0,
         'SP500': 0.0,
         'SmallCAP': 0.0, 
-        'US_REIT_VNQ': 0.0,     # OUT
-        'OBLIGATION': 0.0
+        'US_REIT_VNQ': 0.0,
+        'OBLIGATION': 0.0,
+        'SHORT_SP500': 0.0
     },
     
     # Q4 (Crash Déflationniste): BUNKER.
     # On enlève les Obligations Corporate. On veut du sans risque.
     4: {
-        'TREASURY_10Y': 0.6,    # Profite de la baisse des taux
-        'GOLD_OZ_USD': 0.4,     # Peur / Valeur Refuge
+        'TREASURY_10Y': 0.7,    # Profite de la baisse des taux
+        'GOLD_OZ_USD': 0.3,     # Peur / Valeur Refuge
         'SP500': 0.0, 
         'NASDAQ_100': 0.0, 
         'SmallCAP': 0.0, 
         'US_REIT_VNQ': 0.0, 
-        'OBLIGATION': 0.0,      # OUT (Risque de deffault de crédit)
-        'COMMODITIES': 0.0
+        'OBLIGATION': 0.0,
+        'COMMODITIES': 0.0,
+        'SHORT_SP500': 0.0
     },
 }
 
 WEIGHTS = ALLOCATIONS
 
-ASSETS = ['SP500', 'GOLD_OZ_USD', 'SmallCAP', 'US_REIT_VNQ', 'OBLIGATION', 'TREASURY_10Y', 'NASDAQ_100', 'COMMODITIES']
+ASSETS = ['SP500', 'GOLD_OZ_USD', 'SmallCAP', 'US_REIT_VNQ', 'OBLIGATION', 'TREASURY_10Y', 'NASDAQ_100', 'COMMODITIES', 'SHORT_SP500']
 
 
-def rolling_mode(series, window):
-    """Calculate rolling mode (most frequent value in window)."""
-
-    def mode_func(x):
-        if len(x) == 0 or x.isna().all():
-            return np.nan
-        mode_result = sp_stats.mode(x.dropna(), keepdims=True)
-        return mode_result.mode[0] if len(mode_result.mode) > 0 else np.nan
-
-    return series.rolling(window, min_periods=1).apply(mode_func, raw=False)
+# rolling_mode removed: ML model handles smoothing via EMA in compute_quadrants.py
 
 
 def max_drawdown(wealth_series):
@@ -134,12 +132,20 @@ def calculate_stats(returns, wealth, label):
 
 
 def main():
-    if len(sys.argv) != 5:
-        print("Usage: backtest_strategy.py <quadrants.csv> <Assets_daily.parquet> <initial_capital> <output_dir>")
+    if len(sys.argv) < 5:
+        print("Usage: backtest_strategy.py <quadrants.csv> <Assets_daily.parquet> <initial_capital> <output_dir> [start_date]")
+        print("  start_date: Optional, format YYYY-MM-DD (e.g., 2010-01-01)")
         sys.exit(1)
 
-    quadrants_csv, assets_parquet, initial_capital, output_dir = sys.argv[1:]
+    quadrants_csv, assets_parquet, initial_capital, output_dir = sys.argv[1:5]
     initial_capital = float(initial_capital)
+    
+    # Start date (default: 2005-01-01)
+    if len(sys.argv) >= 6:
+        start_date = pd.to_datetime(sys.argv[5])
+    else:
+        start_date = pd.to_datetime('2005-01-01')
+    print(f" Backtest starting from: {start_date.strftime('%Y-%m-%d')}")
 
     if os.path.isdir(output_dir):
         shutil.rmtree(output_dir)
@@ -147,7 +153,17 @@ def main():
 
     # ========== 1. LOAD & DEDUPLICATE ==========
     df_q = pd.read_csv(quadrants_csv, parse_dates=['date'])
-    df_q = df_q.drop_duplicates(subset=['date']).set_index('date').sort_index()
+    df_q = df_q.drop_duplicates(subset=['date']).sort_values('date')
+    
+    # FIX: Shift quadrant by 1 day to avoid look-ahead bias
+    # Signal at Close(T) applies to Return(T+1)
+    # We shift the columns (excluding date) or just use shift on the specific column later
+    # Here we shift the entire dataframe's data columns relative to date
+    cols_to_shift = [c for c in df_q.columns if c != 'date']
+    df_q[cols_to_shift] = df_q[cols_to_shift].shift(1)
+    
+    df_q = df_q.set_index('date').sort_index()
+    df_q = df_q.dropna(thresh=1) # Drop rows that became NaN due to shift
 
     df_a = pd.read_parquet(assets_parquet)
     df_a['date'] = pd.to_datetime(df_a['date'])
@@ -157,13 +173,18 @@ def main():
     df = df_a[ASSETS].join(df_q[['assigned_quadrant']], how='inner')
     df = df.dropna(subset=['assigned_quadrant'])
     df['assigned_quadrant'] = df['assigned_quadrant'].astype(int)
+    
+    # Apply start date filter
+    df = df[df.index >= start_date]
+    print(f"   Filtered to {len(df)} trading days from {start_date.strftime('%Y-%m-%d')}")
 
     # ========== 3. DAILY RETURNS ==========
     for asset in ASSETS:
         df[f'{asset}_ret'] = df[asset].pct_change().fillna(0.0)
 
-    # ========== 4. MACRO SMOOTHING: 20-Day Rolling Mode ==========
-    df['smooth_quadrant'] = rolling_mode(df['assigned_quadrant'], SMOOTH_WINDOW).ffill().astype(int)
+    # ========== 4. USE ML QUADRANTS DIRECTLY ==========
+    # ML model (compute_quadrants.py) already applies EMA(5) smoothing on probabilities
+    df['smooth_quadrant'] = df['assigned_quadrant']  # column name kept for backward compat
 
     # ========== 5. BASE ALLOCATION FROM SMOOTH QUADRANT ==========
     for asset in ASSETS:
@@ -271,6 +292,39 @@ def main():
 
     # ========== 14. EXPORT ==========
     pd.DataFrame([stats]).to_csv(f"{output_dir}/backtest_stats.csv", index=False)
+
+    # Export Performance by Smooth Quadrant (Model Selection)
+    # Calculate annualized return per asset per smooth quadrant
+    perf_rows = []
+    for q in [1, 2, 3, 4]:
+        mask = df['smooth_quadrant'] == q
+        if mask.any():
+            # Annualized return for this quadrant
+            days_in_q = mask.sum()
+            years_in_q = days_in_q / 252.0
+            
+            for asset in ASSETS:
+                # Total return in this quadrant
+                returns_q = df.loc[mask, f'{asset}_ret']
+                total_ret = (1 + returns_q).prod() - 1
+                # Annualized
+                ann_ret = (1 + total_ret) ** (1 / years_in_q) - 1 if years_in_q > 0 else 0
+                
+                # Sharpe
+                mean_ret = returns_q.mean()
+                std_ret = returns_q.std(ddof=1)
+                sharpe = (mean_ret / std_ret) * np.sqrt(252) if std_ret > 0 else 0.0
+
+                perf_rows.append({
+                    'quadrant': q,
+                    'asset': asset,
+                    'annual_return': ann_ret,
+                    'sharpe': sharpe,
+                    'days': days_in_q
+                })
+    
+    if perf_rows:
+        pd.DataFrame(perf_rows).to_csv(f"{output_dir}/assets_performance_by_smooth_quadrant.csv", index=False)
 
     # Timeseries
     out_cols = ['smooth_quadrant', 'portfolio_return', 'wealth', 'SP500_wealth', 'GOLD_wealth',
