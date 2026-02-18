@@ -23,6 +23,11 @@ logs/
 webserver_config.py
 
 # Data files - On garde les données mais pas les fichiers temporaires
+
+data/US/backup/
+data/EU/backup
+
+
 # (Vous pouvez commenter cette section si les données sont trop lourdes)
 
 # Spark
@@ -41,3 +46,5 @@ Thumbs.db
 # Elasticsearch
 .env
 
+data/EU/
+spark_jobs/optimize_window.py
